@@ -296,6 +296,11 @@
       });
     }, { threshold: 0.03, rootMargin: "0px 0px -4% 0px" });
     revealItems.forEach((el, i) => { el.style.setProperty("--i", i % 8); io.observe(el); });
+    // Safety net: never let content stay stuck invisible (slow JS, odd viewport
+    // resizes, edge-case browsers). Anything still hidden after a beat just shows.
+    setTimeout(() => {
+      revealItems.forEach(el => el.classList.add("is-visible"));
+    }, 2500);
   } else {
     revealItems.forEach(el => el.classList.add("is-visible"));
   }
@@ -305,8 +310,9 @@
   if ("IntersectionObserver" in window) {
     const dio = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("is-visible"); dio.unobserve(e.target); } });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.1 });
     dividers.forEach(d => dio.observe(d));
+    setTimeout(() => { dividers.forEach(d => d.classList.add("is-visible")); }, 2500);
   } else {
     dividers.forEach(d => d.classList.add("is-visible"));
   }

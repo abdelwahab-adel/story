@@ -201,6 +201,7 @@
 
     <h3 class="h-display" style="font-size:1.3rem;margin:64px 0 8px;" data-reveal data-en="The complete timeline">الخط الزمني الكامل</h3>
     <div class="timeline" data-reveal>
+      <div class="timeline-spine" aria-hidden="true"></div>
       <div class="timeline-era-title">١. العصور المبكرة (ما قبل الأسرات)</div>
       <div class="timeline-item">
         <div class="tl-card"><div class="tl-period">٨٠٠٠ – ٥٠٠٠ ق.م</div><div class="tl-title">العصر الحجري الحديث النوبي</div><div class="tl-desc">بدايات الاستقرار والرعي حول النيل</div></div>
@@ -270,8 +271,7 @@
       </div>
     </div>
 
-    <div class="pharaohs-banner" data-reveal="scale" style="margin-top:60px;">
-      <img src="assets/images/hero-nile-feluccas.jpg" alt="" role="presentation" loading="lazy">
+    <div class="pharaohs-banner pharaohs-banner-plain" data-reveal="scale" style="margin-top:60px;">
       <div class="pb-content">
         <h3>الفراعنة السود: الأسرة الخامسة والعشرون</h3>
         <p>بين عامَي ٧٤٤ و٦٥٦ ق.م، حكم ملوك النوبة مصر والنوبة معًا في حقبة فريدة جمعت بين تاجَي البلدين، وبَنَوا من الأهرامات في مروي أكثر مما بُني في مصر ذاتها.</p>
@@ -413,13 +413,15 @@
     <!-- CLOTHES -->
     <div id="clothes" style="scroll-margin-top:110px;">
       <h3 class="h-display" style="font-size:1.7rem;margin-bottom:26px;" data-reveal>الأزياء النوبية</h3>
-      <div class="grid grid-3" data-reveal>
-        <div class="card" style="grid-row:span 2;">
+      <div class="grid grid-2" data-reveal>
+        <div class="card">
           <div class="card-media"><picture><source srcset="assets/images/clothes-women-headscarves.webp" type="image/webp"><img src="assets/images/clothes-women-headscarves.jpg" alt="سيدتان نوبيتان يرتديان الأزياء التقليدية الملونة" loading="lazy"></picture></div>
           <div class="card-body"><span class="card-eyebrow">الجرجار الأسود</span><p>زي المرأة النوبية التقليدي الطويل الذي يميز هويتها في كل مناسبة. الجرجار الأسود الشفاف يُلبس فوق ملابس ملونة، ويتميز بطوله الذي يجرّ خلف المرأة.</p></div>
         </div>
-        <div class="card"><div class="card-body"><span class="card-eyebrow">ملابس الرجل</span><h3>الجلباب والعمامة</h3><p>الجلباب الأبيض والعمامة والصديري النوبي المطرز أحيانًا.</p></div></div>
-        <div class="card"><div class="card-body"><span class="card-eyebrow">الألوان والزخارف</span><h3>تركواز وذهبي</h3><p>درجات زاهية من التركواز والذهبي تعكس دفء الطبيعة النوبية، مع نقوش هندسية موروثة تُطرَّز على الأقمشة والعباءات.</p></div></div>
+        <div style="display:flex;flex-direction:column;gap:26px;">
+          <div class="card" style="flex:1;"><div class="card-body"><span class="card-eyebrow">ملابس الرجل</span><h3>الجلباب والعمامة</h3><p>الجلباب الأبيض والعمامة والصديري النوبي المطرز أحيانًا.</p></div></div>
+          <div class="card" style="flex:1;"><div class="card-body"><span class="card-eyebrow">الألوان والزخارف</span><h3>تركواز وذهبي</h3><p>درجات زاهية من التركواز والذهبي تعكس دفء الطبيعة النوبية، مع نقوش هندسية موروثة تُطرَّز على الأقمشة والعباءات.</p></div></div>
+        </div>
       </div>
       <div class="fact-row" data-reveal>
         <div class="fact-chip"><b>المجوهرات</b> — حُلي فضية وخرزية تكمل الزي وتحمل دلالات اجتماعية وجمالية</div>
@@ -524,26 +526,9 @@
       </div>
     </div>
 
-    <!-- CLOSING VISUAL RECAP -->
+    <!-- CLOSING QUOTE -->
     <div style="margin-top:100px;">
-      <div class="section-head center" data-reveal>
-        <h3 class="h-display section-title" style="font-size:2rem;">لحظات من الحياة النوبية</h3>
-      </div>
-      <div class="grid grid-3" data-reveal>
-        <div class="card">
-          <div class="card-media"><picture><source srcset="assets/images/hero-nile-feluccas.webp" type="image/webp"><img src="assets/images/hero-nile-feluccas.jpg" alt="ضفاف النيل" loading="lazy"></picture></div>
-          <div class="card-body"><h3>ضفاف النيل</h3><p>النيل شريان الحياة الذي يربط النوبة من شمال السودان إلى أسوان.</p></div>
-        </div>
-        <div class="card">
-          <div class="card-media"><picture><source srcset="assets/images/hero-village-camels.webp" type="image/webp"><img src="assets/images/hero-village-camels.jpg" alt="الجمال والنخيل" loading="lazy"></picture></div>
-          <div class="card-body"><h3>الجمال والنخيل</h3><p>رفيق السفر والترحال في الصحراء، يحكي قصص القوافل القديمة.</p></div>
-        </div>
-        <div class="card">
-          <div class="card-media"><picture><source srcset="assets/images/architecture-house-facade.webp" type="image/webp"><img src="assets/images/architecture-house-facade.jpg" alt="الواجهات الملونة" loading="lazy"></picture></div>
-          <div class="card-body"><h3>الواجهات الملونة</h3><p>رموز زخرفية تروي حكايات الأجداد وتحمي البيت من الحسد.</p></div>
-        </div>
-      </div>
-      <p class="pull-quote text-center" style="margin:44px auto 0;max-width:60ch;border:none;" data-reveal>الإبداع النوبي جعل القرية مزارًا عالميًا؛ لأن الناس يشعرون بصدق الشعب الذي صنعه.</p>
+      <p class="pull-quote text-center" style="margin:0 auto;max-width:60ch;border:none;font-size:1.2rem;" data-reveal>الإبداع النوبي جعل القرية مزارًا عالميًا؛ لأن الناس يشعرون بصدق الشعب الذي صنعه.</p>
     </div>
   </div>
 </section>
@@ -803,7 +788,7 @@
     </div>
 
     <div class="legend-card" data-reveal>
-      <div class="legend-media"><picture><source srcset="assets/images/hero-nile-feluccas.webp" type="image/webp"><img src="assets/images/hero-nile-feluccas.jpg" alt="ضفاف النيل حيث تُقام طقوس السبوع النوبية" loading="lazy"></picture></div>
+      <div class="legend-media"><picture><source srcset="assets/images/nile-terrace-building.webp" type="image/webp"><img src="assets/images/nile-terrace-building.jpg" alt="مبنى نوبي على ضفاف النيل حيث تُقام طقوس السبوع" loading="lazy"></picture></div>
       <div class="legend-body"><div class="legend-num">03</div><h3>حكاية السبوع والنيل (المعمودية النوبية)</h3><p>بعد ولادة الطفل بسبعة أيام، تأخذه الأم في موكب مع نساء القرية إلى شاطئ النيل، وتغسل وجهه بمياهه، وترمي الفشار والبلح في الماء كهدية للنهر لضمان أن يعيش الطفل حياة رخاء.</p></div>
     </div>
 
@@ -813,7 +798,7 @@
     </div>
 
     <div class="legend-card" data-reveal>
-      <div class="legend-media"><picture><source srcset="assets/images/village-west-suhail.webp" type="image/webp"><img src="assets/images/village-west-suhail.jpg" alt="قرية نوبية أعيد بناؤها بعد التهجير، صدى ذاكرة الشمندورة" loading="lazy"></picture></div>
+      <div class="legend-media"><picture><source srcset="assets/images/culture-cafe-mural.webp" type="image/webp"><img src="assets/images/culture-cafe-mural.jpg" alt="جدارية نوبية تحفظ ذاكرة المكان في القرى الجديدة" loading="lazy"></picture></div>
       <div class="legend-body"><div class="legend-num">05</div><h3>حكايات الشمندورة والعودة</h3><p>بعد تهجير النوبيين عند بناء السد العالي، ولدت قصص كثيرة حول الشمندورة (فانوس يرشد المراكب) كرمز لغرق القرى القديمة، بينما ظل النوبيون يروون لأبنائهم حكايات البلاد القديمة وأسماء النخيل الذي تركوه هناك.</p></div>
     </div>
   </div>
