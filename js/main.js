@@ -136,9 +136,7 @@
      DATA — Gallery (every file from /assets, tagged + captioned)
      ======================================================================= */
   const GALLERY = [
-    { base:"hero-nile-feluccas", tag:"nile", label:"الطبيعة والنيل", alt:"مراكب شراعية على النيل في أسوان" },
     { base:"nile-terrace-building", tag:"nile", label:"الطبيعة والنيل", alt:"مبنى نوبي على ضفاف النيل" },
-    { base:"hero-village-camels", tag:"villages", label:"القرى النوبية", alt:"جمال أمام بيت نوبي ملون في أسوان" },
     { base:"village-west-suhail", tag:"villages", label:"القرى النوبية", alt:"قرية غرب سهيل النوبية الشهيرة بألوانها" },
     { base:"clothes-women-headscarves", tag:"people", label:"الناس", alt:"سيدتان نوبيتان يرتديان الأزياء التقليدية الملونة" },
     { base:"history-ancient-nubians-painting", tag:"history", label:"آثار وتاريخ", alt:"لوحة أثرية تصوّر مشهدًا من حضارة النوبة القديمة" },
@@ -608,7 +606,7 @@
     galleryGrid.innerHTML = GALLERY.map((g, i) => `
       <div class="masonry-item" data-tag="${g.tag}" data-index="${i}">
         <picture>
-          <source srcset="${IMG}${g.base}-thumb.webp" type="image/webp">
+          <source srcset="${IMG}${g.base}-thumb.jpg" type="image/jpg">
           <img src="${IMG}${g.base}-thumb.jpg" alt="${g.alt}" loading="lazy" width="480" height="360">
         </picture>
         <div class="m-overlay">${g.alt}</div>
@@ -629,7 +627,7 @@
   }
   function updateLightbox() {
     const g = GALLERY[lbIndex];
-    lbImg.src = `${IMG}${g.base}.jpg`;
+    lbImg.src = `${IMG}${g.base}-thumb.jpg`;
     lbImg.alt = g.alt;
     lbCaption.textContent = `${g.alt} — ${g.label}`;
   }

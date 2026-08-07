@@ -13,7 +13,7 @@ host (Netlify, Vercel, GitHub Pages, cPanel, etc). No build step or install requ
 index.html          الصفحة الرئيسية (كل الأقسام)
 css/style.css        نظام التصميم الكامل (الألوان، الخطوط، المكوّنات، الحركات)
 js/main.js            البيانات (القاموس، المعرض، الاختبار) + كل التفاعلات
-assets/images/        كل الصور، محسّنة بنسختين (jpg + webp) وبحجمين (كامل + مصغّر)
+assets/images/        كل الصور، محسّنة بنسختين (jpg + jpg) وبحجمين (كامل + مصغّر)
 ```
 
 ## لتعديل المحتوى دون لمس HTML
