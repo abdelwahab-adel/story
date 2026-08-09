@@ -39,7 +39,7 @@
 <div id="loader" aria-hidden="true">
   <div class="loader-mark">
     <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path class="loader-path" d="M24 6 L40 38 L8 38 Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+      <path d="M24 6 L40 38 L8 38 Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
       <circle cx="24" cy="21" r="3" fill="currentColor"/>
     </svg>
   </div>
@@ -47,7 +47,6 @@
 </div>
 
 <div id="reading-progress"></div>
-<div id="cursor-glow" aria-hidden="true" style="position:fixed;top:0;left:0;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;background:radial-gradient(circle,rgba(200,153,47,.10),transparent 70%);pointer-events:none;z-index:5;"></div>
 
 <!-- ============================= NAV ============================= -->
 <header id="site-nav">
@@ -129,18 +128,17 @@
       <a href="#tourism" class="btn btn-outline-light" data-en="Plan Your Visit">خطط لزيارتك</a>
     </div>
 
-    <div class="hero-stats">
+    <!-- <div class="hero-stats">
       <div class="stat"><div class="num"><span class="plus">+</span><span class="counter-num" data-count="5000">0</span></div><div class="label" data-en="Years of history">عام من التاريخ</div></div>
       <div class="stat"><div class="num"><span class="plus">+</span><span class="counter-num" data-count="100">0</span></div><div class="label" data-en="Nubian words">كلمة نوبية</div></div>
       <div class="stat"><div class="num"><span class="plus">+</span><span class="counter-num" data-count="20">0</span></div><div class="label" data-en="Tourist landmarks">معلم سياحي</div></div>
       <div class="stat"><div class="num"><span class="plus">+</span><span class="counter-num" data-count="50">0</span></div><div class="label" data-en="Heritage stories">قصة تراثية</div></div>
-    </div>
+    </div> -->
   </div>
 
-  <div class="scroll-cue"><span data-en="Scroll">مرّر للأسفل</span><span class="wheel"></span></div>
 </section>
 
-<div id="en-notice" style="display:none;background:var(--gold-soft);color:var(--ink-900);text-align:center;padding:10px 20px;font-size:.85rem;align-items:center;justify-content:center;gap:8px;">
+<div id="en-notice" class="lang-notice">
   This English layer covers navigation &amp; headlines. Full long-form stories are presented in Arabic, the language of the source material — translations are on the roadmap.
 </div>
 
@@ -154,24 +152,24 @@
     </div>
 
     <div class="grid grid-4 stagger" data-reveal>
-      <div class="fact-chip" style="flex-direction:column;align-items:flex-start;padding:20px;border-radius:18px;"><b>الأصول العريقة</b><span style="margin-top:8px;font-weight:500;">أكثر من ٥٠,٠٠٠ سنة من التاريخ الممتد على ضفاف النيل</span></div>
-      <div class="fact-chip" style="flex-direction:column;align-items:flex-start;padding:20px;border-radius:18px;"><b>أرض القوس</b><span style="margin-top:8px;font-weight:500;">مهارة تاريخية في الرماية اشتهر بها النوبيون منذ العصور القديمة</span></div>
-      <div class="fact-chip" style="flex-direction:column;align-items:flex-start;padding:20px;border-radius:18px;"><b>اللغة والتراث</b><span style="margin-top:8px;font-weight:500;">الحفاظ على اللغة النوبية وعاداتها وفنونها حتى يومنا هذا</span></div>
-      <div class="fact-chip" style="flex-direction:column;align-items:flex-start;padding:20px;border-radius:18px;"><b>الدور الحضاري</b><span style="margin-top:8px;font-weight:500;">دور محوري في تاريخ مصر والسودان على مدى قرون طويلة</span></div>
+      <div class="fact-chip fact-chip--card"><b>الأصول العريقة</b><span>أكثر من ٥٠,٠٠٠ سنة من التاريخ الممتد على ضفاف النيل</span></div>
+      <div class="fact-chip fact-chip--card"><b>أرض القوس</b><span>مهارة تاريخية في الرماية اشتهر بها النوبيون منذ العصور القديمة</span></div>
+      <div class="fact-chip fact-chip--card"><b>اللغة والتراث</b><span>الحفاظ على اللغة النوبية وعاداتها وفنونها حتى يومنا هذا</span></div>
+      <div class="fact-chip fact-chip--card"><b>الدور الحضاري</b><span>دور محوري في تاريخ مصر والسودان على مدى قرون طويلة</span></div>
     </div>
 
-    <div class="glass-card" data-reveal="scale" style="margin-top:44px;padding:clamp(28px,4vw,48px);text-align:center;">
+    <div class="glass-card stack-lg" data-reveal="scale" style="padding:clamp(28px,4vw,48px);text-align:center;">
       <p class="pull-quote" style="border:none;padding:0;margin:0;font-size:clamp(1.2rem,2.2vw,1.6rem);">"أرض الذهب… وأرض القوس" — إرث من القوة والكرم والصمود عبر آلاف السنين، لا يزال ينبض على ضفاف النيل في أسوان.</p>
     </div>
 
-    <div class="grid grid-2" style="margin-top:32px;align-items:center;" data-reveal>
+    <div class="grid grid-2 stack-md" style="align-items:center;" data-reveal>
       <div class="story-media" style="aspect-ratio:auto;"><picture><img src="assets/images/history-archer-figurines-thumb.jpg" alt="نماذج خشبية أثرية لجنود نوبيين حاملي الأقواس" loading="lazy" style="aspect-ratio:4/3;"></picture></div>
       <p style="color:var(--text-soft);">تحفظ المتاحف نماذج أثرية لجنود نوبيين حاملي الأقواس، شاهدة على مهارة رمتها التي عُرفت بها النوبة منذ فجر التاريخ.</p>
     </div>
   </div>
 </section>
 
-<div class="pattern-divider container"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M 0 30 L 30 14 L 60 30 L 90 46 L 120 30 L 150 14 L 180 30 L 210 46 L 240 30 L 270 14 L 300 30 L 330 46 L 360 30 L 390 14 L 420 30 L 450 46 L 480 30 L 510 14 L 540 30 L 570 46 L 600 30 L 630 14 L 660 30 L 690 46 L 720 30 L 750 14 L 780 30 L 810 46 L 840 30 L 870 14 L 900 30 L 930 46 L 960 30 L 990 14 L 1020 30 L 1050 46 L 1080 30 L 1110 14 L 1140 30 L 1170 46 L 1200 30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
 
 <!-- ============================= HISTORY ============================= -->
 <section id="history" class="section-pad alt-bg">
@@ -190,16 +188,16 @@
       </div>
     </div>
 
-    <h3 class="h-display" style="font-size:1.3rem;margin:60px 0 22px;" data-reveal data-en="Landmark eras">محطات بارزة</h3>
+    <h3 class="h-display block-title" data-reveal data-en="Landmark eras">محطات بارزة</h3>
     <div class="kingdoms-strip" data-reveal>
       <div class="kingdom-card"><div class="k-era">٢٥٠٠–١٥٠٠ ق.م</div><h4>مملكة كرمة</h4><p>أول دولة مركزية في أفريقيا جنوب الصحراء</p></div>
       <div class="kingdom-card"><div class="k-era">١٠٧٠ ق.م–٣٥٠ م</div><h4>كوش</h4><p>"الفراعنة السود" الذين حكموا مصر والنوبة</p></div>
       <div class="kingdom-card"><div class="k-era">٥٩١ ق.م–٣٥٠ م</div><h4>مروي</h4><p>صناعة الحديد وبناء مئات الأهرامات</p></div>
       <div class="kingdom-card"><div class="k-era">٣٥٠–١٥٠٠ م</div><h4>النوبة المسيحية</h4><p>كنائس مزينة بالفريسكو والصلبان</p></div>
-      <div class="kingdom-card"><div class="k-era">١٣١٧–١٥٠٤ م</div><h4>دخول الإسلام</h4><p>اتفاقية البقط وامتزاج الثقافات</p></div>
+      <div class="kingdom-card"><div class="k-era">١٣١٧–١٥٠٤ م</div><h4>أفول الممالك المسيحية</h4><p>سقوط دنقلا ثم علوة، وانتشار الإسلام تدريجيًا في النوبة</p></div>
     </div>
 
-    <h3 class="h-display" style="font-size:1.3rem;margin:64px 0 8px;" data-reveal data-en="The complete timeline">الخط الزمني الكامل</h3>
+    <h3 class="h-display block-title" data-reveal data-en="The complete timeline">الخط الزمني الكامل</h3>
     <div class="timeline" data-reveal>
       <div class="timeline-spine" aria-hidden="true"></div>
       <div class="timeline-era-title">١. العصور المبكرة (ما قبل الأسرات)</div>
@@ -271,7 +269,7 @@
       </div>
     </div>
 
-    <div class="pharaohs-banner pharaohs-banner-plain" data-reveal="scale" style="margin-top:60px;">
+    <div class="pharaohs-banner pharaohs-banner-plain stack-xl" data-reveal="scale">
       <div class="pb-content">
         <h3>الفراعنة السود: الأسرة الخامسة والعشرون</h3>
         <p>بين عامَي ٧٤٤ و٦٥٦ ق.م، حكم ملوك النوبة مصر والنوبة معًا في حقبة فريدة جمعت بين تاجَي البلدين، وبَنَوا من الأهرامات في مروي أكثر مما بُني في مصر ذاتها.</p>
@@ -296,7 +294,7 @@
   </div>
 </section>
 
-<div class="pattern-divider container"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M 0 30 L 30 14 L 60 30 L 90 46 L 120 30 L 150 14 L 180 30 L 210 46 L 240 30 L 270 14 L 300 30 L 330 46 L 360 30 L 390 14 L 420 30 L 450 46 L 480 30 L 510 14 L 540 30 L 570 46 L 600 30 L 630 14 L 660 30 L 690 46 L 720 30 L 750 14 L 780 30 L 810 46 L 840 30 L 870 14 L 900 30 L 930 46 L 960 30 L 990 14 L 1020 30 L 1050 46 L 1080 30 L 1110 14 L 1140 30 L 1170 46 L 1200 30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
 
 <!-- ============================= CULTURE & LANGUAGE ============================= -->
 <section id="culture" class="section-pad alt-bg">
@@ -309,16 +307,16 @@
     <div class="story-block" data-reveal>
       <div class="story-media">
         <picture><img src="assets/images/music-nile-musicians-thumb.jpg" alt="شابان نوبيان يغنيان بجوار النيل" loading="lazy"></picture>
-        <span class="media-tag">التنبور… روح النوبة</span>
+        <span class="media-tag">الطنبور… روح النوبة</span>
       </div>
       <div class="story-text">
-        <h3>التنبور… روح النوبة</h3>
-        <p>التنبور هو الآلة الوترية المقدسة في الموسيقى النوبية، يصنع منها الفنان أغانيَ للفرح والحب والحنين، وتتوارثه الأجيال كما تتوارث الأرض والاسم.</p>
-        <p class="pull-quote">"حين يعزف النوبي على التنبور، تسمع في أوتارَيه همس النيل وأصداء القرية وأغاني الأجداد."</p>
+        <h3>الطنبور… روح النوبة</h3>
+        <p>الطنبور هو الآلة الوترية المقدسة في الموسيقى النوبية، يصنع منها الفنان أغانيَ للفرح والحب والحنين، وتتوارثه الأجيال كما تتوارث الأرض والاسم.</p>
+        <p class="pull-quote">"حين يعزف النوبي على الطنبور، تسمع في أوتارَيه همس النيل وأصداء القرية وأغاني الأجداد."</p>
       </div>
     </div>
 
-    <div class="story-block reverse" style="margin-top:80px;" data-reveal>
+    <div class="story-block reverse stack-xl" data-reveal>
       <div class="story-media">
         <picture><img src="assets/images/music-band-daf-thumb.jpg" alt="فرقة موسيقية نوبية تؤدي بالدفوف" loading="lazy"></picture>
         <span class="media-tag">إيقاع الاحتفال</span>
@@ -331,30 +329,30 @@
       </div>
     </div>
 
-    <div class="grid grid-2" style="margin-top:60px;align-items:center;" data-reveal="scale">
+    <div class="grid grid-2 stack-xl" style="align-items:center;" data-reveal="scale">
       <div class="glass-card" style="padding:32px;text-align:center;">
         <p style="font-family:var(--font-ar-display);font-size:1.15rem;">مجالس النوبة.. حيث تُروى الحكايات وتُشرب القهوة — تجمعات القرية النوبية.</p>
       </div>
       <div class="story-media" style="aspect-ratio:auto;"><picture><img src="assets/images/culture-majlis-diorama-thumb.jpg" alt="مجسم متحفي لمجلس نوبي تقليدي" loading="lazy" style="aspect-ratio:4/3;"></picture></div>
     </div>
 
-    <h3 id="instruments" class="h-display" style="font-size:1.3rem;margin:70px 0 22px;text-align:center;" data-reveal>الآلات الموسيقية</h3>
+    <h3 id="instruments" class="h-display block-title text-center anchor" data-reveal>الآلات الموسيقية</h3>
     <div class="grid grid-4" data-reveal>
-      <div class="symbol-card"><div class="sym-icon"><img src="assets/images/ppppppppp/images.jpg" alt="آلة الطنبور النوبي الوترية"></div><h5>الطنبور</h5><p>آلة وترية — روح الموسيقى النوبية</p></div>
-      <div class="symbol-card"><div class="sym-icon"><img src="assets/images/ppppppppp/images (1).jpg" alt="عازفون نوبيون يعزفون على الطار"></div><h5>الطار</h5><p>آلة إيقاعية — قلب الاحتفالات</p></div>
-      <div class="symbol-card"><div class="sym-icon"><img src="assets/images/ppppppppp/images (3).jpg" alt="مجموعة إنشاد نوبية أمام معبد أبو سمبل"></div><h5>الإيقاعات الجسدية</h5><p>تصفيق ودق الأقدام</p></div>
-      <div class="symbol-card"><div class="sym-icon"><img src="assets/images/ppppppppp/images (2).jpg" alt="عازفان نوبيان يعزفان الربابة والطار"></div><h5>الربابة</h5><p>آلة شعبية للسير والقصص</p></div>
+      <div class="symbol-card"><div class="sym-icon"><img src="assets/images/music-tanbur-instrument-thumb.jpg" alt="آلة الطنبور النوبي الوترية"></div><h5>الطنبور</h5><p>آلة وترية — روح الموسيقى النوبية</p></div>
+      <div class="symbol-card"><div class="sym-icon"><img src="assets/images/music-tar-players-thumb.jpg" alt="عازفون نوبيون يعزفون على الطار"></div><h5>الطار</h5><p>آلة إيقاعية — قلب الاحتفالات</p></div>
+      <div class="symbol-card"><div class="sym-icon"><img src="assets/images/music-choir-abu-simbel-thumb.jpg" alt="مجموعة إنشاد نوبية أمام معبد أبو سمبل"></div><h5>الإنشاد الجماعي</h5><p>أداء جماعي بالزي التقليدي</p></div>
+      <div class="symbol-card"><div class="sym-icon"><img src="assets/images/music-drum-generations-thumb.jpg" alt="جيلان يعزفان الدفوف معًا في جلسة غير رسمية"></div><h5>توارث الدفوف</h5><p>تعليم الإيقاع جيلًا بعد جيل</p></div>
     </div>
 
     <!-- LANGUAGE / DICTIONARY -->
-    <div id="language" style="margin-top:100px;">
+    <div id="language" class="subsection">
       <div class="section-head center" data-reveal>
         <span class="section-eyebrow" data-en="The Nubian Language">اللغة النوبية</span>
         <h2 class="section-title h-display" data-en="Kenzi &amp; Fadicca — a living heritage">الكنزية والفاديجا… تراث حيّ</h2>
         <p class="section-lede">يحفظ النوبيون لهجتين رئيسيتين توارثوها أبًا عن جد: <b>الكنزية</b> في الشمال، و<b>الفاديجا</b> في الجنوب، وهما وعاء حيّ لنقل التراث الشفهي والقصص والأمثال. استُخدمت اللغة النوبية كشفرة عسكرية في حرب أكتوبر ١٩٧٣ بفضل تعقيدها على العدو، وهي اليوم منارة هوية وحصن ثقافي يحمي الذاكرة النوبية من الذوبان.</p>
       </div>
 
-      <div class="glass-card text-center" data-reveal="scale" style="padding:24px;margin-bottom:50px;">
+      <div class="glass-card text-center" data-reveal="scale" style="padding:24px;margin-bottom:var(--sp-lg);">
         <p style="font-family:var(--font-ar-display);font-size:1.2rem;">"اللغة ليست كلمات فقط… هي بيتٌ نعيش فيه" ✦</p>
       </div>
 
@@ -384,14 +382,14 @@
             </div>
             <button class="btn btn-primary btn-sm" id="dict-game-start">ابدأ اللعب</button>
           </div>
-          <div class="game-shell" id="dict-game" style="display:none;margin-top:20px;"></div>
+          <div class="game-shell is-hidden stack-sm" id="dict-game"></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="pattern-divider container"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M 0 30 L 30 14 L 60 30 L 90 46 L 120 30 L 150 14 L 180 30 L 210 46 L 240 30 L 270 14 L 300 30 L 330 46 L 360 30 L 390 14 L 420 30 L 450 46 L 480 30 L 510 14 L 540 30 L 570 46 L 600 30 L 630 14 L 660 30 L 690 46 L 720 30 L 750 14 L 780 30 L 810 46 L 840 30 L 870 14 L 900 30 L 930 46 L 960 30 L 990 14 L 1020 30 L 1050 46 L 1080 30 L 1110 14 L 1140 30 L 1170 46 L 1200 30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
 
 <!-- ============================= ARTS (clothes, architecture, wedding, crafts, festivals) ============================= -->
 <section id="arts" class="section-pad">
@@ -402,19 +400,19 @@
       <p class="section-lede" data-en="One of the richest African and Mediterranean cultures — a living expression of a history spanning thousands of years.">من أغنى الثقافات الأفريقية والمتوسطية، تعبير حي عن تاريخ يمتد لآلاف السنين.</p>
     </div>
 
-    <div class="pill-tabs" style="margin-bottom:60px;justify-content:center;" data-reveal>
-      <a href="#clothes" class="btn-sm" style="padding:11px 22px;border-radius:999px;border:1px solid var(--border);font-weight:700;font-size:.88rem;color:var(--text-soft);">الأزياء</a>
-      <a href="#architecture" class="btn-sm" style="padding:11px 22px;border-radius:999px;border:1px solid var(--border);font-weight:700;font-size:.88rem;color:var(--text-soft);">المنازل</a>
-      <a href="#wedding" class="btn-sm" style="padding:11px 22px;border-radius:999px;border:1px solid var(--border);font-weight:700;font-size:.88rem;color:var(--text-soft);">الزفاف</a>
-      <a href="#crafts" class="btn-sm" style="padding:11px 22px;border-radius:999px;border:1px solid var(--border);font-weight:700;font-size:.88rem;color:var(--text-soft);">الحرف</a>
-      <a href="#festivals" class="btn-sm" style="padding:11px 22px;border-radius:999px;border:1px solid var(--border);font-weight:700;font-size:.88rem;color:var(--text-soft);">المهرجانات</a>
-      <a href="#music" class="btn-sm" style="padding:11px 22px;border-radius:999px;border:1px solid var(--border);font-weight:700;font-size:.88rem;color:var(--text-soft);">الموسيقى</a>
-      <a href="#jewelry" class="btn-sm" style="padding:11px 22px;border-radius:999px;border:1px solid var(--border);font-weight:700;font-size:.88rem;color:var(--text-soft);">الحُلي</a>
+    <div class="pill-tabs" style="justify-content:center;margin-bottom:var(--sp-xl);" data-reveal>
+      <a href="#clothes">الأزياء</a>
+      <a href="#architecture">المنازل</a>
+      <a href="#wedding">الزفاف</a>
+      <a href="#crafts">الحرف</a>
+      <a href="#festivals">المهرجانات</a>
+      <a href="#music">الموسيقى</a>
+      <a href="#jewelry">الحُلي</a>
     </div>
 
     <!-- CLOTHES -->
-    <div id="clothes" style="scroll-margin-top:110px;">
-      <h3 class="h-display" style="font-size:1.7rem;margin-bottom:26px;" data-reveal>الأزياء النوبية</h3>
+    <div id="clothes" class="anchor">
+      <h3 class="h-display subsection-title" data-reveal>الأزياء النوبية</h3>
       <div class="grid grid-2" data-reveal>
         <div class="card">
           <div class="card-media"><picture><img src="assets/images/clothes-women-headscarves-thumb.jpg" alt="سيدتان نوبيتان يرتديان الأزياء التقليدية الملونة" loading="lazy"></picture></div>
@@ -426,12 +424,12 @@
         </div>
       </div>
       <div class="fact-row" data-reveal>
-        <div class="fact-chip"><b>المجوهرات</b> — حُلي فضية وخرزية تكمل الزي وتحمل دلالات اجتماعية وجمالية</div>
+        <div class="fact-chip"><b>المجوهرات</b> — حُلي ذهبية وفضية وخرزية تكمل الزي وتحمل دلالات اجتماعية وجمالية</div>
       </div>
     </div>
 
     <!-- ARCHITECTURE -->
-    <div id="architecture" style="scroll-margin-top:110px;margin-top:90px;">
+    <div id="architecture" class="subsection">
       <div class="story-block">
         <div class="story-media">
           <picture><img src="assets/images/architecture-house-facade-thumb.jpg" alt="واجهة بيت نوبي مزينة برسوم هندسية" loading="lazy"></picture>
@@ -443,22 +441,22 @@
           <p>تحمل واجهات المنازل رموزًا ونقوشًا متوارثة، فتتحول كل بيت إلى لوحة فنية تعكس ذوق أصحابه وهويتهم الثقافية على ضفاف النيل.</p>
         </div>
       </div>
-      <div class="symbol-grid" style="margin-top:40px;" data-reveal>
+      <div class="symbol-grid stack-lg" data-reveal>
         <div class="symbol-card"><h5>التصميم</h5><p>قباب وقبو (الجريد واللحف) لتبريد الجو طبيعيًا دون الحاجة لتكييف</p></div>
         <div class="symbol-card"><h5>الألوان والزخارف</h5><p>واجهات بيضاء تُزين برموز شعبية مثل التمساح للحماية والعقرب لمنع الحسد</p></div>
         <div class="symbol-card"><h5>المصطبة</h5><p>جزء أساسي خارج البيت وداخله للجلوس واستقبال الضيوف</p></div>
       </div>
 
-      <div class="grid grid-4" style="margin-top:24px;" data-reveal>
-        <div class="masonry-item" style="margin-bottom:0;"><picture><source srcset="assets/images/architecture-desert-house-thumb.jpg" type="image/jpg"><img src="assets/images/architecture-desert-house-thumb.jpg" alt="منزل نوبي بالطراز الصحراوي التقليدي" loading="lazy"></picture></div>
-        <div class="masonry-item" style="margin-bottom:0;"><picture><source srcset="assets/images/architecture-guesthouse-terrace-thumb.jpg" type="image/jpg"><img src="assets/images/architecture-guesthouse-terrace-thumb.jpg" alt="تراس بيت ضيافة نوبي يطل على النيل" loading="lazy"></picture></div>
-        <div class="masonry-item" style="margin-bottom:0;"><picture><source srcset="assets/images/architecture-water-jars-thumb.jpg" type="image/jpg"><img src="assets/images/architecture-water-jars-thumb.jpg" alt="قلل فخارية تقليدية لتبريد الماء" loading="lazy"></picture></div>
-        <div class="masonry-item" style="margin-bottom:0;"><picture><source srcset="assets/images/architecture-decorated-stairs-thumb.jpg" type="image/jpg"><img src="assets/images/architecture-decorated-stairs-thumb.jpg" alt="درجات سلم مزخرفة أمام مدخل بيت نوبي" loading="lazy"></picture></div>
+      <div class="grid grid-4 stack-md" data-reveal>
+        <div class="masonry-item" style="margin-bottom:0;"><picture><source srcset="assets/images/architecture-desert-house-thumb.jpg" type="image/jpeg"><img src="assets/images/architecture-desert-house-thumb.jpg" alt="منزل نوبي بالطراز الصحراوي التقليدي" loading="lazy"></picture></div>
+        <div class="masonry-item" style="margin-bottom:0;"><picture><source srcset="assets/images/architecture-guesthouse-terrace-thumb.jpg" type="image/jpeg"><img src="assets/images/architecture-guesthouse-terrace-thumb.jpg" alt="تراس بيت ضيافة نوبي يطل على النيل" loading="lazy"></picture></div>
+        <div class="masonry-item" style="margin-bottom:0;"><picture><source srcset="assets/images/architecture-water-jars-thumb.jpg" type="image/jpeg"><img src="assets/images/architecture-water-jars-thumb.jpg" alt="قلل فخارية تقليدية لتبريد الماء" loading="lazy"></picture></div>
+        <div class="masonry-item" style="margin-bottom:0;"><picture><source srcset="assets/images/architecture-decorated-stairs-thumb.jpg" type="image/jpeg"><img src="assets/images/architecture-decorated-stairs-thumb.jpg" alt="درجات سلم مزخرفة أمام مدخل بيت نوبي" loading="lazy"></picture></div>
       </div>
     </div>
 
     <!-- WEDDING -->
-    <div id="wedding" style="scroll-margin-top:110px;margin-top:90px;">
+    <div id="wedding" class="subsection">
       <div class="story-block reverse">
         <div class="story-media">
           <picture><img src="assets/images/wedding-art-wall-thumb.jpg" alt="جدارية فنية تحكي تقاليد الزفاف النوبي" loading="lazy"></picture>
@@ -469,23 +467,23 @@
           <p>احتفال حي بالتراث وتأكيد لروابط العائلة وانعكاس لملامح الحضارة القديمة، تشمل احتفالاته "زفة النيل" حيث يذهب العروسان للنيل طلبًا للبركة، وتستمر لعدة أيام وتشمل الخضاب (الحناء).</p>
         </div>
       </div>
-      <div class="grid grid-2" style="margin-top:40px;gap:50px;align-items:start;">
+      <div class="grid grid-2 stack-lg" style="gap:50px;align-items:start;">
         <div class="step-list" data-reveal>
-          <div class="step-item"><div class="step-num" style="counter-increment:none;">١</div><div class="step-text"><h4>شروط الارتباط</h4><p>الأولوية للزواج الداخلي حفاظًا على اللغة والتقاليد، بلا "قايمة"، فالثقة هي الضمان وتُحل الخلافات في "جلسات العرب".</p></div></div>
-          <div class="step-item"><div class="step-num" style="counter-increment:none;">٢</div><div class="step-text"><h4>التجهيزات</h4><p>يُعد الذهب (الشبكة) جزءًا أساسيًا من المهر، ويقدّم العريس "الشيلة" وهي حقيبة هدايا ضخمة من أفخر الثياب.</p></div></div>
-          <div class="step-item"><div class="step-num" style="counter-increment:none;">٣</div><div class="step-text"><h4>ليلة الحناء</h4><p>تبدأ بذبح المواشي وإطعام القرية، وترتدي العروس الساري النوبي الملون بينما تُطبق الحناء وسط الاحتفال.</p></div></div>
-          <div class="step-item"><div class="step-num" style="counter-increment:none;">٤</div><div class="step-text"><h4>الزفّة</h4><p>موكب راقص يرافقه الغناء والتصفيق ورقصات نوبية مميزة، تُؤدى أغانيها باللغتين الفاديجا والكنزية.</p></div></div>
+          <div class="step-item"><div class="step-num">١</div><div class="step-text"><h4>شروط الارتباط</h4><p>الأولوية للزواج الداخلي حفاظًا على اللغة والتقاليد، بلا "قايمة"، فالثقة هي الضمان وتُحل الخلافات في "جلسات العرب".</p></div></div>
+          <div class="step-item"><div class="step-num">٢</div><div class="step-text"><h4>التجهيزات</h4><p>يُعد الذهب (الشبكة) جزءًا أساسيًا من المهر، ويقدّم العريس "الشيلة" وهي حقيبة هدايا ضخمة من أفخر الثياب.</p></div></div>
+          <div class="step-item"><div class="step-num">٣</div><div class="step-text"><h4>ليلة الحناء</h4><p>تبدأ بذبح المواشي وإطعام القرية، وترتدي العروس الساري النوبي الملون بينما تُطبق الحناء وسط الاحتفال.</p></div></div>
+          <div class="step-item"><div class="step-num">٤</div><div class="step-text"><h4>الزفّة</h4><p>موكب راقص يرافقه الغناء والتصفيق ورقصات نوبية مميزة، تُؤدى أغانيها باللغتين الفاديجا والكنزية.</p></div></div>
         </div>
         <div class="story-media" style="aspect-ratio:auto;" data-reveal="scale"><picture><img src="assets/images/wedding-procession-real-thumb.jpg" alt="موكب زفة نوبية في إحدى القرى" loading="lazy" style="aspect-ratio:3/4;"></picture><span class="media-tag">الزفّة اليوم</span></div>
       </div>
-      <div class="glass-card" style="margin-top:30px;padding:26px;max-width:800px;" data-reveal>
+      <div class="glass-card stack-lg" style="padding:26px;max-width:800px;" data-reveal>
         <span class="card-eyebrow">الميلاد والسبوع</span>
         <p style="color:var(--text-soft);">بعد ولادة الطفل بسبعة أيام، تأخذه الأم في موكب مع نساء القرية إلى شاطئ النيل، وتغسل وجهه بمياهه، وترمي الفشار والبلح في الماء كهدية للنهر لضمان أن يعيش الطفل حياة رخاء.</p>
       </div>
     </div>
 
     <!-- CRAFTS -->
-    <div id="crafts" style="scroll-margin-top:110px;margin-top:90px;">
+    <div id="crafts" class="subsection">
       <div class="story-block">
         <div class="story-media">
           <picture><img src="assets/images/handicrafts-market-street-thumb.jpg" alt="شارع وسوق نوبي للحرف والهدايا" loading="lazy"></picture>
@@ -497,29 +495,28 @@
           <p class="pull-quote">أسواق القرى النوبية تعرض هذه الحرف يوميًا لأهالي أسوان وزوارها.</p>
         </div>
       </div>
-      <div class="grid grid-4" style="margin-top:40px;" data-reveal>
-        <div class="card"><div class="card-media"><picture><img src="assets/images/handicrafts-basket-weaving-hands-thumb.jpg" alt="سيدة نوبية تصنع سلة من سعف النخيل" loading="lazy"></picture></div><div class="card-body"><h3 style="font-size:1.05rem;">السلال الملونة</h3><p style="font-size:.88rem;">مصنوعة من سعف النخيل بألوان زاهية متعددة</p></div></div>
-        <div class="card"><div class="card-media"><picture><img src="assets/images/handicrafts-hanging-pottery-thumb.jpg" alt="أوعية فخارية معلّقة بزخارف نسيجية" loading="lazy"></picture></div><div class="card-body"><h3 style="font-size:1.05rem;">الفخار المزخرف</h3><p style="font-size:.88rem;">أواني فخارية بنقوش هندسية موروثة</p></div></div>
-        <div class="card" id="jewelry" style="scroll-margin-top:110px;"><div class="card-media"><picture><img src="assets/images/ppppppppp/images (4).jpg" alt="خرز ومجوهرات تعكس ذوق المرأة النوبي" loading="lazy"></picture></div><div class="card-body"><h3 style="font-size:1.05rem;">الحُلي ذهبي</h3><p style="font-size:.88rem;">خرز ومجوهرات تعكس ذوق المرأة النوبي</p></div></div>
-        <div class="card"><div class="card-media"><picture><img src="assets/images/handicrafts-souvenir-stall-thumb.jpg" alt="كشك تذكارات نوبي بالدفوف والمنحوتات الخشبية" loading="lazy"></picture></div><div class="card-body"><h3 style="font-size:1.05rem;">أسواق التذكارات</h3><p style="font-size:.88rem;">دفوف ومنحوتات خشبية وأقواس تقليدية للزوار</p></div></div>
-       
+      <div class="grid grid-4 stack-lg" data-reveal>
+        <div class="card card--compact"><div class="card-media"><picture><img src="assets/images/handicrafts-basket-weaving-hands-thumb.jpg" alt="سيدة نوبية تصنع سلة من سعف النخيل" loading="lazy"></picture></div><div class="card-body"><h3>السلال الملونة</h3><p>مصنوعة من سعف النخيل بألوان زاهية متعددة</p></div></div>
+        <div class="card card--compact"><div class="card-media"><picture><img src="assets/images/handicrafts-hanging-pottery-thumb.jpg" alt="أوعية فخارية معلّقة بزخارف نسيجية" loading="lazy"></picture></div><div class="card-body"><h3>الفخار المزخرف</h3><p>أواني فخارية بنقوش هندسية موروثة</p></div></div>
+        <div class="card card--compact anchor" id="jewelry"><div class="card-media"><picture><img src="assets/images/jewelry-gold-earrings-thumb.jpg" alt="خرز ومجوهرات تعكس ذوق المرأة النوبي" loading="lazy"></picture></div><div class="card-body"><h3>الحُلي الذهبية</h3><p>خرز ومجوهرات تعكس ذوق المرأة النوبي</p></div></div>
+        <div class="card card--compact"><div class="card-media"><picture><img src="assets/images/handicrafts-souvenir-stall-thumb.jpg" alt="كشك تذكارات نوبي بالدفوف والمنحوتات الخشبية" loading="lazy"></picture></div><div class="card-body"><h3>أسواق التذكارات</h3><p>دفوف ومنحوتات خشبية وأقواس تقليدية للزوار</p></div></div>
       </div>
     </div>
 
     <!-- FESTIVALS -->
-    <div id="festivals" style="scroll-margin-top:110px;margin-top:90px;">
-      <h3 class="h-display" style="font-size:1.7rem;margin-bottom:12px;" data-reveal>الأعياد والمناسبات</h3>
-      <p class="section-lede" style="margin-bottom:30px;" data-reveal>يتبادل الجميع التحية بعبارة <b>"كوريج أنجا ناليه"</b> (عيد سعيد)، مع ارتداء الزي التقليدي وإعداد الأطباق الخاصة.</p>
+    <div id="festivals" class="subsection">
+      <h3 class="h-display subsection-title" data-reveal>الأعياد والمناسبات</h3>
+      <p class="section-lede subsection-lede" data-reveal>يتبادل الجميع التحية بعبارة <b>"كوريج أنجا ناليه"</b> (عيد سعيد)، مع ارتداء الزي التقليدي وإعداد الأطباق الخاصة.</p>
       <div class="grid grid-3" data-reveal>
-        <div class="symbol-card" style="text-align:start;">
+        <div class="symbol-card symbol-card--start">
           <h5>عيد الفطر — ١ شوال</h5>
           <p>صلاة العيد، زيارة الأقارب، وتبادل الحلويات، مع طبق "شعرية الحليب" التقليدي.</p>
         </div>
-        <div class="symbol-card" style="text-align:start;">
+        <div class="symbol-card symbol-card--start">
            <h5>عيد الأضحى — ١٠ ذو الحجة</h5>
           <p>تقديم "الجكوت" و"الكشيد"، وتتزين النساء بالجرجار النوبي.</p>
         </div>
-        <div class="symbol-card" style="text-align:start;">
+        <div class="symbol-card symbol-card--start">
           
           <h5>يوم النوبة العالمي — ٧ يوليو</h5>
           <p>احتفاء عالمي بالثقافة النوبية، والرقم ٧ مقدّس في الطقوس النوبية القديمة.</p>
@@ -528,7 +525,7 @@
     </div>
 
     <!-- MUSIC -->
-    <div id="music" style="scroll-margin-top:110px;margin-top:90px;">
+    <div id="music" class="subsection">
       <div class="story-block reverse">
         <div class="story-media">
           <picture><img src="assets/images/music-nile-musicians-thumb.jpg" alt="عازفان نوبيان يعزفان بجوار النيل" loading="lazy"></picture>
@@ -541,19 +538,19 @@
         </div>
       </div>
 
-      <h3 class="h-display" style="font-size:1.2rem;margin:50px 0 22px;" data-reveal>الآلات والإيقاعات</h3>
-      <p class="section-lede" style="margin-bottom:24px;" data-reveal>أربع ركائز تشكّل الصوت النوبي المميّز:</p>
+      <h3 class="h-display block-title" data-reveal>الآلات والإيقاعات</h3>
+      <p class="section-lede subsection-lede" data-reveal>أربع ركائز تشكّل الصوت النوبي المميّز:</p>
       <div class="grid grid-2" data-reveal>
         <div class="card">
-          <div class="card-media"><picture><img src="assets/images/ppppppppp/images.jpg" alt="آلة الطنبور النوبي الوترية" loading="lazy"></picture></div>
+          <div class="card-media"><picture><img src="assets/images/music-tanbur-instrument-thumb.jpg" alt="آلة الطنبور النوبي الوترية" loading="lazy"></picture></div>
           <div class="card-body">
             <span class="card-eyebrow">آلة وترية — روح الموسيقى</span>
-            <h3>التنبور</h3>
+            <h3>الطنبور</h3>
             <p>آلة وترية نوبية قديمة، تعزف بهدوء السحر وتُرافق الغناء الفردي والمجالس، وتُعدّ من أكثر الآلات ارتباطًا بالروح النوبية.</p>
           </div>
         </div>
         <div class="card">
-          <div class="card-media"><picture><img src="assets/images/ppppppppp/images (1).jpg" alt="عازفون نوبيون يعزفون على الطار" loading="lazy"></picture></div>
+          <div class="card-media"><picture><img src="assets/images/music-tar-players-thumb.jpg" alt="عازفون نوبيون يعزفون على الطار" loading="lazy"></picture></div>
           <div class="card-body">
             <span class="card-eyebrow">آلة إيقاعية — قلب الاحتفالات</span>
             <h3>الطار (الدف النوبي)</h3>
@@ -561,23 +558,23 @@
           </div>
         </div>
         <div class="card">
-          <div class="card-media"><picture><img src="assets/images/ppppppppp/images (3).jpg" alt="مجموعة إنشاد نوبية أمام معبد أبو سمبل" loading="lazy"></picture></div>
+          <div class="card-media"><picture><img src="assets/images/music-choir-abu-simbel-thumb.jpg" alt="مجموعة إنشاد نوبية أمام معبد أبو سمبل" loading="lazy"></picture></div>
           <div class="card-body">
-            <span class="card-eyebrow">إيقاعات جسدية</span>
-            <h3>التصفيق ودق الأقدام</h3>
-            <p>الجسد نفسه آلة إيقاعية: تصفيق الكفّين على إيقاع خاص مع دقّ الأقدام على الأرض، يرافقان الزفّة والرقص النوبي.</p>
+            <span class="card-eyebrow">أداء جماعي — صوت الجماعة</span>
+            <h3>الإنشاد الجماعي</h3>
+            <p>فرق الإنشاد النوبية تؤدي أغانيها وأهازيجها بأزياء تقليدية ملوّنة أمام المعابد الأثرية وفي المناسبات، يرافقها تصفيق الكفّين ودقّ الأقدام على إيقاع الأغنية، بأصوات متناغمة تحمل حكايات النهر والأجداد.</p>
           </div>
         </div>
         <div class="card">
-          <div class="card-media"><picture><img src="assets/images/ppppppppp/images (2).jpg" alt="عازفان نوبيان يعزفان الربابة والطار" loading="lazy"></picture></div>
+          <div class="card-media"><picture><img src="assets/images/music-drum-generations-thumb.jpg" alt="جيلان يعزفان الدفوف معًا في جلسة غير رسمية" loading="lazy"></picture></div>
           <div class="card-body">
-            <span class="card-eyebrow">آلة شعبية — رفيق السفر</span>
-            <h3>الربابة</h3>
-            <p>آلة السَير والقصص: يصحبها الرعاة والمسافرون، تنقل حكايات النوبة وأهازيج الفلاحين على الطرقات وفي السهرات.</p>
+            <span class="card-eyebrow">توارث شفهي — جيل يعلّم جيلًا</span>
+            <h3>توارث الدفوف</h3>
+            <p>يتوارث النوبيون العزف على الدفوف والطبول جيلًا بعد جيل، في جلسات غير رسمية يعلّم فيها الكبار الصغار الإيقاعات التقليدية. وتحضر الربابة كذلك في هذا التراث، آلة السَير الوترية التي رافق بها الرعاة والمسافرون النوبيون طرقاتهم وحكاياتهم، وإن ندُر توثيقها بالصورة.</p>
           </div>
         </div>
       </div>
-      <div class="glass-card" style="margin-top:30px;padding:26px;max-width:800px;" data-reveal>
+      <div class="glass-card stack-lg" style="padding:26px;max-width:800px;" data-reveal>
         <span class="card-eyebrow">السلام الخماسي النوبي</span>
         <p style="color:var(--text-soft);">تستخدم الموسيقى النوبية سلّمًا خماسيًا فريدًا يختلف عن السلمين الكبير والصغير في الموسيقى العربية، وهو ما يميّزها ويساعد على تعرّفها من أول سمعة. من أشهر رموزها المعاصرين: محمد منير الذي نقلها للعالمية.</p>
       </div>
@@ -586,13 +583,13 @@
     <!-- JEWELRY -->
     
     <!-- CLOSING QUOTE -->
-    <div style="margin-top:100px;">
+    <div class="stack-xl">
       <p class="pull-quote text-center" style="margin:0 auto;max-width:60ch;border:none;font-size:1.2rem;" data-reveal>الإبداع النوبي جعل القرية مزارًا عالميًا؛ لأن الناس يشعرون بصدق الشعب الذي صنعه.</p>
     </div>
   </div>
 </section>
 
-<div class="pattern-divider container"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M 0 30 L 30 14 L 60 30 L 90 46 L 120 30 L 150 14 L 180 30 L 210 46 L 240 30 L 270 14 L 300 30 L 330 46 L 360 30 L 390 14 L 420 30 L 450 46 L 480 30 L 510 14 L 540 30 L 570 46 L 600 30 L 630 14 L 660 30 L 690 46 L 720 30 L 750 14 L 780 30 L 810 46 L 840 30 L 870 14 L 900 30 L 930 46 L 960 30 L 990 14 L 1020 30 L 1050 46 L 1080 30 L 1110 14 L 1140 30 L 1170 46 L 1200 30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
 
 <!-- ============================= DAILY LIFE ============================= -->
 <section id="lifestyle" class="section-pad alt-bg">
@@ -616,7 +613,7 @@
       </div>
     </div>
 
-    <div class="story-block reverse" style="margin-top:80px;" data-reveal>
+    <div class="story-block reverse stack-xl" data-reveal>
       <div class="story-media">
         <picture><img src="assets/images/culture-majlis-gathering-thumb.jpg" alt="تجمع أهالي في مجلس نوبي" loading="lazy"></picture>
         <span class="media-tag">روتين الحياة</span>
@@ -629,7 +626,7 @@
       </div>
     </div>
 
-    <div class="grid grid-2" style="margin-top:60px;" data-reveal>
+    <div class="grid grid-2 stack-xl" data-reveal>
       <div class="card"><div class="card-body"><span class="card-eyebrow">العلاقات الاجتماعية</span><h3>الاحترام الهرمي</h3><p>لكبار السن مكانة مقدسة، وكلمة "الكبير" مسموعة ومطاعة، مما يحافظ على استقرار المجتمع.</p></div></div>
       <div class="card"><div class="card-body"><span class="card-eyebrow">العلاقات الاجتماعية</span><h3>الأمان والخصوصية</h3><p>تمتاز القرى النوبية بخصوصية عالية وأمان كبير، فالكل يعرف الكل، وهذا يخلق بيئة تربوية مثالية.</p></div></div>
     </div>
@@ -647,41 +644,41 @@
 
     <div class="tourism-layout" data-reveal>
       <div>
-        <h3 class="h-display" style="font-size:1.2rem;margin-bottom:18px;">المعالم التاريخية</h3>
+        <h3 class="h-display col-title">المعالم التاريخية</h3>
         <div class="attraction-list">
           <div class="attraction-item active" data-map-query="Abu Simbel Temple Egypt">
-            <div class="a-thumb"><picture><source srcset="assets/images/tourism-abu-simbel-performers-thumb.jpg" type="image/jpg"><img src="assets/images/tourism-abu-simbel-performers-thumb.jpg" alt="معبد أبو سمبل" loading="lazy"></picture></div>
+            <div class="a-thumb"><picture><source srcset="assets/images/tourism-abu-simbel-performers-thumb.jpg" type="image/jpeg"><img src="assets/images/tourism-abu-simbel-performers-thumb.jpg" alt="معبد أبو سمبل" loading="lazy"></picture></div>
             <div><h4>معبد أبو سمبل</h4><p>أعظم معابد رمسيس الثاني المنحوتة في الصخر</p></div>
             <div class="a-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></div>
           </div>
           <div class="attraction-item" data-map-query="Philae Temple Aswan">
-            <div class="a-thumb icon-thumb"><picture><source srcset="assets/images/معبد فيلة.avif" type="image/jpg"><img src="assets/images/معبد فيلة.avif" alt="معبد فيلة" loading="lazy"></picture></div>
+            <div class="a-thumb icon-thumb"><picture><source srcset="assets/images/temple-philae-thumb.avif" type="image/avif"><img src="assets/images/temple-philae-thumb.avif" alt="معبد فيلة" loading="lazy"></picture></div>
             <div><h4>معبد فيلة</h4><p>لؤلؤة النيل المخصصة للإلهة إيزيس</p></div>
             <div class="a-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></div>
           </div>
           <div class="attraction-item" data-map-query="Nubian Museum Aswan">
-            <div class="a-thumb"><picture><source srcset="assets/images/museum-ramses-statue-thumb.jpg" type="image/jpg"><img src="assets/images/museum-ramses-statue-thumb.jpg" alt="متحف النوبة" loading="lazy"></picture></div>
+            <div class="a-thumb"><picture><source srcset="assets/images/museum-ramses-statue-thumb.jpg" type="image/jpeg"><img src="assets/images/museum-ramses-statue-thumb.jpg" alt="متحف النوبة" loading="lazy"></picture></div>
             <div><h4>متحف النوبة</h4><p>يضم آلاف القطع التي توثّق تاريخ المنطقة</p></div>
             <div class="a-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></div>
           </div>
         </div>
 
-        <h3 class="h-display" style="font-size:1.2rem;margin:34px 0 18px;">القرى النوبية</h3>
+        <h3 class="h-display col-title stack-md">القرى النوبية</h3>
         <div class="attraction-list">
           <div class="attraction-item" data-map-query="West Seheil Village Aswan">
-            <div class="a-thumb"><picture><source srcset="assets/images/village-west-suhail-thumb.jpg" type="image/jpg"><img src="assets/images/village-west-suhail-thumb.jpg" alt="غرب سهيل" loading="lazy"></picture></div>
+            <div class="a-thumb"><picture><source srcset="assets/images/village-west-suhail-thumb.jpg" type="image/jpeg"><img src="assets/images/village-west-suhail-thumb.jpg" alt="غرب سهيل" loading="lazy"></picture></div>
             <div><h4>غرب سهيل</h4><p>القرية الأشهر ببيوتها الملونة وتجربة ركوب الجمال</p></div>
             <div class="a-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></div>
           </div>
           <div class="attraction-item" data-map-query="Heisa Island Aswan">
-            <div class="a-thumb icon-thumb"><picture><source srcset="assets/images/جزيرة هيسا.jpeg" type="image/jpg"><img src="assets/images/جزيرة هيسا.jpeg" alt="جزيرة هيسا" loading="lazy"></picture></div>
+            <div class="a-thumb icon-thumb"><picture><source srcset="assets/images/island-heisa-thumb.jpeg" type="image/jpeg"><img src="assets/images/island-heisa-thumb.jpeg" alt="جزيرة هيسا" loading="lazy"></picture></div>
             <div><h4>جزيرة هيسا</h4><p>هدوء تام وسط صخور النيل الجرانيتية</p></div>
             <div class="a-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></div>
           </div>
         </div>
 
         <div class="season-guide">
-          <h3 class="h-display" style="font-size:1.2rem;margin-bottom:14px;">أفضل وقت للزيارة</h3>
+          <h3 class="h-display col-title">أفضل وقت للزيارة</h3>
           <p style="color:var(--text-soft);margin-bottom:16px;font-size:.92rem;">أفضل وقت للزيارة بين شهري أكتوبر ومارس، حيث الجو معتدل ومناسب لجولات المعابد والقرى.</p>
           <div class="season-track">
             <span class="m">يناير</span><span class="m">فبراير</span><span class="m">مارس</span><span class="m">أبريل</span><span class="m">مايو</span><span class="m">يونيو</span><span class="m">يوليو</span><span class="m">أغسطس</span><span class="m">سبتمبر</span><span class="m">أكتوبر</span><span class="m">نوفمبر</span><span class="m">ديسمبر</span>
@@ -689,10 +686,10 @@
         </div>
 
         <div class="itinerary-tabs">
-          <h3 class="h-display" style="font-size:1.2rem;margin-bottom:6px;">اقتراح رحلة ٣ أيام</h3>
+          <h3 class="h-display col-title">اقتراح رحلة ٣ أيام</h3>
           <div class="itin-day"><div class="itin-num">١</div><div><h5>أسوان والنيل</h5><p>نزهة بالمركب الشراعي على النيل، وزيارة قرية غرب سهيل الملونة.</p></div></div>
           <div class="itin-day"><div class="itin-num">٢</div><div><h5>فيلة والمتحف</h5><p>معبد فيلة صباحًا، ثم متحف النوبة لاستكشاف تاريخ المنطقة.</p></div></div>
-          <div class="itin-day" style="border-bottom:none;"><div class="itin-num">٣</div><div><h5>أبو سمبل</h5><p>رحلة إلى معبدَي أبو سمبل، مع وقت هادئ عند جزيرة هيسا إن أمكن.</p></div></div>
+          <div class="itin-day"><div class="itin-num">٣</div><div><h5>أبو سمبل</h5><p>رحلة إلى معبدَي أبو سمبل، مع وقت هادئ عند جزيرة هيسا إن أمكن.</p></div></div>
         </div>
       </div>
 
@@ -713,24 +710,24 @@
       <p class="section-lede">نكهات طبيعية تعتمد على محاصيل البيئة المحلية مثل القمح والذرة والكركديه، وتعتمد بشكل أساسي على "الويكة" (البامية المجففة المطحونة) ومرق اللحم الدسم.</p>
     </div>
 
-    <h3 class="h-display" style="font-size:1.2rem;margin-bottom:22px;" data-reveal>أشهر الأطباق</h3>
+    <h3 class="h-display subsection-title" data-reveal>أشهر الأطباق</h3>
     <div class="grid grid-3" data-reveal>
       <div class="card">
-        <div class="card-media"><picture><img src="assets/images/ppppppppp/images (5).jpg" alt="طبق الجاكود، مرقة خضراء من البامية المجففة تُقدّم مع الخبز" loading="lazy"></picture></div>
+        <div class="card-media"><picture><img src="assets/images/food-jakoud-dish-thumb.jpg" alt="طبق الجاكود، مرقة خضراء من البامية المجففة تُقدّم مع الخبز" loading="lazy"></picture></div>
         <div class="card-body">
           <span class="card-eyebrow">طبق رئيسي</span>
           <h3>الجاكود</h3><p>مرقة من البامية المجففة مع مرق الضأن والخضروات.</p>
         </div>
       </div>
       <div class="card">
-        <div class="card-media"><picture><img src="assets/images/ppppppppp/images (7).jpg" alt="طبق الكاشيد، قطع لحم محمّرة مع البصل والفلفل" loading="lazy"></picture></div>
+        <div class="card-media"><picture><img src="assets/images/food-kashid-meat-thumb.jpg" alt="طبق الكاشيد، قطع لحم محمّرة مع البصل والفلفل" loading="lazy"></picture></div>
         <div class="card-body">
           <span class="card-eyebrow">مناسبات</span>
           <h3>الكاشيد</h3><p>لحم محمّر مع البصل والسمن، من أطباق المناسبات الرئيسية.</p>
         </div>
       </div>
       <div class="card">
-        <div class="card-media"><picture><img src="assets/images/ppppppppp/images (6).jpg" alt="طبق الأرتي، بامية خضراء مفروكة طازجة" loading="lazy"></picture></div>
+        <div class="card-media"><picture><img src="assets/images/food-arti-okra-thumb.jpg" alt="طبق الأرتي، بامية خضراء مفروكة طازجة" loading="lazy"></picture></div>
         <div class="card-body">
           <span class="card-eyebrow">يومي</span>
           <h3>الأرتي (البامية المفروكة)</h3>
@@ -739,16 +736,16 @@
       </div>
     </div>
 
-    <h3 class="h-display" style="font-size:1.2rem;margin:50px 0 22px;" data-reveal>المعجنات والمخبوزات</h3>
-    <p class="section-lede" style="margin-bottom:24px;" data-reveal>الخبز هو "سيد المائدة" في النوبة، وتتنوع أشكاله حسب طريقة الطهي:</p>
+    <h3 class="h-display block-title" data-reveal>المعجنات والمخبوزات</h3>
+    <p class="section-lede subsection-lede" data-reveal>الخبز هو "سيد المائدة" في النوبة، وتتنوع أشكاله حسب طريقة الطهي:</p>
     <div class="grid grid-2" data-reveal>
-      <div class="card">
-        <div class="card-media"><picture><img src="assets/images/ppppppppp/images (9).jpg" alt="أرغفة الملتوت، عيش شمسي تقليدي في وعاء" loading="lazy"></picture></div>
-        <div class="card-body"><h3 style="font-size:1.05rem;">الملتوت</h3><p style="font-size:.88rem;">العيش الشمسي.. تراث فرعوني قديم احتكره صعيد مصر</p></div>
+      <div class="card card--compact">
+        <div class="card-media"><picture><img src="assets/images/food-multot-bread-thumb.jpg" alt="أرغفة الملتوت، عيش شمسي تقليدي في وعاء" loading="lazy"></picture></div>
+        <div class="card-body"><h3>الملتوت</h3><p>العيش الشمسي.. تراث فرعوني قديم احتكره صعيد مصر</p></div>
       </div>
-      <div class="card">
-        <div class="card-media"><picture><img src="assets/images/ppppppppp/images (8).jpg" alt="رغيف الخمريت، خبز رقيق وطري" loading="lazy"></picture></div>
-        <div class="card-body"><h3 style="font-size:1.05rem;">الخمريت</h3><p style="font-size:.88rem;">خبز رقيق وطري، يؤكل غالبًا مع العسل أو المرق.</p></div>
+      <div class="card card--compact">
+        <div class="card-media"><picture><img src="assets/images/food-khamriit-bread-thumb.jpg" alt="رغيف الخمريت، خبز رقيق وطري" loading="lazy"></picture></div>
+        <div class="card-body"><h3>الخمريت</h3><p>خبز رقيق وطري، يؤكل غالبًا مع العسل أو المرق.</p></div>
       </div>
     </div>
   </div>
@@ -790,8 +787,8 @@
       </div>
     </div>
     <div class="testi-arrows">
-      <button class="icon-btn" id="testi-prev" aria-label="السابق"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button>
-      <button class="icon-btn" id="testi-next" aria-label="التالي"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+      <button class="icon-btn" id="testi-prev" aria-label="السابق"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+      <button class="icon-btn" id="testi-next" aria-label="التالي"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button>
     </div>
     <div class="testi-dots" id="testi-dots"></div>
   </div>
@@ -908,21 +905,21 @@
     <div class="quiz-card" data-reveal="scale">
       <div class="quiz-start" id="quiz-start">
         <div class="quiz-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 4h8v4a4 4 0 01-8 0V4zM5 5H3v2a4 4 0 004 4M19 5h2v2a4 4 0 01-4 4M10 15h4v3h-4zM7 21h10"/></svg></div>
-        <p style="color:var(--text-soft);margin-bottom:24px;">خمسة أسئلة سريعة لتختبر معرفتك بتاريخ النوبة وثقافتها.</p>
+        <p class="subsection-lede" style="color:var(--text-soft);">خمسة أسئلة سريعة لتختبر معرفتك بتاريخ النوبة وثقافتها.</p>
         <button class="btn btn-primary" id="quiz-start-btn">ابدأ الاختبار</button>
       </div>
 
-      <div id="quiz-play" style="display:none;">
-        <div class="dict-toolbar" style="justify-content:center;margin-bottom:20px;">
+      <div id="quiz-play" class="is-hidden">
+        <div class="dict-toolbar" style="justify-content:center;">
           <span class="dict-count" id="quiz-progress-label"></span>
         </div>
         <div class="game-word" id="quiz-question" style="font-size:1.3rem;"></div>
-        <div class="game-options" id="quiz-options" style="margin-top:26px;"></div>
+        <div class="game-options stack-md" id="quiz-options"></div>
       </div>
 
-      <div id="quiz-final" style="display:none;" class="quiz-final">
+      <div id="quiz-final" class="is-hidden quiz-final">
         <div class="score-num" id="quiz-score-num"></div>
-        <p id="quiz-final-msg" style="margin:16px 0 26px;color:var(--text-soft);"></p>
+        <p id="quiz-final-msg" style="margin:var(--sp-sm) 0 var(--sp-lg);color:var(--text-soft);"></p>
         <button class="btn btn-primary" id="quiz-restart-btn">إعادة المحاولة</button>
       </div>
     </div>
@@ -969,7 +966,7 @@
       </div>
       <div>
         <h5 data-en="More">المزيد</h5>
-        <ul style="margin-bottom:22px;">
+        <ul style="margin-bottom:var(--sp-sm);">
           <li><a href="#figures">الشخصيات</a></li>
           <li><a href="#stories">حكايات</a></li>
           <li><a href="#quiz">اختبر نفسك</a></li>
@@ -998,16 +995,16 @@
 
 <!-- ============================= LIGHTBOX ============================= -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عرض الصورة">
-  <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="الصورة السابقة">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+  <button style="right: 4%;" class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="الصورة السابقة">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
   </button>
   <figure>
     <button class="lightbox-close" id="lightbox-close" aria-label="إغلاق"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     <img id="lightbox-img" src="" alt="">
     <figcaption id="lightbox-caption"></figcaption>
   </figure>
-  <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="الصورة التالية">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+  <button style="left: 4%;" class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="الصورة التالية">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
   </button>
 </div>
 

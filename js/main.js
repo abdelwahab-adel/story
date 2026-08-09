@@ -136,21 +136,25 @@
      DATA — Gallery (every file from /assets, tagged + captioned)
      ======================================================================= */
   const GALLERY = [
-    { base:"nile-terrace-building", tag:"nile", label:"الطبيعة والنيل", alt:"مبنى نوبي على ضفاف النيل" },
-    { base:"village-west-suhail", tag:"villages", label:"القرى النوبية", alt:"قرية غرب سهيل النوبية الشهيرة بألوانها" },
-    { base:"clothes-women-headscarves", tag:"people", label:"الناس", alt:"سيدتان نوبيتان يرتديان الأزياء التقليدية الملونة" },
-    { base:"history-ancient-nubians-painting", tag:"history", label:"آثار وتاريخ", alt:"لوحة أثرية تصوّر مشهدًا من حضارة النوبة القديمة" },
-    { base:"history-ancient-papyrus-art", tag:"history", label:"آثار وتاريخ", alt:"فن مصري قديم يصوّر ملامح من الحضارة النوبية" },
-    { base:"history-archer-figurines", tag:"history", label:"آثار وتاريخ", alt:"نماذج خشبية أثرية لجنود نوبيين حاملي الأقواس" },
-    { base:"museum-ramses-statue", tag:"history", label:"آثار وتاريخ", alt:"تمثال حجري لرمسيس الثاني في متحف النوبة" },
-    { base:"music-band-daf", tag:"music", label:"الموسيقى والرقص", alt:"فرقة موسيقية نوبية تؤدي بالدفوف" },
-    { base:"music-nile-musicians", tag:"music", label:"الموسيقى والرقص", alt:"عازفان نوبيان يعزفان بجوار النيل" },
+    { base:"nile-terrace-building", tag:"architecture", label:"العمارة", alt:"مبنى نوبي على ضفاف النيل" },
+    { base:"village-west-suhail", tag:"architecture", label:"العمارة", alt:"قرية غرب سهيل النوبية الشهيرة بألوانها" },
     { base:"architecture-house-facade", tag:"architecture", label:"العمارة", alt:"واجهة بيت نوبي مزينة برسوم هندسية" },
     { base:"architecture-desert-house", tag:"architecture", label:"العمارة", alt:"منزل نوبي بالطراز الصحراوي التقليدي" },
     { base:"architecture-guesthouse-terrace", tag:"architecture", label:"العمارة", alt:"تراس بيت ضيافة نوبي يطل على النيل" },
     { base:"architecture-guesthouse-archway", tag:"architecture", label:"العمارة", alt:"بوابة مقنطرة تطل على النيل في قرية نوبية" },
     { base:"architecture-water-jars", tag:"architecture", label:"العمارة", alt:"قلل فخارية تقليدية لتبريد الماء في حائط البيت" },
     { base:"architecture-decorated-stairs", tag:"architecture", label:"العمارة", alt:"درجات سلم مزخرفة أمام مدخل بيت نوبي" },
+    { base:"clothes-women-headscarves", tag:"culture", label:"لحظات ثقافية", alt:"سيدتان نوبيتان يرتديان الأزياء التقليدية الملونة" },
+    { base:"history-ancient-nubians-painting", tag:"history", label:"آثار وتاريخ", alt:"لوحة أثرية تصوّر مشهدًا من حضارة النوبة القديمة" },
+    { base:"history-ancient-papyrus-art", tag:"history", label:"آثار وتاريخ", alt:"فن مصري قديم يصوّر ملامح من الحضارة النوبية" },
+    { base:"history-archer-figurines", tag:"history", label:"آثار وتاريخ", alt:"نماذج خشبية أثرية لجنود نوبيين حاملي الأقواس" },
+    { base:"museum-ramses-statue", tag:"history", label:"آثار وتاريخ", alt:"تمثال حجري لرمسيس الثاني في متحف النوبة" },
+    { base:"music-band-daf", tag:"music", label:"الموسيقى والرقص", alt:"فرقة موسيقية نوبية تؤدي بالدفوف" },
+    { base:"music-nile-musicians", tag:"music", label:"الموسيقى والرقص", alt:"عازفان نوبيان يعزفان بجوار النيل" },
+    { base:"music-tanbur-instrument", tag:"music", label:"الموسيقى والرقص", alt:"التنبور هو الآلة الوترية المقدسة في الموسيقى النوبية، يصنع منها الفنان أغانيَ للفرح والحب والحنين، وتتوارثه الأجيال كما تتوارث الأرض والاسم." },
+    { base:"music-tar-players", tag:"music", label:"الموسيقى والرقص", alt:"يتوارث النوبيون العزف على الدفوف والطبول جيلًا بعد جيل، في جلسات غير رسمية يعلّم فيها الكبار الصغار" },
+    { base:"tourism-abu-simbel-performers", tag:"music", label:"الموسيقى والرقص", alt:"أداء جماعي بالزي التقليدي" },
+    { base:"music-drum-generations", tag:"music", label:"الموسيقى والرقص", alt:"عازفان نوبيان يعزفان بجوار النيل" },
     { base:"handicrafts-market-street", tag:"crafts", label:"الحرف اليدوية", alt:"شارع وسوق نوبي للحرف والهدايا" },
     { base:"handicrafts-souvenir-stall", tag:"crafts", label:"الحرف اليدوية", alt:"كشك تذكارات نوبي بالدفوف والمنحوتات الخشبية" },
     { base:"handicrafts-baskets-product", tag:"crafts", label:"الحرف اليدوية", alt:"سلال وحقائب منسوجة يدويًا بألوان زاهية" },
@@ -170,11 +174,8 @@
   ];
   const GALLERY_FILTERS = [
     { key:"all", label:"الكل" },
-    { key:"nile", label:"الطبيعة والنيل" },
-    { key:"villages", label:"القرى" },
-    { key:"people", label:"الناس" },
-    { key:"music", label:"الموسيقى" },
     { key:"architecture", label:"العمارة" },
+    { key:"music", label:"الموسيقى" },
     { key:"crafts", label:"الحرف" },
     { key:"history", label:"آثار وتاريخ" },
     { key:"culture", label:"لحظات ثقافية" },
@@ -361,7 +362,7 @@
   }
 
   /* =======================================================================
-     Hero parallax + crossfade + mouse glow
+     Hero parallax + crossfade — kept subtle and minimal
      ======================================================================= */
   const heroImgs = $$(".hero-media img");
   if (heroImgs.length && !prefersReducedMotion) {
@@ -372,7 +373,7 @@
       requestAnimationFrame(() => {
         const y = window.scrollY;
         if (y < window.innerHeight * 1.2) {
-          heroImgs.forEach(img => { img.style.transform = `scale(1.12) translateY(${y * 0.18}px)`; });
+          heroImgs.forEach(img => { img.style.transform = `scale(1.08) translateY(${y * 0.08}px)`; });
         }
         ticking = false;
       });
@@ -386,18 +387,6 @@
       idx = (idx + 1) % heroImgs.length;
       heroImgs[idx].classList.add("show");
     }, 6000);
-  }
-
-  const glow = $("#cursor-glow");
-  if (glow && window.matchMedia("(pointer:fine)").matches && !prefersReducedMotion) {
-    let gx = 0, gy = 0, cx = 0, cy = 0;
-    on(window, "pointermove", (e) => { gx = e.clientX; gy = e.clientY; });
-    function loop() {
-      cx += (gx - cx) * 0.12; cy += (gy - cy) * 0.12;
-      glow.style.transform = `translate(${cx}px, ${cy}px)`;
-      requestAnimationFrame(loop);
-    }
-    requestAnimationFrame(loop);
   }
 
   /* =======================================================================
@@ -673,8 +662,8 @@
   }
   function updateTesti() {
     const track = $("#testi-track");
-    if (track) track.style.transform = `translateX(${document.documentElement.dir === "rtl" ? "" : "-"}${testiIndex * 100}%)`;
-    if (track && document.documentElement.dir === "rtl") track.style.transform = `translateX(${testiIndex * 100}%)`;
+    const dir = document.documentElement.dir === "rtl" ? "" : "-";
+    if (track) track.style.transform = `translateX(${dir}${testiIndex * 100}%)`;
     renderTestiDots();
   }
   on($("#testi-prev"), "click", () => { testiIndex = (testiIndex - 1 + testiSlides.length) % testiSlides.length; updateTesti(); });
