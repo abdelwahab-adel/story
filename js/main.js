@@ -153,8 +153,7 @@
     { base:"music-nile-musicians", tag:"music", label:"الموسيقى والرقص", alt:"عازفان نوبيان يعزفان بجوار النيل" },
     { base:"music-tanbur-instrument", tag:"music", label:"الموسيقى والرقص", alt:"التنبور هو الآلة الوترية المقدسة في الموسيقى النوبية، يصنع منها الفنان أغانيَ للفرح والحب والحنين، وتتوارثه الأجيال كما تتوارث الأرض والاسم." },
     { base:"music-tar-players", tag:"music", label:"الموسيقى والرقص", alt:"يتوارث النوبيون العزف على الدفوف والطبول جيلًا بعد جيل، في جلسات غير رسمية يعلّم فيها الكبار الصغار" },
-    { base:"tourism-abu-simbel-performers", tag:"music", label:"الموسيقى والرقص", alt:"أداء جماعي بالزي التقليدي" },
-    { base:"music-drum-generations", tag:"music", label:"الموسيقى والرقص", alt:"عازفان نوبيان يعزفان بجوار النيل" },
+    { base:"music-drum-generations", tag:"music", label:"الموسيقى والرقص", alt:"جيلان يعزفان الدفوف معًا في جلسة غير رسمية" },
     { base:"handicrafts-market-street", tag:"crafts", label:"الحرف اليدوية", alt:"شارع وسوق نوبي للحرف والهدايا" },
     { base:"handicrafts-souvenir-stall", tag:"crafts", label:"الحرف اليدوية", alt:"كشك تذكارات نوبي بالدفوف والمنحوتات الخشبية" },
     { base:"handicrafts-baskets-product", tag:"crafts", label:"الحرف اليدوية", alt:"سلال وحقائب منسوجة يدويًا بألوان زاهية" },
@@ -315,6 +314,19 @@
   } else {
     dividers.forEach(d => d.classList.add("is-visible"));
   }
+
+  /* =======================================================================
+     Timeline tabs
+     ======================================================================= */
+  const tlTabs = $$("#tl-tabs button");
+  const tlGroups = $$("#tl-list .tl-era-group");
+  tlTabs.forEach(btn => {
+    on(btn, "click", () => {
+      const era = btn.dataset.era;
+      tlTabs.forEach(b => { b.classList.toggle("active", b === btn); b.setAttribute("aria-selected", b === btn ? "true" : "false"); });
+      tlGroups.forEach(g => { g.hidden = g.dataset.eraGroup !== era; });
+    });
+  });
 
   /* =======================================================================
      Active nav link highlighting
@@ -595,7 +607,7 @@
     galleryGrid.innerHTML = GALLERY.map((g, i) => `
       <div class="masonry-item" data-tag="${g.tag}" data-index="${i}">
         <picture>
-          <source srcset="${IMG}${g.base}-thumb.jpg" type="image/jpg">
+          <source srcset="${IMG}${g.base}-thumb.jpg" type="image/jpeg">
           <img src="${IMG}${g.base}-thumb.jpg" alt="${g.alt}" loading="lazy" width="480" height="360">
         </picture>
         <div class="m-overlay">${g.alt}</div>

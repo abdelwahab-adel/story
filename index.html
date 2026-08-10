@@ -190,82 +190,48 @@
 
     <h3 class="h-display block-title" data-reveal data-en="Landmark eras">محطات بارزة</h3>
     <div class="kingdoms-strip" data-reveal>
-      <div class="kingdom-card"><div class="k-era">٢٥٠٠–١٥٠٠ ق.م</div><h4>مملكة كرمة</h4><p>أول دولة مركزية في أفريقيا جنوب الصحراء</p></div>
-      <div class="kingdom-card"><div class="k-era">١٠٧٠ ق.م–٣٥٠ م</div><h4>كوش</h4><p>"الفراعنة السود" الذين حكموا مصر والنوبة</p></div>
-      <div class="kingdom-card"><div class="k-era">٥٩١ ق.م–٣٥٠ م</div><h4>مروي</h4><p>صناعة الحديد وبناء مئات الأهرامات</p></div>
-      <div class="kingdom-card"><div class="k-era">٣٥٠–١٥٠٠ م</div><h4>النوبة المسيحية</h4><p>كنائس مزينة بالفريسكو والصلبان</p></div>
-      <div class="kingdom-card"><div class="k-era">١٣١٧–١٥٠٤ م</div><h4>أفول الممالك المسيحية</h4><p>سقوط دنقلا ثم علوة، وانتشار الإسلام تدريجيًا في النوبة</p></div>
+      <div class="kingdom-card"><div class="k-era">٢٥٠٠–١٥٠٠ ق.م</div><h4>مملكة كرمة</h4><p>أول دولة مركزية في أفريقيا جنوب الصحراء، اشتهرت بصناعة الفخار الرقيق والعمارة الضخمة مثل "الدفوفة".</p></div>
+      <div class="kingdom-card"><div class="k-era">١٠٧٠ ق.م–٣٥٠ م</div><h4>كوش</h4><p>شهدت صعود "الفراعنة السود" الذين حكموا مصر والنوبة معًا (الأسرة الخامسة والعشرون)، وأسّسوا عاصمة عظيمة في نبتة ثم مروي.</p></div>
+      <div class="kingdom-card"><div class="k-era">٥٩١ ق.م–٣٥٠ م</div><h4>مروي</h4><p>اشتهرت بصناعة الحديد وبناء مئات الأهرامات الجنائزية التي لا تزال قائمة حتى اليوم، وطوّرت لغتها المروية الخاصة.</p></div>
+      <div class="kingdom-card"><div class="k-era">٣٥٠–١٥٠٠ م</div><h4>النوبة المسيحية</h4><p>في القرن السادس الميلادي تحوّلت الممالك النوبية الثلاث (نوباتيا، المقرة، علوة) إلى المسيحية، وبُنيت الكنائس المزينة بالفريسكو الرائع.</p></div>
+      <div class="kingdom-card"><div class="k-era">١٣١٧–١٥٠٤ م</div><h4>أفول الممالك المسيحية</h4><p>بدأ الانتشار التدريجي للإسلام في النوبة من خلال التجارة والمعاهدات (مثل اتفاقية البقط)، مما أدى لامتزاج الثقافات وسقوط دنقلا ثم علوة.</p></div>
     </div>
 
     <h3 class="h-display block-title" data-reveal data-en="The complete timeline">الخط الزمني الكامل</h3>
-    <div class="timeline" data-reveal>
-      <div class="timeline-spine" aria-hidden="true"></div>
-      <div class="timeline-era-title">١. العصور المبكرة (ما قبل الأسرات)</div>
-      <div class="timeline-item">
-        <div class="tl-card"><div class="tl-period">٨٠٠٠ – ٥٠٠٠ ق.م</div><div class="tl-title">العصر الحجري الحديث النوبي</div><div class="tl-desc">بدايات الاستقرار والرعي حول النيل</div></div>
-        <div class="tl-dot"></div><div class="tl-spacer"></div>
-      </div>
-      <div class="timeline-item">
-        <div class="tl-spacer"></div><div class="tl-dot"></div>
-        <div class="tl-card"><div class="tl-period">٣٨٠٠ – ٣١٠٠ ق.م</div><div class="tl-title">المجموعة (أ) — A-Group</div><div class="tl-desc">أول كيان سياسي منظم في النوبة السفلى، تزامن مع عصر توحيد مصر</div></div>
+
+    <div class="tl-tabs" id="tl-tabs" role="tablist" data-reveal>
+      <button type="button" class="active" role="tab" aria-selected="true" data-era="1">١. العصور المبكرة</button>
+      <button type="button" role="tab" aria-selected="false" data-era="2">٢. عصر الممالك الكبرى</button>
+      <button type="button" role="tab" aria-selected="false" data-era="3">٣. العصور المسيحية والإسلامية</button>
+      <button type="button" role="tab" aria-selected="false" data-era="4">٤. العصر الحديث</button>
+    </div>
+
+    <div class="tl-list" id="tl-list" data-reveal>
+      <div class="tl-era-group" data-era-group="1" role="tabpanel">
+        <div class="tl-row"><div class="tl-text"><div class="tl-title">العصر الحجري الحديث النوبي</div><div class="tl-desc">بدايات الاستقرار والرعي حول النيل</div></div><div class="tl-period">٨٠٠٠ – ٥٠٠٠ ق.م</div></div>
+        <div class="tl-row"><div class="tl-text"><div class="tl-title">المجموعة (أ) — A-Group</div><div class="tl-desc">أول كيان سياسي منظم في النوبة السفلى، تزامن مع عصر توحيد مصر</div></div><div class="tl-period">٣٨٠٠ – ٣١٠٠ ق.م</div></div>
       </div>
 
-      <div class="timeline-era-title">٢. عصر الممالك الكبرى (العصر الذهبي)</div>
-      <div class="timeline-item">
-        <div class="tl-card"><div class="tl-period">٢٥٠٠ – ١٥٠٠ ق.م</div><div class="tl-title">مملكة كرمة</div><div class="tl-desc">أول إمبراطورية نوبية قوية وعاصمتها كرمة (شمال السودان الحالي)</div></div>
-        <div class="tl-dot"></div><div class="tl-spacer"></div>
-      </div>
-      <div class="timeline-item">
-        <div class="tl-spacer"></div><div class="tl-dot"></div>
-        <div class="tl-card"><div class="tl-period">١٠٧٠ – ٧٥٠ ق.م</div><div class="tl-title">فترة الاستقلال النوبي</div><div class="tl-desc">ظهور مملكة نبتة</div></div>
-      </div>
-      <div class="timeline-item">
-        <div class="tl-card"><div class="tl-period">٧٤٤ – ٦٥٦ ق.م</div><div class="tl-title">الأسرة الخامسة والعشرون (الفراعنة السود)</div><div class="tl-desc">حكم ملوك النوبة (بعنخي، شباكا، طهارقة) مصر والنوبة معًا</div></div>
-        <div class="tl-dot"></div><div class="tl-spacer"></div>
-      </div>
-      <div class="timeline-item">
-        <div class="tl-spacer"></div><div class="tl-dot"></div>
-        <div class="tl-card"><div class="tl-period">٥٩١ ق.م – ٣٥٠ م</div><div class="tl-title">مملكة مروي</div><div class="tl-desc">انتقال العاصمة جنوبًا، وازدهار صناعة الحديد والأبجدية المروية وبناء الأهرامات</div></div>
+      <div class="tl-era-group" data-era-group="2" role="tabpanel" hidden>
+        <div class="tl-row"><div class="tl-text"><div class="tl-title">مملكة كرمة</div><div class="tl-desc">أول إمبراطورية نوبية قوية وعاصمتها كرمة (شمال السودان الحالي)</div></div><div class="tl-period">٢٥٠٠ – ١٥٠٠ ق.م</div></div>
+        <div class="tl-row"><div class="tl-text"><div class="tl-title">فترة الاستقلال النوبي</div><div class="tl-desc">ظهور مملكة نبتة</div></div><div class="tl-period">١٠٧٠ – ٧٥٠ ق.م</div></div>
+        <div class="tl-row"><div class="tl-text"><div class="tl-title">الأسرة الخامسة والعشرون (الفراعنة السود)</div><div class="tl-desc">حكم ملوك النوبة (بعنخي، شباكا، طهارقة) مصر والنوبة معًا</div></div><div class="tl-period">٧٤٤ – ٦٥٦ ق.م</div></div>
+        <div class="tl-row"><div class="tl-text"><div class="tl-title">مملكة مروي</div><div class="tl-desc">انتقال العاصمة جنوبًا، وازدهار صناعة الحديد والأبجدية المروية وبناء الأهرامات</div></div><div class="tl-period">٥٩١ ق.م – ٣٥٠ م</div></div>
       </div>
 
-      <div class="timeline-era-title">٣. العصور المسيحية والإسلامية</div>
-      <div class="timeline-item">
-        <div class="tl-card"><div class="tl-period">٣٥٠ – ٥٥٠ م</div><div class="tl-title">فترة الممالك النوبية الثلاث</div><div class="tl-desc">نوباديا، المقرة، علوة بعد سقوط مروي</div></div>
-        <div class="tl-dot"></div><div class="tl-spacer"></div>
-      </div>
-      <div class="timeline-item">
-        <div class="tl-spacer"></div><div class="tl-dot"></div>
-        <div class="tl-card"><div class="tl-period">٥٥٠ – ١٥٠٠ م</div><div class="tl-title">العصر المسيحي</div><div class="tl-desc">اعتناق النوبيين للمسيحية وبناء الكنائس والممالك القوية مثل مملكة المقرة</div></div>
-      </div>
-      <div class="timeline-item">
-        <div class="tl-card"><div class="tl-period">٦٤٢ م</div><div class="tl-title">اتفاقية البقط</div><div class="tl-desc">توقيع الاتفاقية الشهيرة بين العرب والنوبيين، استمرت لأكثر من ٦٠٠ عام</div></div>
-        <div class="tl-dot"></div><div class="tl-spacer"></div>
-      </div>
-      <div class="timeline-item">
-        <div class="tl-spacer"></div><div class="tl-dot"></div>
-        <div class="tl-card"><div class="tl-period">١٣١٧ – ١٥٠٤ م</div><div class="tl-title">بداية التحول التدريجي للإسلام</div><div class="tl-desc">سقوط آخر الممالك المسيحية (علوة)</div></div>
+      <div class="tl-era-group" data-era-group="3" role="tabpanel" hidden>
+        <div class="tl-row"><div class="tl-text"><div class="tl-title">فترة الممالك النوبية الثلاث</div><div class="tl-desc">نوباديا، المقرة، علوة بعد سقوط مروي</div></div><div class="tl-period">٣٥٠ – ٥٥٠ م</div></div>
+        <div class="tl-row"><div class="tl-text"><div class="tl-title">العصر المسيحي</div><div class="tl-desc">اعتناق النوبيين للمسيحية وبناء الكنائس والممالك القوية مثل مملكة المقرة</div></div><div class="tl-period">٥٥٠ – ١٥٠٠ م</div></div>
+        <div class="tl-row"><div class="tl-text"><div class="tl-title">اتفاقية البقط</div><div class="tl-desc">توقيع الاتفاقية الشهيرة بين العرب والنوبيين، استمرت لأكثر من ٦٠٠ عام</div></div><div class="tl-period">٦٤٢ م</div></div>
+        <div class="tl-row"><div class="tl-text"><div class="tl-title">بداية التحول التدريجي للإسلام</div><div class="tl-desc">سقوط آخر الممالك المسيحية (علوة)</div></div><div class="tl-period">١٣١٧ – ١٥٠٤ م</div></div>
       </div>
 
-      <div class="timeline-era-title">٤. العصر الحديث (التحولات الكبرى)</div>
-      <div class="timeline-item">
-        <div class="tl-card"><div class="tl-period">١٨٢١ – ١٨٨٥ م</div><div class="tl-title">الحكم التركي المصري</div><div class="tl-desc">خضوع النوبة لحكم محمد علي باشا</div></div>
-        <div class="tl-dot"></div><div class="tl-spacer"></div>
-      </div>
-      <div class="timeline-item">
-        <div class="tl-spacer"></div><div class="tl-dot"></div>
-        <div class="tl-card"><div class="tl-period">١٨٩٩ – ١٩٥٥ م</div><div class="tl-title">الحكم الثنائي</div><div class="tl-desc">الحكم الإنجليزي المصري على السودان والنوبة</div></div>
-      </div>
-      <div class="timeline-item">
-        <div class="tl-card"><div class="tl-period">١٩٠٢ – ١٩٣٣ م</div><div class="tl-title">بناء وتعلية خزان أسوان القديم</div><div class="tl-desc">بداية غرق بعض القرى النوبية</div></div>
-        <div class="tl-dot"></div><div class="tl-spacer"></div>
-      </div>
-      <div class="timeline-item">
-        <div class="tl-spacer"></div><div class="tl-dot"></div>
-        <div class="tl-card"><div class="tl-period">١٩٦٠ – ١٩٧٠ م</div><div class="tl-title">بناء السد العالي</div><div class="tl-desc">التاريخ الفاصل الذي أدى لغرق بلاد النوبة القديمة وتهجير أهلها إلى قراهم الحالية</div></div>
-      </div>
-      <div class="timeline-item">
-        <div class="tl-card"><div class="tl-period">١٩٧٣ م</div><div class="tl-title">اللغة النوبية كشفرة سرية</div><div class="tl-desc">استخدام اللغة النوبية في حرب أكتوبر، مما أعطى بعدًا وطنيًا معاصرًا للهوية النوبية</div></div>
-        <div class="tl-dot"></div><div class="tl-spacer"></div>
+      <div class="tl-era-group" data-era-group="4" role="tabpanel" hidden>
+        <div class="tl-row"><div class="tl-text"><div class="tl-title">الحكم التركي المصري</div><div class="tl-desc">خضوع النوبة لحكم محمد علي باشا</div></div><div class="tl-period">١٨٢١ – ١٨٨٥ م</div></div>
+        <div class="tl-row"><div class="tl-text"><div class="tl-title">الحكم الثنائي</div><div class="tl-desc">الحكم الإنجليزي المصري على السودان والنوبة</div></div><div class="tl-period">١٨٩٩ – ١٩٥٥ م</div></div>
+        <div class="tl-row"><div class="tl-text"><div class="tl-title">بناء وتعلية خزان أسوان القديم</div><div class="tl-desc">بداية غرق بعض القرى النوبية</div></div><div class="tl-period">١٩٠٢ – ١٩٣٣ م</div></div>
+        <div class="tl-row"><div class="tl-text"><div class="tl-title">بناء السد العالي</div><div class="tl-desc">التاريخ الفاصل الذي أدى لغرق بلاد النوبة القديمة وتهجير أهلها إلى قراهم الحالية</div></div><div class="tl-period">١٩٦٠ – ١٩٧٠ م</div></div>
+        <div class="tl-row"><div class="tl-text"><div class="tl-title">اللغة النوبية كشفرة سرية</div><div class="tl-desc">استخدام اللغة النوبية في حرب أكتوبر، مما أعطى بعدًا وطنيًا معاصرًا للهوية النوبية</div></div><div class="tl-period">١٩٧٣ م</div></div>
       </div>
     </div>
 
@@ -324,7 +290,7 @@
       <div class="story-text">
         <h3>عناصر الاحتفال</h3>
         <p><b>الإيقاع والطار:</b> تبدأ الاحتفالات النوبية بإيقاع الطار والرقص الجماعي الذي يجمع القرية كلها حول الدفوف.</p>
-        <p><b>رقصة الأراجيد:</b> رقصة فريدة بحركة الأكتاف والتوازن المتناغم، تُؤدى في الأفراح والمناسبات الكبرى.</p>
+        <p><b>الرقص الشعبي — رقصة الأراجيد:</b> أشهر الرقصات النوبية، وهي رقصة جماعية تعتمد على حركة الأكتاف والتصفيق الإيقاعي المتناغم، تُؤدى في الأفراح والمناسبات الكبرى.</p>
         <p><b>السلم الخماسي:</b> سلّم موسيقي مميز يمنح الأغاني النوبية طابعًا شجيًا يختلف عن الموسيقى العربية التقليدية.</p>
       </div>
     </div>
@@ -338,10 +304,10 @@
 
     <h3 id="instruments" class="h-display block-title text-center anchor" data-reveal>الآلات الموسيقية</h3>
     <div class="grid grid-4" data-reveal>
-      <div class="symbol-card"><div class="sym-icon"><img src="assets/images/music-tanbur-instrument-thumb.jpg" alt="آلة الطنبور النوبي الوترية"></div><h5>الطنبور</h5><p>آلة وترية — روح الموسيقى النوبية</p></div>
-      <div class="symbol-card"><div class="sym-icon"><img src="assets/images/music-tar-players-thumb.jpg" alt="عازفون نوبيون يعزفون على الطار"></div><h5>الطار</h5><p>آلة إيقاعية — قلب الاحتفالات</p></div>
-      <div class="symbol-card"><div class="sym-icon"><img src="assets/images/music-choir-abu-simbel-thumb.jpg" alt="مجموعة إنشاد نوبية أمام معبد أبو سمبل"></div><h5>الإنشاد الجماعي</h5><p>أداء جماعي بالزي التقليدي</p></div>
-      <div class="symbol-card"><div class="sym-icon"><img src="assets/images/music-drum-generations-thumb.jpg" alt="جيلان يعزفان الدفوف معًا في جلسة غير رسمية"></div><h5>توارث الدفوف</h5><p>تعليم الإيقاع جيلًا بعد جيل</p></div>
+      <div class="symbol-card"><div class="sym-icon"><img src="assets/images/music-tanbur-instrument-thumb.jpg" alt="آلة الطنبور النوبي الوترية"></div><h4>الطنبور</h4><p>آلة وترية — روح الموسيقى النوبية</p></div>
+      <div class="symbol-card"><div class="sym-icon"><img src="assets/images/music-tar-players-thumb.jpg" alt="عازفون نوبيون يعزفون على الطار"></div><h4>الطار</h4><p>آلة إيقاعية — قلب الاحتفالات</p></div>
+      <div class="symbol-card"><div class="sym-icon"><img src="assets/images/music-choir-abu-simbel-thumb.jpg" alt="مجموعة إنشاد نوبية أمام معبد أبو سمبل"></div><h4>الإنشاد الجماعي</h4><p>أداء جماعي بالزي التقليدي</p></div>
+      <div class="symbol-card"><div class="sym-icon"><img src="assets/images/music-drum-generations-thumb.jpg" alt="جيلان يعزفان الدفوف معًا في جلسة غير رسمية"></div><h4>توارث الدفوف</h4><p>تعليم الإيقاع جيلًا بعد جيل</p></div>
     </div>
 
     <!-- LANGUAGE / DICTIONARY -->
@@ -377,7 +343,7 @@
 
           <div class="mini-game-cta">
             <div>
-              <h4>لعبة تعلّم سريعة</h4>
+              <h3>لعبة تعلّم سريعة</h3>
               <p>خمّن مقابل الكلمة العربية باللهجة الفاديجا في خمس جولات.</p>
             </div>
             <button class="btn btn-primary btn-sm" id="dict-game-start">ابدأ اللعب</button>
@@ -416,7 +382,7 @@
       <div class="grid grid-2" data-reveal>
         <div class="card">
           <div class="card-media"><picture><img src="assets/images/clothes-women-headscarves-thumb.jpg" alt="سيدتان نوبيتان يرتديان الأزياء التقليدية الملونة" loading="lazy"></picture></div>
-          <div class="card-body"><span class="card-eyebrow">الجرجار الأسود</span><p>زي المرأة النوبية التقليدي الطويل الذي يميز هويتها في كل مناسبة. الجرجار الأسود الشفاف يُلبس فوق ملابس ملونة، ويتميز بطوله الذي يجرّ خلف المرأة.</p></div>
+          <div class="card-body"><span class="card-eyebrow">الجرجار الأسود</span><p>زي المرأة النوبية التقليدي الطويل الذي يميز هويتها في كل مناسبة. الجرجار الأسود الشفاف يُلبس فوق ملابس ملونة، ويتميز بطوله الذي يجرّ خلف المرأة ليمسح أثر أقدامها.</p></div>
         </div>
         <div style="display:flex;flex-direction:column;gap:26px;">
           <div class="card" style="flex:1;"><div class="card-body"><span class="card-eyebrow">ملابس الرجل</span><h3>الجلباب والعمامة</h3><p>الجلباب الأبيض والعمامة والصديري النوبي المطرز أحيانًا.</p></div></div>
@@ -442,9 +408,9 @@
         </div>
       </div>
       <div class="symbol-grid stack-lg" data-reveal>
-        <div class="symbol-card"><h5>التصميم</h5><p>قباب وقبو (الجريد واللحف) لتبريد الجو طبيعيًا دون الحاجة لتكييف</p></div>
-        <div class="symbol-card"><h5>الألوان والزخارف</h5><p>واجهات بيضاء تُزين برموز شعبية مثل التمساح للحماية والعقرب لمنع الحسد</p></div>
-        <div class="symbol-card"><h5>المصطبة</h5><p>جزء أساسي خارج البيت وداخله للجلوس واستقبال الضيوف</p></div>
+        <div class="symbol-card"><h4>التصميم</h4><p>قباب وقبو (الجريد واللحف) لتبريد الجو طبيعيًا دون الحاجة لتكييف</p></div>
+        <div class="symbol-card"><h4>الألوان والزخارف</h4><p>واجهات بيضاء تُزين برموز شعبية مثل التمساح للحماية والعقرب لمنع الحسد</p></div>
+        <div class="symbol-card"><h4>المصطبة</h4><p>جزء أساسي خارج البيت وداخله للجلوس واستقبال الضيوف</p></div>
       </div>
 
       <div class="grid grid-4 stack-md" data-reveal>
@@ -495,6 +461,12 @@
           <p class="pull-quote">أسواق القرى النوبية تعرض هذه الحرف يوميًا لأهالي أسوان وزوارها.</p>
         </div>
       </div>
+      <div class="symbol-grid stack-lg" data-reveal>
+        <div class="symbol-card"><h4>الخوص والطباق</h4><p>صناعة "الشوربة" و"الكوندا" (أطباق من جريد النخل) الملوّنة بألوان زاهية، وتُستخدم لتقديم الطعام أو كزينة للحوائط.</p></div>
+        <div class="symbol-card"><h4>الخرز والمشغولات</h4><p>صناعة العقود ("الجرجار") والحلي الذهبية والفضية المميزة مثل "الزمام" و"الخلاخيل".</p></div>
+        <div class="symbol-card"><h4>الفخار</h4><p>صناعة "الزير" و"القِلال" بتصميمات نوبية فريدة لتبريد الماء.</p></div>
+      </div>
+
       <div class="grid grid-4 stack-lg" data-reveal>
         <div class="card card--compact"><div class="card-media"><picture><img src="assets/images/handicrafts-basket-weaving-hands-thumb.jpg" alt="سيدة نوبية تصنع سلة من سعف النخيل" loading="lazy"></picture></div><div class="card-body"><h3>السلال الملونة</h3><p>مصنوعة من سعف النخيل بألوان زاهية متعددة</p></div></div>
         <div class="card card--compact"><div class="card-media"><picture><img src="assets/images/handicrafts-hanging-pottery-thumb.jpg" alt="أوعية فخارية معلّقة بزخارف نسيجية" loading="lazy"></picture></div><div class="card-body"><h3>الفخار المزخرف</h3><p>أواني فخارية بنقوش هندسية موروثة</p></div></div>
@@ -509,17 +481,17 @@
       <p class="section-lede subsection-lede" data-reveal>يتبادل الجميع التحية بعبارة <b>"كوريج أنجا ناليه"</b> (عيد سعيد)، مع ارتداء الزي التقليدي وإعداد الأطباق الخاصة.</p>
       <div class="grid grid-3" data-reveal>
         <div class="symbol-card symbol-card--start">
-          <h5>عيد الفطر — ١ شوال</h5>
-          <p>صلاة العيد، زيارة الأقارب، وتبادل الحلويات، مع طبق "شعرية الحليب" التقليدي.</p>
+          <h4>عيد الفطر — ١ شوال</h4>
+          <p>يبدأ بصلاة العيد، تليها زيارة الأقارب وتبادل التحايا والحلويات (الكعك والبسكويت). يُعد طبق "شعرية الحليب" الطبق التقليدي الأساسي في هذا العيد.</p>
         </div>
         <div class="symbol-card symbol-card--start">
-           <h5>عيد الأضحى — ١٠ ذو الحجة</h5>
-          <p>تقديم "الجكوت" و"الكشيد"، وتتزين النساء بالجرجار النوبي.</p>
+           <h4>عيد الأضحى — ١٠ ذو الحجة</h4>
+          <p>يشتهر بطقوس ذبح الأضاحي وتقديم أطباق تقليدية مثل "الجكوت" و"الكشيد". يرتدي الجميع أبهى ثيابهم، وتتزين النساء بالجرجار النوبي.</p>
         </div>
         <div class="symbol-card symbol-card--start">
           
-          <h5>يوم النوبة العالمي — ٧ يوليو</h5>
-          <p>احتفاء عالمي بالثقافة النوبية، والرقم ٧ مقدّس في الطقوس النوبية القديمة.</p>
+          <h4>يوم النوبة العالمي — ٧ يوليو</h4>
+          <p>يوم مخصص للاحتفال بالثقافة النوبية في جميع أنحاء العالم، ويرمز إلى الوحدة والتراث. يُعتبر الرقم ٧ مقدّسًا في الطقوس النوبية القديمة.</p>
         </div>
       </div>
     </div>
@@ -652,7 +624,7 @@
             <div class="a-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></div>
           </div>
           <div class="attraction-item" data-map-query="Philae Temple Aswan">
-            <div class="a-thumb icon-thumb"><picture><source srcset="assets/images/temple-philae-thumb.avif" type="image/avif"><img src="assets/images/temple-philae-thumb.avif" alt="معبد فيلة" loading="lazy"></picture></div>
+            <div class="a-thumb icon-thumb"><picture><source srcset="assets/images/temple-philae-thumb.avif" type="image/avif"><img src="assets/images/temple-philae-thumb.jpg" alt="معبد فيلة" loading="lazy"></picture></div>
             <div><h4>معبد فيلة</h4><p>لؤلؤة النيل المخصصة للإلهة إيزيس</p></div>
             <div class="a-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></div>
           </div>
@@ -687,9 +659,9 @@
 
         <div class="itinerary-tabs">
           <h3 class="h-display col-title">اقتراح رحلة ٣ أيام</h3>
-          <div class="itin-day"><div class="itin-num">١</div><div><h5>أسوان والنيل</h5><p>نزهة بالمركب الشراعي على النيل، وزيارة قرية غرب سهيل الملونة.</p></div></div>
-          <div class="itin-day"><div class="itin-num">٢</div><div><h5>فيلة والمتحف</h5><p>معبد فيلة صباحًا، ثم متحف النوبة لاستكشاف تاريخ المنطقة.</p></div></div>
-          <div class="itin-day"><div class="itin-num">٣</div><div><h5>أبو سمبل</h5><p>رحلة إلى معبدَي أبو سمبل، مع وقت هادئ عند جزيرة هيسا إن أمكن.</p></div></div>
+          <div class="itin-day"><div class="itin-num">١</div><div><h4>أسوان والنيل</h4><p>نزهة بالمركب الشراعي على النيل، وزيارة قرية غرب سهيل الملونة.</p></div></div>
+          <div class="itin-day"><div class="itin-num">٢</div><div><h4>فيلة والمتحف</h4><p>معبد فيلة صباحًا، ثم متحف النوبة لاستكشاف تاريخ المنطقة.</p></div></div>
+          <div class="itin-day"><div class="itin-num">٣</div><div><h4>أبو سمبل</h4><p>رحلة إلى معبدَي أبو سمبل، مع وقت هادئ عند جزيرة هيسا إن أمكن.</p></div></div>
         </div>
       </div>
 
@@ -964,7 +936,7 @@
           <li><a href="#kitchen">المطبخ</a></li>
         </ul>
       </div>
-      <div>
+      <div class="footer-col">
         <h5 data-en="More">المزيد</h5>
         <ul style="margin-bottom:var(--sp-sm);">
           <li><a href="#figures">الشخصيات</a></li>
