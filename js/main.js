@@ -316,6 +316,19 @@
   }
 
   /* =======================================================================
+     Figures tabs
+     ======================================================================= */
+  const figTabs = $$("#fig-tabs button");
+  const figPanels = $$("#fig-panels .fig-panel");
+  figTabs.forEach(btn => {
+    on(btn, "click", () => {
+      const cat = btn.dataset.cat;
+      figTabs.forEach(b => { b.classList.toggle("active", b === btn); b.setAttribute("aria-selected", b === btn ? "true" : "false"); });
+      figPanels.forEach(p => { p.hidden = p.dataset.catPanel !== cat; });
+    });
+  });
+
+  /* =======================================================================
      Timeline tabs
      ======================================================================= */
   const tlTabs = $$("#tl-tabs button");

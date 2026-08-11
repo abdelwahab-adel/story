@@ -730,7 +730,7 @@
       <span class="section-eyebrow" data-en="Voices">آراء وشهادات</span>
       <h2 class="section-title h-display" data-en="Voices from Nubia">أصوات من أرض النوبة</h2>
     </div>
-    <div class="testi-viewport" data-reveal="scale">
+    <div class="testi-viewport">
       <div class="testi-track" id="testi-track">
         <div class="testi-slide">
           <div class="testi-card">
@@ -774,31 +774,69 @@
       <h2 class="section-title h-display" data-en="Faces that carried Nubia's name">وجوه حملت اسم النوبة</h2>
     </div>
 
-    <h3 class="figure-group-title" data-reveal>في الأدب والفكر (حراس الهوية)</h3>
-    <div class="grid grid-3" data-reveal>
-      <div class="figure-card"><div class="f-avatar">م</div><h4>محمد خليل قاسم</h4><p>صاحب رواية "الشمندورة"، التي تُعد "إنجيل النوبيين"، أرّخ فيها لحياة النوبيين ومعاناتهم مع التهجير.</p></div>
-      <div class="figure-card"><div class="f-avatar">ح</div><h4>حجاج أدول</h4><p>أديب ومناضل نوبي عالمي، نال جوائز عديدة وتركز كتاباته على الخصوصية الثقافية للنوبة.</p></div>
-      <div class="figure-card"><div class="f-avatar">إ</div><h4>إدريس علي</h4><p>روائي نوبي جريء، ناقشت رواياته مثل "دنقلة" قضايا التهميش والبحث عن الذات.</p></div>
+    <div class="fig-tabs" id="fig-tabs" role="tablist" data-reveal>
+      <button type="button" class="cat-lit active" role="tab" aria-selected="true" data-cat="lit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5.5C4 4.67 4.67 4 5.5 4H11v16H5.5A1.5 1.5 0 014 18.5v-13Z"/><path d="M20 5.5c0-.83-.67-1.5-1.5-1.5H13v16h5.5c.83 0 1.5-.67 1.5-1.5v-13Z"/></svg>
+        الأدب والفكر
+      </button>
+      <button type="button" class="cat-art" role="tab" aria-selected="false" data-cat="art">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/><path d="M9 18V4l12-2v14"/></svg>
+        الفن والموسيقى
+      </button>
+      <button type="button" class="cat-pol" role="tab" aria-selected="false" data-cat="pol">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16.9 6.4 20.1l1.4-6.3-4.8-4.3 6.4-.6L12 3Z" stroke-linejoin="round"/></svg>
+        البطولة والسياسة
+      </button>
+      <button type="button" class="cat-sport" role="tab" aria-selected="false" data-cat="sport">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L7 21l5-3 5 3-2-7.5"/></svg>
+        الرياضة والعمل الاجتماعي
+      </button>
     </div>
 
-    <h3 class="figure-group-title" data-reveal>في الفن والموسيقى (سفراء النوبة)</h3>
-    <div class="grid grid-3" data-reveal>
-      <div class="figure-card"><div class="f-avatar">م</div><h4>محمد منير</h4><p>أهم رمز نوبي معاصر، نقل السلم الموسيقي الخماسي النوبي إلى العالمية ومزجه بموسيقى الجاز والروك.</p></div>
-      <div class="figure-card"><div class="f-avatar">أ</div><h4>أحمد منيب</h4><p>الأب الروحي للأغنية النوبية الحديثة، وضع أساس مدرسة "منير" الغنائية بألحان خالدة.</p></div>
-      <div class="figure-card"><div class="f-avatar">ح</div><h4>حمزة علاء الدين</h4><p>فنان نوبي عالمي وعازف عود، وصل بموسيقى النوبة إلى مسارح أمريكا واليابان.</p></div>
-    </div>
+    <div id="fig-panels">
+      <div class="fig-panel cat-lit" data-cat-panel="lit" role="tabpanel">
+        <p class="fig-panel-sub">حراس الهوية</p>
+        <div class="grid grid-3">
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-mohamed-khalil-qasim.jpg" alt="محمد خليل قاسم"></div><h3>محمد خليل قاسم</h3><span class="f-role">روائي وأديب</span><p>من أبرز الأسماء في الأدب النوبي الحديث، واشتهر بروايته «الشمندورة» التي تناولت حياة النوبيين وتفاصيل مجتمعهم والتغيرات التي مروا بها، خاصة تجربة التهجير المرتبطة ببناء السد العالي. قدم من خلال الأدب شهادة مهمة على حياة المجتمع النوبي، ولذلك أصبحت أعماله جزءًا مهمًا من الذاكرة الأدبية والتاريخية للنوبة.</p></div>
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-hagag-oddoul.jpg" alt="حجاج أدول"></div><h3>حجاج أدول</h3><span class="f-role">أديب وروائي ومسرحي</span><p>أحد أبرز الأصوات الأدبية النوبية المعاصرة، تناول في كتاباته قضايا الهوية والانتماء والتهجير والخصوصية الثقافية للنوبة. كتب في الرواية والقصة والمسرح، واستطاع أن يجعل القضية النوبية حاضرة في الأدب المصري والعربي. كما عُرف بمواقفه المدافعة عن الثقافة والهوية النوبية وحقها في الحضور داخل المشهد الثقافي المصري.</p></div>
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-idris-ali.jpg" alt="إدريس علي"></div><h3>إدريس علي</h3><span class="f-role">روائي وقاص</span><p>روائي وقاص نوبي بارز، ركز جانب كبير من إنتاجه الأدبي على الإنسان النوبي وتجربة التهجير وقضايا التهميش والهوية. من أشهر أعماله رواية «دنقلة» التي تناولت عالم النوبة والتحولات الاجتماعية والنفسية التي عاشها أبناؤها. استطاع من خلال أعماله أن ينقل تفاصيل الحياة النوبية إلى القارئ العربي، وأن يجعل الأدب وسيلة للتعبير عن الذاكرة والهوية والانتماء.</p></div>
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-hassan-nour.jpg" alt="حسن نور"></div><h3>حسن نور</h3><span class="f-role">أديب وروائي نوبي</span><p>أديب وروائي نوبي اهتم في أعماله بتوثيق حياة المجتمع النوبي والتحولات التي مر بها، خاصة تجربة التهجير وآثارها على الإنسان والثقافة والهوية. ومن أعماله رواية «بين النهر والجبل»، التي تنتمي إلى الأدب النوبي وتتناول جوانب من الحياة والذاكرة النوبية.</p></div>
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-yahia-mokhtar.jpg" alt="يحيى مختار"></div><h3>يحيى مختار</h3><span class="f-role">روائي وقاص ومؤرخ للتراث النوبي</span><p>من أبرز الأدباء والباحثين المهتمين بالتراث النوبي. وُلد في الجنينة والشباك بالنوبة القديمة، وظلت النوبة حاضرة بقوة في كتاباته وأبحاثه. اهتم بتوثيق الحكايات والعادات والتقاليد والذاكرة الشعبية، ولذلك عُرف بلقب «مؤرخ التراث»، وأسهم في الحفاظ على جانب مهم من الذاكرة الثقافية النوبية.</p></div>
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-kabbara.jpg" alt="مختار محمد خليل كبارة"></div><h3>مختار محمد خليل كبارة</h3><span class="f-role">باحث في اللغة والآثار</span><p>باحث نوبي اهتم منذ صغره باللغة والتراث النوبي. درس الآثار، وحصل على الدكتوراه في علم المصريات من جامعة بون بألمانيا. كرّس جانبًا مهمًا من حياته لدراسة اللغة النوبية وتوثيقها، واشتهر بكتابه «اللغة النوبية.. كيف نكتبها؟»، الذي تناول قواعد الكتابة باللغة النوبية وسعى إلى توفير وسيلة عملية لتدوينها والحفاظ عليها.</p></div>
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-ibrahim-shaarawy.jpg" alt="إبراهيم شعراوي"></div><h3>إبراهيم شعراوي</h3><span class="f-role">أديب وشاعر وباحث في التراث النوبي</span><p>من أهم رواد الأدب النوبي، وعُرف بلقب «شيخ أدباء النوبة». اهتم بتوثيق الحكايات الشعبية والأساطير والفلكلور والعادات والتقاليد النوبية، وجعل من الأدب وسيلة للحفاظ على الذاكرة الثقافية للمجتمع النوبي. أسهمت أعماله في التعريف بالأدب النوبي وإبراز خصوصيته داخل المشهد الأدبي المصري.</p></div>
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-mohyeldin-saleh.jpg" alt="محيي الدين صالح"></div><h3>محيي الدين صالح</h3><span class="f-role">شاعر وأديب وباحث في الثقافة النوبية</span><p>من الشخصيات المهمة في الحركة الأدبية والثقافية النوبية. اهتم بالشعر والأدب ودراسة التراث، وساهم في توثيق أعمال عدد من الأدباء والمبدعين النوبيين. ارتبط نشاطه بالحفاظ على الذاكرة الثقافية والهوية النوبية، وجعل من الكتابة والبحث وسيلة لتوثيق تاريخ المجتمع النوبي وثقافته.</p></div>
+        </div>
+      </div>
 
-    <h3 class="figure-group-title" data-reveal>في البطولة والسياسة</h3>
-    <div class="grid grid-3" data-reveal>
-      <div class="figure-card"><div class="f-avatar">م</div><h4>المشير محمد حسين طنطاوي</h4><p>ابن قرية أبو سمبل، شغل منصب وزير الدفاع وقاد البلاد في فترة انتقالية حرجة.</p></div>
-      <div class="figure-card"><div class="f-avatar">أ</div><h4>أحمد إدريس</h4><p>صاحب فكرة "الشفرة النوبية" في حرب أكتوبر، اقترح استخدام اللغة النوبية لتضليل العدو.</p></div>
-      <div class="figure-card"><div class="f-avatar">ز</div><h4>زكي مراد</h4><p>أحد أبرز السياسيين والمثقفين النوبيين وكان له دور كبير في الحركة الوطنية المصرية.</p></div>
-    </div>
+      <div class="fig-panel cat-art" data-cat-panel="art" role="tabpanel" hidden>
+        <p class="fig-panel-sub">سفراء النوبة</p>
+        <div class="grid grid-3">
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-mohamed-mounir.jpg" alt="محمد منير"></div><h3>محمد منير</h3><span class="f-role">مطرب وملحّن</span><p>يُعد محمد منير واحدًا من أشهر أبناء النوبة وأكثر الشخصيات تأثيرًا في الموسيقى المصرية الحديثة. استطاع أن يقدم الموسيقى والإيقاعات النوبية إلى جمهور واسع داخل مصر وخارجها، ودمجها مع أنماط موسيقية مختلفة مثل الجاز والروك والموسيقى الأفريقية. أصبح أسلوبه الفني المميز علامة خاصة به، وساهم في جعل الهوية النوبية جزءًا حاضرًا بقوة في المشهد الموسيقي المصري والعربي.</p></div>
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-ahmed-mounib.jpg" alt="أحمد منيب"></div><h3>أحمد منيب</h3><span class="f-role">ملحّن ومطرب</span><p>من أهم رواد الموسيقى والغناء النوبي الحديث، وصاحب تأثير كبير في تطور الأغنية النوبية المعاصرة. قدم ألحانًا مستوحاة من التراث الموسيقي النوبي مع تطويرها بأسلوب حديث، وكان له تأثير واضح على عدد من الفنانين، ومن أبرزهم محمد منير. لذلك يُنظر إليه باعتباره أحد أهم الأساتذة الذين ساهموا في تشكيل مدرسة الأغنية النوبية الحديثة.</p></div>
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-hamza-eldin.jpg" alt="حمزة علاء الدين"></div><h3>حمزة علاء الدين</h3><span class="f-role">عازف عود وملحن ومطرب عالمي</span><p>فنان نوبي عالمي ساهم في نقل الموسيقى النوبية من نطاقها المحلي إلى المسارح العالمية. تميز بعزفه على العود وبأسلوبه الذي جمع بين التراث النوبي والتجارب الموسيقية العالمية. قدم حفلات وأعمالًا في عدد من دول العالم، وأسهم في تعريف الجمهور في الولايات المتحدة واليابان وأوروبا بجمال الموسيقى والثقافة النوبية.</p></div>
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-hassan-gozouli.jpg" alt="حسن جزولي"></div><h3>حسن جزولي</h3><span class="f-role">مطرب وفنان نوبي</span><p>من رواد الأغنية النوبية، وُلد عام 1936 في قرية قورة بإنيبا في النوبة القديمة. بدأ مسيرته الفنية في خمسينيات القرن العشرين، وارتبطت أعماله بالغناء النوبي والتراث الشعبي والتقاليد المحلية. قدم فنه داخل مصر وخارجها، وساهم في الحفاظ على حضور الأغنية النوبية وانتقالها إلى أجيال جديدة.</p></div>
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-mohamed-wardi.jpg" alt="محمد عثمان وردي"></div><h3>محمد عثمان وردي</h3><span class="f-role">مطرب وملحن وشاعر نوبي سوداني</span><p>أحد أعظم رموز الفن النوبي والسوداني في القرن العشرين. وُلد في وادي حلفا شمال السودان، وهي منطقة ذات جذور نوبية عريقة. قدم أعمالًا باللغتين النوبية والعربية، وجمع في موسيقاه بين التراث النوبي والتجديد الموسيقي. تجاوز تأثيره حدود السودان، وأصبح أحد أبرز الأصوات التي عرّفت الجمهور العربي والعالمي بالموسيقى النوبية السودانية.</p></div>
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-ali-kuban.jpg" alt="علي كوبان"></div><h3>علي كوبان</h3><span class="f-role">مطرب وموسيقار نوبي</span><p>من أهم رواد الموسيقى النوبية الحديثة، وُلد في قورة بالنوبة القديمة، وارتبط اسمه بتطوير الأغنية النوبية وتقديمها بأسلوب موسيقي حديث. ساهم في دمج الإيقاعات والألحان النوبية مع تأثيرات موسيقية مختلفة، كما لعب دورًا مهمًا في انتشار الموسيقى النوبية خارج مصر. ويُعد من أبرز الرموز الفنية التي ساهمت في وصول الفن النوبي إلى جمهور عالمي.</p></div>
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-bahr-abu-gresha.jpg" alt="بحر أبو جريشة"></div><h3>بحر أبو جريشة</h3><span class="f-role">مطرب وفنان نوبي</span><p>من الفنانين المرتبطين بالأغنية الشعبية والتراث الموسيقي النوبي. ساهم من خلال أعماله في الحفاظ على حضور الألحان والإيقاعات الشعبية، وارتبط فنه بالثقافة المحلية والهوية النوبية. يمثل أحد الأصوات التي جمعت بين الطابع الشعبي والتعبير عن التراث والذاكرة النوبية.</p></div>
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-khedr-elattar.jpg" alt="خضر العطار"></div><h3>خضر العطار</h3><span class="f-role">مطرب وحافظ للتراث النوبي</span><p>من أبرز الأصوات في تاريخ الأغنية النوبية، ارتبط فنه بالتراث والذاكرة الشعبية للنوبة. عبّرت أعماله عن الحياة النوبية والحنين إلى القرى القديمة، وحملت الكثير من ملامح الثقافة واللغة والإيقاعات النوبية. ساهم في نقل الأغنية النوبية إلى أجيال جديدة والحفاظ على حضورها كجزء من الهوية الثقافية للنوبة.</p></div>
+        </div>
+      </div>
 
-    <h3 class="figure-group-title" data-reveal>في الرياضة والعمل الاجتماعي</h3>
-    <div class="grid grid-3" data-reveal>
-      <div class="figure-card"><div class="f-avatar">ش</div><h4>شيكابالا (محمود عبد الرازق)</h4><p>أيقونة نادي الزمالك، من أشهر الرياضيين النوبيين بفضل مهارته وانتمائه لجذوره.</p></div>
-      <div class="figure-card"><div class="f-avatar">ع</div><h4>المشير عبد الغني الجمسي</h4><p>أحد مهندسي حرب أكتوبر ١٩٧٣.</p></div>
+      <div class="fig-panel cat-pol" data-cat-panel="pol" role="tabpanel" hidden>
+        <div class="grid grid-3">
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-tantawy.jpg" alt="المشير محمد حسين طنطاوي"></div><h3>المشير محمد حسين طنطاوي</h3><span class="f-role">مشير ووزير دفاع</span><p>قائد عسكري مصري بارز من أصول نوبية، تولى منصب وزير الدفاع والإنتاج الحربي ورئاسة المجلس الأعلى للقوات المسلحة. شارك في عدد من الحروب التي خاضتها مصر، وكان من أبرز القادة العسكريين في تاريخ مصر الحديث. تولى إدارة البلاد خلال المرحلة الانتقالية عقب ثورة يناير 2011، ولعب دورًا محوريًا في الحفاظ على مؤسسات الدولة خلال تلك الفترة.</p></div>
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-ahmed-idris.jpg" alt="أحمد إدريس"></div><h3>أحمد إدريس</h3><span class="f-role">بطل حرب أكتوبر</span><p>جندي نوبي من أبناء أسوان، ارتبط اسمه بفكرة استخدام اللغة النوبية في تأمين الاتصالات العسكرية خلال حرب أكتوبر 1973. قدم فكرته للقيادة العسكرية، واستُخدمت كلمات من اللغة النوبية كوسيلة لتشفير بعض الاتصالات، مستفيدين من عدم فهم القوات الإسرائيلية لهذه اللغة. أصبحت قصته واحدة من أشهر القصص المرتبطة بدور أبناء النوبة في حرب أكتوبر.</p></div>
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-zaki-murad.jpg" alt="زكي مراد"></div><h3>زكي مراد</h3><span class="f-role">سياسي ومثقف وشاعر</span><p>شخصية نوبية بارزة جمعت بين النشاط السياسي والعمل الثقافي والأدبي. شارك في الحركة الوطنية المصرية، واهتم بالقضايا السياسية والاجتماعية، كما ارتبط اسمه بالحياة الثقافية النوبية. يمثل نموذجًا للمثقف النوبي الذي جمع بين الدفاع عن قضايا المجتمع والمشاركة في الحياة العامة المصرية.</p></div>
+        </div>
+      </div>
+
+      <div class="fig-panel cat-sport" data-cat-panel="sport" role="tabpanel" hidden>
+        <div class="grid grid-2">
+          <div class="figure-card"><div class="f-avatar">ش</div><h3>شيكابالا (محمود عبد الرازق)</h3><span class="f-role">لاعب كرة قدم</span><p>أيقونة نادي الزمالك، من أشهر الرياضيين النوبيين بفضل مهارته وانتمائه لجذوره.</p></div>
+          <div class="figure-card"><div class="f-avatar">ع</div><h3>المشير عبد الغني الجمسي</h3><span class="f-role">مهندس حربي</span><p>أحد مهندسي حرب أكتوبر ١٩٧٣.</p></div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
