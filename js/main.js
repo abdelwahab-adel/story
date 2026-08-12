@@ -316,6 +316,59 @@
   }
 
   /* =======================================================================
+     Figure card bio expand/collapse
+     ======================================================================= */
+  $$(".figure-card .f-more").forEach(btn => {
+    on(btn, "click", () => {
+      const card = btn.closest(".figure-card");
+      const expanded = card.classList.toggle("is-expanded");
+      btn.textContent = expanded ? "اقرأ أقل" : "اقرأ المزيد";
+    });
+  });
+
+  /* =======================================================================
+     Figure modal (click card → big photo + full bio)
+     ======================================================================= */
+  const figModal = $("#figure-modal");
+  const figModalBox = $(".figure-modal-box", figModal);
+  const figModalAvatar = $("#figure-modal-avatar");
+  const figModalName = $("#figure-modal-name");
+  const figModalRole = $("#figure-modal-role");
+  const figModalBio = $("#figure-modal-bio");
+
+  function openFigureModal(card) {
+    const panel = card.closest(".fig-panel");
+    const cat = panel ? panel.dataset.catPanel : "lit";
+    figModalBox.className = "figure-modal-box cat-" + cat;
+
+    const imgEl = card.querySelector(".f-avatar img");
+    figModalAvatar.innerHTML = imgEl
+      ? `<img src="${imgEl.src}" alt="${imgEl.alt}">`
+      : card.querySelector(".f-avatar").textContent;
+    figModalName.textContent = card.querySelector("h3").textContent;
+    figModalRole.textContent = card.querySelector(".f-role").textContent;
+    figModalBio.textContent = card.querySelector(".f-bio").textContent;
+
+    figModal.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function closeFigureModal() {
+    figModal.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+  $$(".figure-card").forEach(card => {
+    on(card, "click", (e) => {
+      if (e.target.closest(".f-more")) return;
+      openFigureModal(card);
+    });
+  });
+  on($("#figure-modal-close"), "click", closeFigureModal);
+  on(figModal, "click", (e) => { if (e.target === figModal) closeFigureModal(); });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && figModal.classList.contains("open")) closeFigureModal();
+  });
+
+  /* =======================================================================
      Figures tabs
      ======================================================================= */
   const figTabs = $$("#fig-tabs button");
