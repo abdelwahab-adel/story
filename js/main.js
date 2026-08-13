@@ -181,6 +181,69 @@
   ];
 
   /* =======================================================================
+     DATA — Nubian video archive (6-video interactive gallery, Music section)
+     Local video files, NOT YouTube. Each video's file lives at assets/videos/
+     — see assets/videos/README.txt for exact filenames expected.
+     Poster images are auto-extracted from each video file (see build step).
+     ======================================================================= */
+  const NUBIAN_VIDEOS = [
+    {
+      videoSrc: "assets/videos/video-1.mp4",
+      poster: "assets/videos/video-1-poster.png",
+      title: "النوبة – فخور أنا بحضارتي النوبة فوق ❤️",
+      artist: "خضر العطار",
+      category: ["النوبة", "فن وحضارة", "أسوان", "خضر العطار"],
+      description: "رحلة في عمق الهوية النوبية، تعبّر عن الفخر بحضارة النوبة وتراثها الأصيل، وتبرز جمال الفن النوبي وارتباطه بالتاريخ والثقافة والهوية.",
+      hashtags: ["#النوبه", "#فخور_أنا", "#فخور_انا_بحضارتي_النوبه_فوق❤️", "#النوبه_فن_و_حضارة", "#أسوان", "#خضر_العطار"],
+    },
+    {
+      videoSrc: "assets/videos/video-2.mp4",
+      poster: "assets/videos/video-2-poster.png",
+      title: "حسن جزولي – فرح نوبي في 1960",
+      artist: "حسن جزولي",
+      category: ["تراث نوبي", "أفراح نوبية", "موسيقى نوبية قديمة"],
+      description: "مشاهد نادرة من فرح نوبي في ستينيات القرن الماضي، توثق أجواء الأفراح القديمة في النوبة، بما تحمله من موسيقى وغناء وعادات وتقاليد أصيلة تعكس روح المجتمع النوبي.",
+      hashtags: ["#حسن_جزولي", "#النوبه", "#تراث_نوبي", "#فرح_نوبي", "#موسيقى_نوبية"],
+    },
+    {
+      videoSrc: "assets/videos/video-3.mp4",
+      poster: "assets/videos/video-3-poster.png",
+      title: "أحمد منيب ومحمد منير – تجمع تاريخي",
+      artist: "أحمد منيب ومحمد منير",
+      category: ["أحمد منيب", "محمد منير", "موسيقى نوبية", "تراث نوبي"],
+      description: "لحظة مميزة تجمع اثنين من رموز الأغنية النوبية الحديثة، أحمد منيب ومحمد منير، في مشهد يوثق جانبًا من تاريخ الفن النوبي وتأثيره في الموسيقى المصرية.",
+      hashtags: ["#أحمد_منيب", "#محمد_منير", "#النوبه", "#موسيقى_نوبية", "#تراث_نوبي"],
+    },
+    {
+      videoSrc: "assets/videos/video-4.mp4",
+      poster: "assets/videos/video-4-poster.jpg",
+      title: "حسن الصغير وبيبو آدم – فرح نوبي في القاهرة",
+      artist: "حسن الصغير وبيبو آدم",
+      category: ["أفراح نوبية", "حسن الصغير", "بيبو آدم", "موسيقى نوبية"],
+      description: "أجواء احتفالية من فرح نوبي في القاهرة، تجمع بين الغناء والموسيقى والفرحة النوبية مع حسن الصغير وبيبو آدم، في مشهد يعكس استمرار التراث النوبي أينما اجتمع أبناء النوبة.",
+      hashtags: ["#حسن_الصغير", "#بيبو_آدم", "#فرح_نوبي", "#النوبه", "#القاهرة", "#أفراح_نوبية"],
+    },
+    {
+      videoSrc: "assets/videos/video-5.mp4",
+      poster: "assets/videos/video-5-poster.png",
+      title: "هشام باطه – توشكي غرب في حنة نوبية",
+      artist: "هشام باطه",
+      category: ["توشكي غرب", "حنة نوبية", "هشام باطه", "تراث نوبي"],
+      description: "أجواء حنة نوبية أصيلة من توشكي غرب، تجمع بين الموسيقى والغناء والاحتفال، وتبرز جمال العادات والتقاليد النوبية وروح الفرح التي تميز المناسبات النوبية.",
+      hashtags: ["#هشام_باطه", "#توشكي_غرب", "#حنة_نوبية", "#النوبه", "#تراث_نوبي"],
+    },
+    {
+      videoSrc: "assets/videos/video-6.mp4",
+      poster: "assets/videos/video-6-poster.png",
+      title: "محمود فوزي – فرح نوبي في السعودية",
+      artist: "محمود فوزي",
+      category: ["محمود فوزي", "فرح نوبي", "السعودية", "موسيقى نوبية"],
+      description: "فرح نوبي في السعودية يجمع أبناء النوبة حول الموسيقى والغناء والاحتفال، في مشهد يؤكد أن الفن النوبي يحمل هويته وتراثه معه أينما كان أبناء النوبة.",
+      hashtags: ["#محمود_فوزي", "#فرح_نوبي", "#النوبه", "#السعودية", "#موسيقى_نوبية"],
+    },
+  ];
+
+  /* =======================================================================
      DATA — Quiz (from the source document, verbatim questions/answers)
      ======================================================================= */
   const QUIZ = [
@@ -325,6 +388,69 @@
       btn.textContent = expanded ? "اقرأ أقل" : "اقرأ المزيد";
     });
   });
+
+  /* =======================================================================
+     Nubian video gallery (6-video interactive system, Music section)
+     ======================================================================= */
+  (function initVideoGallery() {
+    const videoEl = $("#vgallery-video");
+    const sourceEl = $("#vgallery-source");
+    if (!videoEl) return;
+
+    const thumbsWrap = $("#vgallery-thumbs");
+    const counterEl = $("#vgallery-counter");
+    const infoBox = $("#vgallery-info");
+    const infoTags = $("#vgallery-tags");
+    const infoTitle = $("#vgallery-title");
+    const infoArtist = $("#vgallery-artist");
+    const infoDesc = $("#vgallery-desc");
+    const infoHashtags = $("#vgallery-hashtags");
+    const prevBtn = $("#vgallery-prev");
+    const nextBtn = $("#vgallery-next");
+    const frameBgEl = $("#vgallery-frame-bg");
+    const total = NUBIAN_VIDEOS.length;
+    let vIndex = 0;
+
+    function renderThumbs() {
+      thumbsWrap.innerHTML = NUBIAN_VIDEOS.map((v, i) => `
+        <button type="button" class="vgallery-thumb${i === vIndex ? " active" : ""}" data-i="${i}" aria-label="${v.title}">
+          <img src="${v.poster}" alt="" loading="lazy" onerror="this.style.opacity='0'">
+        </button>`).join("");
+    }
+
+    function renderVideo(i) {
+      const v = NUBIAN_VIDEOS[i];
+      videoEl.pause();
+      videoEl.poster = v.poster;
+      sourceEl.src = v.videoSrc;
+      videoEl.load();
+      frameBgEl.style.backgroundImage = `url(${v.poster})`;
+
+      infoBox.classList.remove("is-in");
+      void infoBox.offsetWidth;
+      infoTags.innerHTML = v.category.map(c => `<span class="vgallery-tag">${c}</span>`).join("");
+      infoTitle.textContent = v.title;
+      infoArtist.textContent = v.artist;
+      infoDesc.textContent = v.description;
+      infoHashtags.innerHTML = v.hashtags.map(h => `<span class="vgallery-hashtag">${h}</span>`).join("");
+      infoBox.classList.add("is-in");
+
+      counterEl.textContent = String(i + 1).padStart(2, "0") + " / " + String(total).padStart(2, "0");
+      $$(".vgallery-thumb", thumbsWrap).forEach((btn, idx) => btn.classList.toggle("active", idx === i));
+    }
+
+    on(thumbsWrap, "click", (e) => {
+      const btn = e.target.closest(".vgallery-thumb");
+      if (!btn) return;
+      vIndex = Number(btn.dataset.i);
+      renderVideo(vIndex);
+    });
+    on(prevBtn, "click", () => { vIndex = (vIndex - 1 + total) % total; renderVideo(vIndex); });
+    on(nextBtn, "click", () => { vIndex = (vIndex + 1) % total; renderVideo(vIndex); });
+
+    renderThumbs();
+    renderVideo(0);
+  })();
 
   /* =======================================================================
      Figure modal (click card → big photo + full bio)

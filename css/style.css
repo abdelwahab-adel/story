@@ -744,6 +744,73 @@ nav.nav-links a.active{color:var(--accent);}
 .masonry-item:hover .m-overlay{opacity:1;}
 .masonry-item.hidden{display:none;}
 
+/* =========================================================================
+   Nubian video gallery (6-video interactive system)
+   ========================================================================= */
+.video-gallery{margin-top:56px;}
+.vgallery-layout{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(20px,3vw,34px);align-items:start;}
+.vgallery-player,.vgallery-info{min-width:0;}
+.vgallery-frame{position:relative;padding-top:56.25%;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-hover);background:var(--nile-950);}
+.vgallery-frame-bg{
+  position:absolute;inset:-4%;background-size:cover;background-position:center;
+  filter:blur(30px) brightness(.5) saturate(1.3);
+  transform:scale(1.12);z-index:0;
+}
+.vgallery-frame video{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:contain;background:transparent;z-index:1;}
+.vgallery-thumbs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:14px;}
+.vgallery-thumb{
+  position:relative;padding-top:56.25%;border-radius:9px;overflow:hidden;border:2px solid transparent;
+  background:var(--bg-alt);cursor:pointer;transition:border-color .25s var(--ease),transform .25s var(--ease);
+}
+.vgallery-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .3s;}
+.vgallery-thumb:hover{transform:translateY(-2px);}
+.vgallery-thumb.active{border-color:var(--turquoise);}
+.vgallery-nav{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:16px;}
+.vgallery-counter{font-family:var(--font-en-body);font-weight:700;letter-spacing:.05em;color:var(--text-soft);font-size:.88rem;min-width:64px;text-align:center;direction:ltr;}
+.vgallery-info{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;height:100%;
+  opacity:0;transform:translateY(10px);transition:opacity .4s var(--ease),transform .4s var(--ease);
+}
+.vgallery-info.is-in{opacity:1;transform:translateY(0);}
+.vgallery-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+.vgallery-tag{background:var(--bg-alt);color:var(--text);font-size:.76rem;font-weight:600;padding:5px 12px;border-radius:var(--radius-pill);}
+.vgallery-info h4{font-family:var(--font-ar-display);font-size:1.24rem;margin-bottom:6px;}
+.vgallery-artist{display:block;color:var(--turquoise);font-weight:700;font-size:.86rem;margin-bottom:16px;}
+.vgallery-info p{color:var(--text-soft);font-size:.9rem;line-height:1.75;}
+.vgallery-hashtags{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px;}
+.vgallery-hashtag{color:var(--turquoise);font-size:.8rem;font-weight:600;}
+
+@media (max-width:900px){
+  .vgallery-layout{grid-template-columns:1fr;}
+}
+@media (max-width:560px){
+  .vgallery-thumbs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:84px;overflow-x:auto;padding-bottom:4px;}
+}
+
+/* =========================================================================
+   Village wedding — standalone archival section
+   ========================================================================= */
+.village-wedding{
+  margin-top:56px;display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(20px,3vw,34px);align-items:center;
+  background:linear-gradient(135deg, rgba(200,153,47,.08), rgba(31,143,146,.07));
+  border:1px solid var(--border);border-radius:var(--radius-lg);
+  padding:clamp(22px,4vw,40px);position:relative;overflow:hidden;
+}
+.vw-media,.vw-info{min-width:0;}
+.village-wedding::before{
+  content:"";position:absolute;top:-36px;inset-inline-end:-36px;width:130px;height:130px;
+  border:2px solid var(--gold);opacity:.16;border-radius:30% 70% 65% 35%/40% 35% 65% 60%;transform:rotate(12deg);
+  pointer-events:none;
+}
+.vw-frame{position:relative;padding-top:56.25%;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-hover);transition:transform .4s var(--ease);}
+.vw-frame:hover{transform:scale(1.015);}
+.vw-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.vw-eyebrow{display:inline-block;color:var(--gold);font-weight:700;font-size:.78rem;letter-spacing:.04em;margin-bottom:8px;}
+.vw-info h3{font-family:var(--font-ar-display);font-size:1.5rem;margin-bottom:14px;}
+.vw-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+.vw-info p{color:var(--text-soft);line-height:1.8;font-size:.94rem;}
+@media (max-width:900px){.village-wedding{grid-template-columns:1fr;}}
+
 .figure-card{cursor:pointer;}
 .figure-modal{
   position:fixed;inset:0;z-index:1200;background:rgba(3,14,18,.82);
@@ -767,11 +834,11 @@ nav.nav-links a.active{color:var(--accent);}
 .figure-modal-close:hover{background:var(--border-strong);}
 .figure-modal-close svg{width:18px;height:18px;}
 .figure-modal-avatar{
-  width:140px;height:140px;border-radius:50%;margin:0 auto 22px;overflow:hidden;
+  width:220px;height:220px;border-radius:50%;margin:0 auto 24px;overflow:hidden;
   background:var(--fg-tint);color:var(--fg-color);
   display:flex;align-items:center;justify-content:center;
-  font-family:var(--font-ar-display);font-weight:700;font-size:2.6rem;
-  box-shadow:0 0 0 5px var(--surface), 0 0 0 7px var(--fg-color);
+  font-family:var(--font-ar-display);font-weight:700;font-size:4rem;
+  box-shadow:0 0 0 6px var(--surface), 0 0 0 8px var(--fg-color);
 }
 .figure-modal-avatar img{width:100%;height:100%;object-fit:cover;}
 .figure-modal-box h3{font-family:var(--font-ar-display);font-size:1.4rem;margin-bottom:8px;}
@@ -780,7 +847,7 @@ nav.nav-links a.active{color:var(--accent);}
   padding:5px 14px;border-radius:var(--radius-pill);margin-bottom:20px;
 }
 .figure-modal-box p{color:var(--text-soft);font-size:.96rem;line-height:1.85;text-align:start;}
-@media (max-width:480px){.figure-modal-avatar{width:110px;height:110px;font-size:2rem;}}
+@media (max-width:480px){.figure-modal-avatar{width:160px;height:160px;font-size:3rem;}}
 
 .lightbox{
   position:fixed;inset:0;z-index:1200;background:rgba(3,14,18,.94);

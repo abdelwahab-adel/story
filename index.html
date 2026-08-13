@@ -550,6 +550,64 @@
         <span class="card-eyebrow">السلام الخماسي النوبي</span>
         <p style="color:var(--text-soft);">تستخدم الموسيقى النوبية سلّمًا خماسيًا فريدًا يختلف عن السلمين الكبير والصغير في الموسيقى العربية، وهو ما يميّزها ويساعد على تعرّفها من أول سمعة. من أشهر رموزها المعاصرين: محمد منير الذي نقلها للعالمية.</p>
       </div>
+
+      <!-- ============================= NUBIAN VIDEO GALLERY (6 videos) ============================= -->
+      <div class="video-gallery" data-reveal>
+        <h3 class="h-display block-title" data-reveal>أرشيف الفيديو النوبي</h3>
+        <p class="section-lede subsection-lede" data-reveal>لحظات موثّقة من الأفراح والفن النوبي عبر الأجيال — تصفّح وشغّل</p>
+
+        <div class="vgallery-layout">
+          <div class="vgallery-player">
+            <div class="vgallery-frame">
+              <div class="vgallery-frame-bg" id="vgallery-frame-bg" aria-hidden="true"></div>
+              <video id="vgallery-video" controls playsinline preload="metadata">
+                <source id="vgallery-source" src="" type="video/mp4">
+                متصفحك لا يدعم تشغيل الفيديو.
+              </video>
+            </div>
+            <div class="vgallery-thumbs" id="vgallery-thumbs"></div>
+            <div class="vgallery-nav">
+              <button type="button" id="vgallery-prev" class="icon-btn" aria-label="الفيديو السابق"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+              <span class="vgallery-counter" id="vgallery-counter">01 / 06</span>
+              <button type="button" id="vgallery-next" class="icon-btn" aria-label="الفيديو التالي"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button>
+            </div>
+          </div>
+          <div class="vgallery-info" id="vgallery-info">
+            <div class="vgallery-tags" id="vgallery-tags"></div>
+            <h4 id="vgallery-title"></h4>
+            <span class="vgallery-artist" id="vgallery-artist"></span>
+            <p id="vgallery-desc"></p>
+            <div class="vgallery-hashtags" id="vgallery-hashtags"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================= VILLAGE WEDDING (standalone, independent video) ============================= -->
+      <div class="village-wedding" data-reveal="fade">
+        <div class="vw-media">
+          <div class="vw-frame">
+            <iframe src="https://www.youtube.com/embed/iGVILKQiyMo?rel=0" title="فرح نوبي في البلد" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="vw-info">
+          <span class="vw-eyebrow">نافذة أرشيفية مستقلة</span>
+          <h3>فرح نوبي في البلد</h3>
+          <div class="vw-tags">
+            <span class="vgallery-tag">أفراح نوبية</span>
+            <span class="vgallery-tag">تراث نوبي</span>
+            <span class="vgallery-tag">موسيقى نوبية</span>
+          </div>
+          <p>مشاهد من أجواء فرح نوبي في البلد، توثق لحظات من الفرح والاحتفال، وتُبرز جمال الموسيقى والغناء والعادات والتقاليد التي تميز الأفراح النوبية الأصيلة. قسم يوثق جانبًا من الحياة النوبية وروحها الاجتماعية والثقافية في أجواء مليئة بالموسيقى والفرحة والتراث.</p>
+          <div class="vgallery-hashtags">
+            <span class="vgallery-hashtag">#فرح_نوبي</span>
+            <span class="vgallery-hashtag">#النوبه</span>
+            <span class="vgallery-hashtag">#أفراح_نوبية</span>
+            <span class="vgallery-hashtag">#تراث_نوبي</span>
+            <span class="vgallery-hashtag">#موسيقى_نوبية</span>
+            <span class="vgallery-hashtag">#البلد</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- JEWELRY -->
@@ -781,7 +839,7 @@
       </button>
       <button type="button" class="cat-art" role="tab" aria-selected="false" data-cat="art">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/><path d="M9 18V4l12-2v14"/></svg>
-        الفن والموسيقى <span class="fig-count">٨</span>
+        الفن والموسيقى <span class="fig-count">٩</span>
       </button>
       <button type="button" class="cat-pol" role="tab" aria-selected="false" data-cat="pol">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16.9 6.4 20.1l1.4-6.3-4.8-4.3 6.4-.6L12 3Z" stroke-linejoin="round"/></svg>
@@ -815,6 +873,7 @@
           <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-ali-kuban.jpg" alt="علي كوبان"></div><h3>علي كوبان</h3><span class="f-role">مطرب وموسيقار نوبي</span><p class="f-bio">من أهم رواد الموسيقى النوبية الحديثة، وُلد في قورة بالنوبة القديمة، وارتبط اسمه بتطوير الأغنية النوبية وتقديمها بأسلوب موسيقي حديث. ساهم في دمج الإيقاعات والألحان النوبية مع تأثيرات موسيقية مختلفة، كما لعب دورًا مهمًا في انتشار الموسيقى النوبية خارج مصر. ويُعد من أبرز الرموز الفنية التي ساهمت في وصول الفن النوبي إلى جمهور عالمي.</p><button type="button" class="f-more">اقرأ المزيد</button></div>
           <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-bahr-abu-gresha.jpg" alt="بحر أبو جريشة"></div><h3>بحر أبو جريشة</h3><span class="f-role">مطرب وفنان نوبي</span><p class="f-bio">من الفنانين المرتبطين بالأغنية الشعبية والتراث الموسيقي النوبي. ساهم من خلال أعماله في الحفاظ على حضور الألحان والإيقاعات الشعبية، وارتبط فنه بالثقافة المحلية والهوية النوبية. يمثل أحد الأصوات التي جمعت بين الطابع الشعبي والتعبير عن التراث والذاكرة النوبية.</p><button type="button" class="f-more">اقرأ المزيد</button></div>
           <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-khedr-elattar.jpg" alt="خضر العطار"></div><h3>خضر العطار</h3><span class="f-role">مطرب وحافظ للتراث النوبي</span><p class="f-bio">من أبرز الأصوات في تاريخ الأغنية النوبية، ارتبط فنه بالتراث والذاكرة الشعبية للنوبة. عبّرت أعماله عن الحياة النوبية والحنين إلى القرى القديمة، وحملت الكثير من ملامح الثقافة واللغة والإيقاعات النوبية. ساهم في نقل الأغنية النوبية إلى أجيال جديدة والحفاظ على حضورها كجزء من الهوية الثقافية للنوبة.</p><button type="button" class="f-more">اقرأ المزيد</button></div>
+          <div class="figure-card"><div class="f-avatar has-photo"><img src="assets/images/figures-mohamed-fawzy.jpg" alt="محمد فوزي"></div><h3>محمد فوزي</h3><span class="f-role">مطرب نوبي</span><p class="f-bio">يُعد محمد فوزي واحدًا من أبرز أصوات الأغنية النوبية الحديثة، ومن أبناء قرية بلانة بمركز نصر النوبة في أسوان. عُرف بين محبيه بألقاب مثل «الإمبراطور» و«صانع السعادة» و«أبو زيزو»، وبدأ رحلته مع الفن منذ سنواته الأولى من خلال العزف والغناء. استطاع أن يقدم الأغنية النوبية بروح عصرية تجمع بين أصالة التراث وروح التجديد، مع الحفاظ على هويتها ومفرداتها الموسيقية والثقافية، وقدم ألوانًا متنوعة من الأغاني النوبية والمصرية والسودانية. شارك مع فرقته في حفلات ومناسبات داخل مصر وخارجها، منها الكويت والسعودية وعُمان، وأسهم في نقل الثقافة والموسيقى النوبية إلى جمهور أكبر، وترك بصمة واضحة في مسيرة الأغنية النوبية المعاصرة.</p><button type="button" class="f-more">اقرأ المزيد</button></div>
         </div>
       </div>
 
@@ -850,18 +909,7 @@
           <b>أهمية العمل</b>
           <p>يمثل الكتاب مصدرًا مهمًا لفهم جانب من الذاكرة الاجتماعية والثقافية للنوبة، ويساهم في حفظ الحكايات والتفاصيل التي انتقلت عبر الأجيال شفهيًا.</p>
         </div>
-
-        <a class="book-download"
-   href="assets/books/hikayat-wa-thikrayat.pdf"
-   target="_blank"
-   rel="noopener noreferrer">
-
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-    <path d="M7 17L17 7M9 7h8v8"/>
-  </svg>
-
-  فتح الكتاب (PDF)
-</a>
+       <a class="book-download"    href="assets/books/hikayat-wa-thikrayat.pdf"    target="_blank"    rel="noopener noreferrer">   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">     <path d="M7 17L17 7M9 7h8v8"/>   </svg>   فتح الكتاب (PDF) </a>
       </div>
 
       <div class="book-card">
@@ -874,17 +922,7 @@
           <b>أهمية العمل</b>
           <p>يساهم الكتاب في دعم جهود توثيق اللغة النوبية وتعليمها والحفاظ عليها من الاندثار، وتحويل المعرفة اللغوية المتوارثة شفهيًا إلى مادة يمكن دراستها وتدوينها ونقلها إلى الأجيال القادمة.</p>
         </div>
-        <a class="book-download"
-   href="assets/books/nubian-language-how-to-write.pdf"
-   target="_blank"
-   rel="noopener noreferrer">
-
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-    <path d="M7 17L17 7M9 7h8v8"/>
-  </svg>
-
-  فتح الكتاب (PDF)
-</a>
+        <a class="book-download"    href="assets/books/nubian-language-how-to-write.pdf"    target="_blank"    rel="noopener noreferrer">   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">     <path d="M7 17L17 7M9 7h8v8"/>   </svg>   فتح الكتاب (PDF) </a>
       </div>
     </div>
 
