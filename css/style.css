@@ -511,7 +511,7 @@ nav.nav-links a.active{color:var(--accent);}
 .story-media img{width:100%;height:100%;object-fit:cover;aspect-ratio:5/4;}
 .story-media video{width:100%;height:100%;object-fit:cover;display:block;}
 .story-media .media-tag{
-  position:absolute;bottom:16px;inset-inline-start:16px;
+  position:absolute;top:16px;inset-inline-start:16px;
   background:rgba(5,25,32,.55);color:#fff;backdrop-filter:blur(6px);
   padding:8px 16px;border-radius:var(--radius-pill);font-size:.78rem;font-weight:600;
 }
