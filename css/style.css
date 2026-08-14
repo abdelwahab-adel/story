@@ -275,7 +275,7 @@ header#site-nav.scrolled{
   box-shadow:var(--shadow-sm);
 }
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--font-ar-display);font-weight:700;font-size:1.28rem;color:var(--text);}
-.brand .brand-mark{width:34px;height:34px;color:var(--gold);flex:none;}
+.brand .brand-mark{width:39px;height:50px;color:var(--gold);flex:none;}
 .brand .brand-mark svg{width:100%;height:100%;}
 .brand small{display:block;font-family:var(--font-en-body);font-size:.6rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--text-soft);}
 
