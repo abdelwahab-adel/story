@@ -27,108 +27,108 @@
     ],
     words: [
       // عبارات أساسية
-      { cat:"phrases", ar:"تحية", fadicca:"كوريج أنجا ناليه", kenzi:"كوريج أنجا ناليه" },
-      { cat:"phrases", ar:"شكرًا", fadicca:"سُكِران", kenzi:"سُكِران" },
-      { cat:"phrases", ar:"الحب", fadicca:"مِري", kenzi:"مِري" },
-      { cat:"phrases", ar:"البيت", fadicca:"نُو", kenzi:"نُو" },
-      { cat:"phrases", ar:"الماء", fadicca:"أسي", kenzi:"أسي" },
+      { cat:"phrases", ar:"تحية (مرحباً)", fadicca:"مسكاقنا / سليمو", kenzi:"مسكاقرو / سليمو" },
+      { cat:"phrases", ar:"شكرًا", fadicca:"أورا / أورونج", kenzi:"أورا / أورون" },
+      { cat:"phrases", ar:"الحب", fadicca:"دولّي", kenzi:"دولّي" },
+      { cat:"phrases", ar:"البيت", fadicca:"كا", kenzi:"كا" },
+      { cat:"phrases", ar:"الماء", fadicca:"أمان (Aman)", kenzi:"أسي (Essi)" },
       // أساسيات
-      { cat:"basics", ar:"أنا", fadicca:"آي (Ai)", kenzi:"آي (Ai)" },
-      { cat:"basics", ar:"أنتَ / أنتِ", fadicca:"إير (Er)", kenzi:"إير (Er)" },
-      { cat:"basics", ar:"نعم", fadicca:"إيو (Eio)", kenzi:"إيو (Eio)" },
-      { cat:"basics", ar:"لا", fadicca:"ماني (Mani)", kenzi:"ماني (Mani)" },
-      { cat:"basics", ar:"لا يوجد / بلاش", fadicca:"مارس (Mars)", kenzi:"مارس (Mars)" },
-      { cat:"basics", ar:"لسه", fadicca:"الجونة (El-gouna)", kenzi:"الجونة (El-gouna)" },
-      { cat:"basics", ar:"كفاية", fadicca:"بركة (Baraka)", kenzi:"بركة (Baraka)" },
-      { cat:"basics", ar:"من؟", fadicca:"ناي (Nai)", kenzi:"ناي (Nai)" },
-      { cat:"basics", ar:"ماذا؟", fadicca:"ناينا (Naina)", kenzi:"نارا (Nara)" },
-      { cat:"basics", ar:"أين؟", fadicca:"مِنقاي (Mingai)", kenzi:"مِنا (Mena)" },
-      { cat:"basics", ar:"متى؟", fadicca:"مِنقاي (Mingai)", kenzi:"مِنا (Mena)" },
-      { cat:"basics", ar:"الآن", fadicca:"سِيك (Seek)", kenzi:"إينقا (Inga)" },
-      { cat:"basics", ar:"اليوم", fadicca:"إن (In)", kenzi:"إن (In)" },
-      { cat:"basics", ar:"بكرة", fadicca:"سلون (Slon)", kenzi:"سلون (Slon)" },
-      { cat:"basics", ar:"أمس", fadicca:"أوور (Owor)", kenzi:"أوور (Owor)" },
+      { cat:"basics", ar:"أنا", fadicca:"أي (Ay)", kenzi:"أي (Ay)" },
+      { cat:"basics", ar:"أنتَ / أنتِ", fadicca:"إير (Ir)", kenzi:"إير (Ir)" },
+      { cat:"basics", ar:"نعم", fadicca:"أي / أيو", kenzi:"أيو" },
+      { cat:"basics", ar:"لا", fadicca:"ملا (Mala) / مالانق", kenzi:"أون (Oun) / مالا" },
+      { cat:"basics", ar:"لا يوجد / بلاش", fadicca:"ملا / مانقا", kenzi:"مونا / سيكام" },
+      { cat:"basics", ar:"لسه", fadicca:"جيل", kenzi:"جيل" },
+      { cat:"basics", ar:"كفاية", fadicca:"يكّي / كورك", kenzi:"يكّي" },
+      { cat:"basics", ar:"من؟", fadicca:"ني (Nee)", kenzi:"ني (Nee)" },
+      { cat:"basics", ar:"ماذا؟", fadicca:"مين (Min)", kenzi:"مين (Min)" },
+      { cat:"basics", ar:"أين؟", fadicca:"مينتو", kenzi:"مينتو / سيكّي" },
+      { cat:"basics", ar:"متى؟", fadicca:"هومين", kenzi:"شومين" },
+      { cat:"basics", ar:"الآن", fadicca:"إشكولا / آكا", kenzi:"إشكولا" },
+      { cat:"basics", ar:"اليوم", fadicca:"إينال / إيتو", kenzi:"إيتو (Eeto)" },
+      { cat:"basics", ar:"بكرة", fadicca:"بيا (Beya)", kenzi:"بيا (Beya)" },
+      { cat:"basics", ar:"أمس", fadicca:"صو", kenzi:"صو / سو" },
       // أفعال
-      { cat:"verbs", ar:"تعال", fadicca:"كار (Kar)", kenzi:"كار (Kar)" },
-      { cat:"verbs", ar:"اذهب / امشِ", fadicca:"جو (Go)", kenzi:"جو (Go)" },
-      { cat:"verbs", ar:"كُل", fadicca:"كب (Kab)", kenzi:"كب (Kab)" },
-      { cat:"verbs", ar:"اشرب", fadicca:"ني (Ni)", kenzi:"سِوي (Siwi)" },
-      { cat:"verbs", ar:"نَم", fadicca:"نير (Neer)", kenzi:"نير (Neer)" },
-      { cat:"verbs", ar:"اجلس", fadicca:"تي (Ti)", kenzi:"تي (Ti)" },
-      { cat:"verbs", ar:"اسمع", fadicca:"كيري (Kiri)", kenzi:"كيري (Kiri)" },
-      { cat:"verbs", ar:"انظر", fadicca:"قِج (Gij)", kenzi:"نَل (Nal)" },
-      { cat:"verbs", ar:"تكلم", fadicca:"بانتشي (Bantchi)", kenzi:"وِي (Wai)" },
-      { cat:"verbs", ar:"هات / أعطِ", fadicca:"تير (Ter)", kenzi:"تير (Ter)" },
-      { cat:"verbs", ar:"خذ", fadicca:"دام (Dam)", kenzi:"دام (Dam)" },
-      { cat:"verbs", ar:"ادخل", fadicca:"تير (Teer)", kenzi:"تير (Teer)" },
-      { cat:"verbs", ar:"اخرج", fadicca:"بال (Bal)", kenzi:"بِن (Bin)" },
-      { cat:"verbs", ar:"اغسل", fadicca:"سوي (Sowi)", kenzi:"سوي (Sowi)" },
-      { cat:"verbs", ar:"العب", fadicca:"هَب (Hab)", kenzi:"هَب (Hab)" },
-      { cat:"verbs", ar:"اعمل / اشتغل", fadicca:"وير (Wair)", kenzi:"وير (Wair)" },
-      { cat:"verbs", ar:"اضحك", fadicca:"جول (Gol)", kenzi:"جول (Gol)" },
-      { cat:"verbs", ar:"اعرف", fadicca:"إيري (Eree)", kenzi:"إيري (Eree)" },
+      { cat:"verbs", ar:"تعال", fadicca:"كير (Kiir)", kenzi:"كير (Kiir)" },
+      { cat:"verbs", ar:"اذهب / امشِ", fadicca:"موق (Mog)", kenzi:"موق (Mog)" },
+      { cat:"verbs", ar:"كُل", fadicca:"كالي (Kalli)", kenzi:"كالي (Kalli)" },
+      { cat:"verbs", ar:"اشرب", fadicca:"ني (Ni)", kenzi:"ناي (Nai)" },
+      { cat:"verbs", ar:"نَم", fadicca:"جير / نيير", kenzi:"جير / نيير" },
+      { cat:"verbs", ar:"اجلس", fadicca:"تقو / آك", kenzi:"أوقو" },
+      { cat:"verbs", ar:"اسمع", fadicca:"مسك / أوكي", kenzi:"أوكي (Ukki)" },
+      { cat:"verbs", ar:"انظر", fadicca:"نال (Nal)", kenzi:"نال (Nal)" },
+      { cat:"verbs", ar:"تكلم", fadicca:"ويقي", kenzi:"ويقير" },
+      { cat:"verbs", ar:"هات / أعطِ", fadicca:"دين / تِي", kenzi:"تِي / دين" },
+      { cat:"verbs", ar:"خذ", fadicca:"طاو (Taw)", kenzi:"طاو (Taw)" },
+      { cat:"verbs", ar:"ادخل", fadicca:"جين (Jeen)", kenzi:"جين (Jeen)" },
+      { cat:"verbs", ar:"اخرج", fadicca:"بال / وسكيل", kenzi:"وسكيل" },
+      { cat:"verbs", ar:"اغسل", fadicca:"جوك / شوك", kenzi:"شوك" },
+      { cat:"verbs", ar:"العب", fadicca:"أور (Our)", kenzi:"أور (Our)" },
+      { cat:"verbs", ar:"اعمل / اشتغل", fadicca:"صو / أوج", kenzi:"أوج" },
+      { cat:"verbs", ar:"اضحك", fadicca:"جيل (Jeel)", kenzi:"جيل (Jeel)" },
+      { cat:"verbs", ar:"اعرف", fadicca:"كيب / ارسك", kenzi:"كيب / ارسك" },
       // العائلة
-      { cat:"family", ar:"أمي", fadicca:"أنان (Anan)", kenzi:"إندي (Inde)" },
-      { cat:"family", ar:"أبي", fadicca:"أبو (Abboo)", kenzi:"أمباب (Ambab)" },
-      { cat:"family", ar:"أخي", fadicca:"نيسي (Nesi)", kenzi:"أمباني (Ambani)" },
-      { cat:"family", ar:"أختي", fadicca:"إيجسي (Egsi)", kenzi:"إنيسي (Inesi)" },
+      { cat:"family", ar:"أمي", fadicca:"إنَّا (Enna)", kenzi:"إنَّا (Enna)" },
+      { cat:"family", ar:"أبي", fadicca:"أپَّا / آبا", kenzi:"أپَّا / آبا" },
+      { cat:"family", ar:"أخي", fadicca:"فاي (Fayi)", kenzi:"أَمْبا (Amba)" },
+      { cat:"family", ar:"أختي", fadicca:"داوس", kenzi:"داوس" },
       { cat:"family", ar:"ولد / ابن", fadicca:"تود (Tod)", kenzi:"تود (Tod)" },
-      { cat:"family", ar:"بنت / ابنة", fadicca:"برو (Bro)", kenzi:"برو (Bro)" },
-      { cat:"family", ar:"طفل", fadicca:"نوتشي (Notchi)", kenzi:"كِني (Keni)" },
-      { cat:"family", ar:"رجل", fadicca:"أوغج (Ogj)", kenzi:"أوغج (Ogj)" },
-      { cat:"family", ar:"امرأة", fadicca:"تين (Teen)", kenzi:"تين (Teen)" },
-      { cat:"family", ar:"ضيف", fadicca:"إسكر (Isker)", kenzi:"إسكر (Isker)" },
-      { cat:"family", ar:"صاحب / جار", fadicca:"سمل (Semil)", kenzi:"سمل (Semil)" },
-      { cat:"family", ar:"إنسان", fadicca:"إيدم (Edim)", kenzi:"إيدم (Edim)" },
+      { cat:"family", ar:"بنت / ابنة", fadicca:"بور (Bour)", kenzi:"بور (Bour)" },
+      { cat:"family", ar:"طفل", fadicca:"كورا / تود", kenzi:"بورو" },
+      { cat:"family", ar:"رجل", fadicca:"أوقج (Ougij)", kenzi:"أوقج (Ougij)" },
+      { cat:"family", ar:"امرأة", fadicca:"إدين / إدنا", kenzi:"إدين" },
+      { cat:"family", ar:"ضيف", fadicca:"إشكي", kenzi:"إشكي" },
+      { cat:"family", ar:"صاحب / جار", fadicca:"كورسي / أورسي", kenzi:"أورسي" },
+      { cat:"family", ar:"إنسان", fadicca:"إد (Id)", kenzi:"إد (Id)" },
       // أجزاء الجسم
-      { cat:"body", ar:"رأس", fadicca:"أور (Oor)", kenzi:"أور (Oor)" },
-      { cat:"body", ar:"عين", fadicca:"ميسي (Messi)", kenzi:"ميسي (Messi)" },
-      { cat:"body", ar:"أذن", fadicca:"أولوغ (Olog)", kenzi:"أولوغ (Olog)" },
-      { cat:"body", ar:"فم", fadicca:"أغل (Agil)", kenzi:"آجيل (Agil)" },
-      { cat:"body", ar:"يد", fadicca:"إي (Ee)", kenzi:"إي (Ee)" },
-      { cat:"body", ar:"رجل (قدم)", fadicca:"أوس (Oos)", kenzi:"أوس (Oos)" },
-      { cat:"body", ar:"قلب", fadicca:"أور (Oor)", kenzi:"أور (Oor)" },
+      { cat:"body", ar:"رأس", fadicca:"أور (Ur)", kenzi:"أور (Ur)" },
+      { cat:"body", ar:"عين", fadicca:"ميس (Miss)", kenzi:"كال (Kal)" },
+      { cat:"body", ar:"أذن", fadicca:"أوي (Uyi)", kenzi:"أوي (Uyi)" },
+      { cat:"body", ar:"فم", fadicca:"أوق (Oug)", kenzi:"أوق (Oug)" },
+      { cat:"body", ar:"يد", fadicca:"إيد (Eed)", kenzi:"إيد (Eed)" },
+      { cat:"body", ar:"رجل (قدم)", fadicca:"أوس (Ous)", kenzi:"أوس (Ous)" },
+      { cat:"body", ar:"قلب", fadicca:"آي (Aay)", kenzi:"آي (Aay)" },
       { cat:"body", ar:"بطن", fadicca:"تو (Too)", kenzi:"تو (Too)" },
-      { cat:"body", ar:"شعر", fadicca:"سير (Seer)", kenzi:"سير (Seer)" },
-      { cat:"body", ar:"لسان", fadicca:"نت (Net)", kenzi:"نيد (Ned)" },
+      { cat:"body", ar:"شعر", fadicca:"ديل / صوم", kenzi:"صوم" },
+      { cat:"body", ar:"لسان", fadicca:"نال / نيد", kenzi:"نيد (Need)" },
       // البيت والطعام
-      { cat:"house", ar:"بيت", fadicca:"نو (Noo)", kenzi:"نو (Noo)" },
-      { cat:"house", ar:"باب", fadicca:"كولو (Kolo)", kenzi:"كولو (Kolo)" },
-      { cat:"house", ar:"ماء", fadicca:"أسي (Asi)", kenzi:"إيس (Ees)" },
-      { cat:"house", ar:"لبن", fadicca:"كول (Kool)", kenzi:"جيله (Gila)" },
-      { cat:"house", ar:"شاي", fadicca:"إتشي (Itchi)", kenzi:"إتشي (Itchi)" },
-      { cat:"house", ar:"خبز", fadicca:"كاب (Kab)", kenzi:"كاب (Kab)" },
-      { cat:"house", ar:"تمر", fadicca:"بيل (Beel)", kenzi:"بيل (Beel)" },
-      { cat:"house", ar:"نخلة", fadicca:"فيت (Fet)", kenzi:"فيت (Fet)" },
-      { cat:"house", ar:"نار", fadicca:"إيج (Iig)", kenzi:"إيج (Iig)" },
-      { cat:"house", ar:"ملح", fadicca:"كوج (Koog)", kenzi:"كوج (Koog)" },
+      { cat:"house", ar:"بيت", fadicca:"كا (Ka)", kenzi:"كا (Ka)" },
+      { cat:"house", ar:"باب", fadicca:"كورو (Kourou)", kenzi:"كورو (Kourou)" },
+      { cat:"house", ar:"ماء", fadicca:"أمان (Aman)", kenzi:"أسي (Essi)" },
+      { cat:"house", ar:"لبن", fadicca:"إرتي (Erti)", kenzi:"إرتي (Erti)" },
+      { cat:"house", ar:"شاي", fadicca:"شاي", kenzi:"شاي" },
+      { cat:"house", ar:"خبز", fadicca:"كابِدة / شادي", kenzi:"كابِدة / شادي" },
+      { cat:"house", ar:"تمر", fadicca:"فينتي (Finti)", kenzi:"فينتي (Finti)" },
+      { cat:"house", ar:"نخلة", fadicca:"فينتي كُو", kenzi:"فينتي كور" },
+      { cat:"house", ar:"نار", fadicca:"إق (Iq)", kenzi:"إق (Iq)" },
+      { cat:"house", ar:"ملح", fadicca:"أجر (Ajir)", kenzi:"أجر (Ajir)" },
       { cat:"house", ar:"لحم", fadicca:"كوس (Koos)", kenzi:"كوس (Koos)" },
-      { cat:"house", ar:"سمك", fadicca:"كاري (Kare)", kenzi:"كاري (Kare)" },
-      { cat:"house", ar:"فلوس / ذهب", fadicca:"نوب (Nob)", kenzi:"نوب (Nob)" },
+      { cat:"house", ar:"سمك", fadicca:"أمان كاري", kenzi:"أسي كاري" },
+      { cat:"house", ar:"فلوس / ذهب", fadicca:"أوري (فلوس) / نوب (ذهب)", kenzi:"أوري (فلوس)" },
       // صفات
-      { cat:"qualities", ar:"جميل", fadicca:"أشري (Ashree)", kenzi:"كيتا (Keta)" },
-      { cat:"qualities", ar:"سيء / وحش", fadicca:"ديبا (Deba)", kenzi:"ساوما (Sawma)" },
-      { cat:"qualities", ar:"كبير", fadicca:"دو (Do)", kenzi:"جاو (Gaw)" },
-      { cat:"qualities", ar:"صغير", fadicca:"كودا (Koda)", kenzi:"كِني (Keni)" },
-      { cat:"qualities", ar:"كثير", fadicca:"دِك (Dik)", kenzi:"مِلُ (Milo)" },
-      { cat:"qualities", ar:"طويل", fadicca:"جيس (Gees)", kenzi:"جيس (Gees)" },
-      { cat:"qualities", ar:"قصير", fadicca:"مور (Mor)", kenzi:"مور (Mor)" },
-      { cat:"qualities", ar:"أبيض", fadicca:"أرو (Aro)", kenzi:"أرو (Aro)" },
-      { cat:"qualities", ar:"أسود", fadicca:"أوروم (Orom)", kenzi:"أوروم (Orom)" },
-      { cat:"qualities", ar:"أحمر", fadicca:"جيله (Gila)", kenzi:"جيله (Gila)" },
-      { cat:"qualities", ar:"بارد", fadicca:"أورو (Oro)", kenzi:"أورو (Oro)" },
-      { cat:"qualities", ar:"سريع", fadicca:"توري (Tori)", kenzi:"توري (Tori)" },
+      { cat:"qualities", ar:"جميل", fadicca:"مسقاني / مشكا", kenzi:"مشكا (Mishka)" },
+      { cat:"qualities", ar:"سيء / وحش", fadicca:"ملان (Malan)", kenzi:"ملان (Malan)" },
+      { cat:"qualities", ar:"كبير", fadicca:"دُو (Dou)", kenzi:"أورا / داو" },
+      { cat:"qualities", ar:"صغير", fadicca:"كينو (Keeno) / كورا", kenzi:"كين (Keen)" },
+      { cat:"qualities", ar:"كثير", fadicca:"ماني / جيك", kenzi:"كادي" },
+      { cat:"qualities", ar:"طويل", fadicca:"فور (Four)", kenzi:"فور (Four)" },
+      { cat:"qualities", ar:"قصير", fadicca:"كور (Kour)", kenzi:"كور (Kour)" },
+      { cat:"qualities", ar:"أبيض", fadicca:"أرو (Aroo)", kenzi:"أرو (Aroo)" },
+      { cat:"qualities", ar:"أسود", fadicca:"أُدّي (Uddi)", kenzi:"أُدّي (Uddi)" },
+      { cat:"qualities", ar:"أحمر", fadicca:"جيل (Jeel)", kenzi:"جيل (Jeel)" },
+      { cat:"qualities", ar:"بارد", fadicca:"أوقوج (Ougouj)", kenzi:"أوقوج (Ougouj)" },
+      { cat:"qualities", ar:"سريع", fadicca:"بيرا (Beera)", kenzi:"بيرا (Beera)" },
       // الأرقام
-      { cat:"numbers", ar:"١ (واحد)", fadicca:"وير", kenzi:"وير" },
-      { cat:"numbers", ar:"٢ (اثنين)", fadicca:"أوو", kenzi:"أوو" },
-      { cat:"numbers", ar:"٣ (ثلاثة)", fadicca:"توسكي", kenzi:"توسكي" },
-      { cat:"numbers", ar:"٤ (أربعة)", fadicca:"كميس", kenzi:"كميس" },
-      { cat:"numbers", ar:"٥ (خمسة)", fadicca:"ديجي", kenzi:"ديجي" },
-      { cat:"numbers", ar:"٦ (ستة)", fadicca:"قورنج", kenzi:"قورنج" },
-      { cat:"numbers", ar:"٧ (سبعة)", fadicca:"كولود", kenzi:"كولود" },
-      { cat:"numbers", ar:"٨ (ثمانية)", fadicca:"إديو", kenzi:"إديو" },
-      { cat:"numbers", ar:"٩ (تسعة)", fadicca:"إسكود", kenzi:"إسكود" },
-      { cat:"numbers", ar:"١٠ (عشرة)", fadicca:"ديمين", kenzi:"ديمين" },
+      { cat:"numbers", ar:"١ (واحد)", fadicca:"وِير (Weer)", kenzi:"وِير (Weer)" },
+      { cat:"numbers", ar:"٢ (اثنين)", fadicca:"أُوو (Oww)", kenzi:"أُوو (Oww)" },
+      { cat:"numbers", ar:"٣ (ثلاثة)", fadicca:"طوسكو (Tosko)", kenzi:"طوسكو (Tosko)" },
+      { cat:"numbers", ar:"٤ (أربعة)", fadicca:"كِمسو (Kemsou)", kenzi:"كِمسو (Kemsou)" },
+      { cat:"numbers", ar:"٥ (خمسة)", fadicca:"دِجو (Dijjou)", kenzi:"دِجو (Dijjou)" },
+      { cat:"numbers", ar:"٦ (ستة)", fadicca:"قورو (Gorou)", kenzi:"قورو (Gorou)" },
+      { cat:"numbers", ar:"٧ (سبعة)", fadicca:"كولود (Kolod)", kenzi:"كولود (Kolod)" },
+      { cat:"numbers", ar:"٨ (ثمانية)", fadicca:"إدِوو (Iddiww)", kenzi:"إدِوو (Iddiww)" },
+      { cat:"numbers", ar:"٩ (تسعة)", fadicca:"إسكود (Iskod)", kenzi:"إسكود (Iskod)" },
+      { cat:"numbers", ar:"١٠ (عشرة)", fadicca:"ديمِر (Dimir)", kenzi:"ديمِر (Dimir)" },
     ],
   };
 
@@ -186,63 +186,118 @@
      — see assets/videos/README.txt for exact filenames expected.
      Poster images are auto-extracted from each video file (see build step).
      ======================================================================= */
-  const NUBIAN_VIDEOS = [
-    {
-      videoSrc: "assets/videos/video-1.mp4",
-      poster: "assets/videos/video-1-poster.png",
-      title: "النوبة – فخور أنا بحضارتي النوبة فوق ❤️",
-      artist: "خضر العطار",
-      category: ["النوبة", "فن وحضارة", "أسوان", "خضر العطار"],
-      description: "رحلة في عمق الهوية النوبية، تعبّر عن الفخر بحضارة النوبة وتراثها الأصيل، وتبرز جمال الفن النوبي وارتباطه بالتاريخ والثقافة والهوية.",
-      hashtags: ["#النوبه", "#فخور_أنا", "#فخور_انا_بحضارتي_النوبه_فوق❤️", "#النوبه_فن_و_حضارة", "#أسوان", "#خضر_العطار"],
-    },
-    {
-      videoSrc: "assets/videos/video-2.mp4",
-      poster: "assets/videos/video-2-poster.png",
-      title: "حسن جزولي – فرح نوبي في 1960",
-      artist: "حسن جزولي",
-      category: ["تراث نوبي", "أفراح نوبية", "موسيقى نوبية قديمة"],
-      description: "مشاهد نادرة من فرح نوبي في ستينيات القرن الماضي، توثق أجواء الأفراح القديمة في النوبة، بما تحمله من موسيقى وغناء وعادات وتقاليد أصيلة تعكس روح المجتمع النوبي.",
-      hashtags: ["#حسن_جزولي", "#النوبه", "#تراث_نوبي", "#فرح_نوبي", "#موسيقى_نوبية"],
-    },
-    {
-      videoSrc: "assets/videos/video-3.mp4",
-      poster: "assets/videos/video-3-poster.png",
-      title: "أحمد منيب ومحمد منير – تجمع تاريخي",
-      artist: "أحمد منيب ومحمد منير",
-      category: ["أحمد منيب", "محمد منير", "موسيقى نوبية", "تراث نوبي"],
-      description: "لحظة مميزة تجمع اثنين من رموز الأغنية النوبية الحديثة، أحمد منيب ومحمد منير، في مشهد يوثق جانبًا من تاريخ الفن النوبي وتأثيره في الموسيقى المصرية.",
-      hashtags: ["#أحمد_منيب", "#محمد_منير", "#النوبه", "#موسيقى_نوبية", "#تراث_نوبي"],
-    },
-    {
-      videoSrc: "assets/videos/video-4.mp4",
-      poster: "assets/videos/video-4-poster.jpg",
-      title: "حسن الصغير وبيبو آدم – فرح نوبي في القاهرة",
-      artist: "حسن الصغير وبيبو آدم",
-      category: ["أفراح نوبية", "حسن الصغير", "بيبو آدم", "موسيقى نوبية"],
-      description: "أجواء احتفالية من فرح نوبي في القاهرة، تجمع بين الغناء والموسيقى والفرحة النوبية مع حسن الصغير وبيبو آدم، في مشهد يعكس استمرار التراث النوبي أينما اجتمع أبناء النوبة.",
-      hashtags: ["#حسن_الصغير", "#بيبو_آدم", "#فرح_نوبي", "#النوبه", "#القاهرة", "#أفراح_نوبية"],
-    },
-    {
-      videoSrc: "assets/videos/video-5.mp4",
-      poster: "assets/videos/video-5-poster.png",
-      title: "هشام باطه – توشكي غرب في حنة نوبية",
-      artist: "هشام باطه",
-      category: ["توشكي غرب", "حنة نوبية", "هشام باطه", "تراث نوبي"],
-      description: "أجواء حنة نوبية أصيلة من توشكي غرب، تجمع بين الموسيقى والغناء والاحتفال، وتبرز جمال العادات والتقاليد النوبية وروح الفرح التي تميز المناسبات النوبية.",
-      hashtags: ["#هشام_باطه", "#توشكي_غرب", "#حنة_نوبية", "#النوبه", "#تراث_نوبي"],
-    },
-    {
-      videoSrc: "assets/videos/video-6.mp4",
-      poster: "assets/videos/video-6-poster.png",
-      title: "محمود فوزي – فرح نوبي في السعودية",
-      artist: "محمود فوزي",
-      category: ["محمود فوزي", "فرح نوبي", "السعودية", "موسيقى نوبية"],
-      description: "فرح نوبي في السعودية يجمع أبناء النوبة حول الموسيقى والغناء والاحتفال، في مشهد يؤكد أن الفن النوبي يحمل هويته وتراثه معه أينما كان أبناء النوبة.",
-      hashtags: ["#محمود_فوزي", "#فرح_نوبي", "#النوبه", "#السعودية", "#موسيقى_نوبية"],
-    },
-  ];
+const NUBIAN_VIDEOS = [
+  {
+    videoSrc: "assets/videos/video-1.mp4",
+    poster: "assets/videos/video-1-poster.png",
+    title: "النوبة – فخور أنا بحضارتي، النوبة فوق ❤️",
+    artist: "خضر العطار",
+    category: ["النوبة", "فن وحضارة", "أسوان", "خضر العطار"],
+    description:
+      "رحلة إلى عمق الهوية النوبية، نستحضر خلالها ملامح حضارة عريقة امتدت جذورها عبر آلاف السنين، ونكتشف إرثًا ثقافيًا أصيلًا ما زال حاضرًا في تفاصيل الحياة والفن واللغة والعادات. تعكس هذه الرحلة الفخر بتاريخ النوبة وثراء حضارتها، وتبرز جمال الفن النوبي بما يحمله من ألوان ورموز وتفاصيل تعبّر عن روح المكان وذاكرة الأجيال. ومن خلال هذا التراث، تتجلى العلاقة العميقة بين الإنسان النوبي وأرضه وتاريخه، حيث تتكامل الموسيقى واللغة والفنون والعادات والموروث الشعبي لتشكّل هوية متفردة حافظت على حضورها عبر العصور. إنها هوية نابضة بالحياة، تجمع بين أصالة الماضي وإبداع الحاضر، وتحمل قصة شعبٍ ما زال يروي تاريخه ويفتخر بجذوره من جيل إلى جيل.",
+    hashtags: [
+      "#النوبة",
+      "#فخور_أنا",
+      "#فخور_أنا_بحضارتي",
+      "#النوبة_فوق",
+      "#النوبة_فن_وحضارة",
+      "#أسوان",
+      "#خضر_العطار",
+    ],
+  },
 
+  {
+    videoSrc: "assets/videos/video-2.mp4",
+    poster: "assets/videos/video-2-poster.png",
+    title: "حسن جزولي – فرح نوبي في ستينيات القرن الماضي",
+    artist: "حسن جزولي",
+    category: ["تراث نوبي", "أفراح نوبية", "موسيقى نوبية قديمة"],
+    description:
+      "مشاهد نادرة من فرح نوبي في ستينيات القرن الماضي، توثّق جانبًا من الحياة الاجتماعية في النوبة خلال تلك الفترة، وتكشف أجواء الأفراح التي كانت تجمع الأهل والأحبة في مناسبات الزواج. وتظهر في هذه المشاهد ملامح من الموسيقى والغناء والرقص النوبي، إلى جانب العادات والتقاليد التي صاحبت الاحتفالات ومنحتها طابعًا خاصًا يعكس روح المجتمع النوبي وتماسكه. وتمثل هذه اللقطات ذاكرة بصرية ثمينة توثّق جانبًا من تفاصيل الحياة والملابس والتجمعات وطرق الاحتفال، وتحفظ ملامح مرحلة تاريخية وثقافية انتقلت ذكرياتها من جيل إلى جيل.",
+    hashtags: [
+      "#حسن_جزولي",
+      "#النوبة",
+      "#تراث_نوبي",
+      "#فرح_نوبي",
+      "#أفراح_نوبية",
+      "#موسيقى_نوبية",
+    ],
+  },
+
+  {
+    videoSrc: "assets/videos/video-3.mp4",
+    poster: "assets/videos/video-3-poster.png",
+    title: "أحمد منيب ومحمد منير – لقاء من ذاكرة الفن النوبي",
+    artist: "أحمد منيب ومحمد منير",
+    category: ["أحمد منيب", "محمد منير", "موسيقى نوبية", "تراث نوبي"],
+    description:
+      "لحظة فنية مميزة تجمع اثنين من أبرز رموز الأغنية النوبية الحديثة، الفنان الراحل أحمد منيب والفنان محمد منير، في مشهد يستحضر جانبًا مهمًا من رحلة الفن النوبي وتأثيره في الموسيقى المصرية. ارتبط أحمد منيب بتقديم الموسيقى والألحان المستلهمة من التراث النوبي بروح فنية معاصرة، بينما واصل محمد منير هذه الرحلة بأعمال حملت الكثير من ملامح الثقافة النوبية إلى جمهور واسع داخل مصر وخارجها. وتبقى هذه اللحظات جزءًا من ذاكرة الفن، لأنها تختصر رحلة التقاء التراث بالتجديد، وتحافظ على حضور الموسيقى النوبية كأحد روافد المشهد الثقافي والموسيقي المصري.",
+    hashtags: [
+      "#أحمد_منيب",
+      "#محمد_منير",
+      "#النوبة",
+      "#موسيقى_نوبية",
+      "#تراث_نوبي",
+      "#فن_نوبي",
+    ],
+  },
+
+  {
+    videoSrc: "assets/videos/video-4.mp4",
+    poster: "assets/videos/video-4-poster.jpg",
+    title: "حسن الصغير وبيبو آدم – فرح نوبي في القاهرة",
+    artist: "حسن الصغير وبيبو آدم",
+    category: ["أفراح نوبية", "حسن الصغير", "بيبو آدم", "موسيقى نوبية"],
+    description:
+      "أجواء احتفالية من فرح نوبي في القاهرة، تجمع أبناء النوبة حول الغناء والموسيقى والاحتفال في مشهد نابض بالحياة. وتكشف هذه المناسبة كيف تظل الموسيقى النوبية حاضرة في تفاصيل الأفراح، فتجمع الأهل والأصدقاء حول الأغاني والإيقاعات والرقصات التي تحمل ملامح التراث وروح المجتمع. كما تعكس هذه المشاهد استمرار العادات الاجتماعية والفنية النوبية خارج موطنها الأصلي، وتحول المناسبات إلى مساحة للحفاظ على الذاكرة الثقافية وتعزيز التواصل بين الأجيال.",
+    hashtags: [
+      "#حسن_الصغير",
+      "#بيبو_آدم",
+      "#فرح_نوبي",
+      "#النوبة",
+      "#القاهرة",
+      "#أفراح_نوبية",
+      "#موسيقى_نوبية",
+    ],
+  },
+
+  {
+    videoSrc: "assets/videos/video-5.mp4",
+    poster: "assets/videos/video-5-poster.png",
+    title: "هشام باطه – أجواء حنّة نوبية من توشكي غرب",
+    artist: "هشام باطه",
+    category: ["توشكي غرب", "حنة نوبية", "هشام باطه", "تراث نوبي"],
+    description:
+      "أجواء حنّة نوبية أصيلة من توشكي غرب، في مشهد يحتفي بواحدة من أبرز المناسبات الاجتماعية في الثقافة النوبية. تمتزج الموسيقى والغناء والرقص مع طقوس الاحتفال، لتصنع أجواءً مليئة بالفرح والبهجة، وتكشف جانبًا من العادات والتقاليد التي حافظ عليها المجتمع النوبي وحرص على تناقلها عبر الأجيال. وتجتمع العائلة والأصدقاء في هذه المناسبة لمشاركة العروس فرحتها، وسط الأغاني النوبية والإيقاعات الشعبية، لتصبح الحنّة أكثر من مجرد احتفال؛ فهي مساحة للتعبير عن الانتماء والهوية واستمرار التراث في الحياة اليومية.",
+    hashtags: [
+      "#هشام_باطه",
+      "#توشكي_غرب",
+      "#حنة_نوبية",
+      "#النوبة",
+      "#تراث_نوبي",
+      "#أفراح_نوبية",
+    ],
+  },
+
+  {
+    videoSrc: "assets/videos/video-6.mp4",
+    poster: "assets/videos/video-6-poster.png",
+    title: "محمود فوزي – فرح نوبي في السعودية",
+    artist: "محمود فوزي",
+    category: ["محمود فوزي", "فرح نوبي", "السعودية", "موسيقى نوبية"],
+    description:
+      "أجواء من فرح نوبي في المملكة العربية السعودية، تجمع أبناء النوبة حول الموسيقى والغناء والاحتفال، في مشهد يعكس حضور الثقافة النوبية خارج موطنها الأصلي. وتحضر في المناسبة الأغاني والإيقاعات والطقوس التي تحمل ملامح التراث النوبي، لتمنح الاحتفال طابعًا خاصًا يجمع بين الفرح والتواصل والاعتزاز بالهوية. وتؤكد مثل هذه المناسبات أن الثقافة النوبية قادرة على الحفاظ على حضورها مهما ابتعدت المسافات، وأن الموسيقى تظل إحدى أهم الوسائل التي تحمل ذاكرة المكان وروح المجتمع من جيل إلى جيل.",
+    hashtags: [
+      "#محمود_فوزي",
+      "#فرح_نوبي",
+      "#النوبة",
+      "#السعودية",
+      "#موسيقى_نوبية",
+      "#أفراح_نوبية",
+      "#تراث_نوبي",
+    ],
+  },
+];
   /* =======================================================================
      DATA — Quiz (from the source document, verbatim questions/answers)
      ======================================================================= */
@@ -632,9 +687,9 @@
     if (!dictCats) return;
     const counts = { all: DICTIONARY.words.length };
     DICTIONARY.categories.forEach(c => counts[c.key] = DICTIONARY.words.filter(w => w.cat === c.key).length);
-    const allBtn = `<button data-cat="all" class="${activeCat==='all'?'active':''}">الكل <span class="count">${counts.all}</span></button>`;
+    const allBtn = `<button data-cat="all" class="${activeCat==='all'?'active':''}"><span class="cat-label"><span class="cat-dot"></span>الكل</span><span class="count">${counts.all}</span></button>`;
     const rest = DICTIONARY.categories.map(c =>
-      `<button data-cat="${c.key}" class="${activeCat===c.key?'active':''}">${c.label} <span class="count">${counts[c.key]}</span></button>`
+      `<button data-cat="${c.key}" class="${activeCat===c.key?'active':''}"><span class="cat-label"><span class="cat-dot"></span>${c.label}</span><span class="count">${counts[c.key]}</span></button>`
     ).join("");
     dictCats.innerHTML = allBtn + rest;
     $$("button", dictCats).forEach(b => on(b, "click", () => { activeCat = b.dataset.cat; renderDictCategories(); renderDictGrid(); }));
@@ -658,30 +713,38 @@
       const catLabel = (DICTIONARY.categories.find(c => c.key === w.cat) || {}).label || "";
       const favKey = `${w.cat}-${i}-${w.ar}`;
       const isFav = favorites.has(favKey);
+      const sameDialect = w.fadicca === w.kenzi;
+      const dialectsHtml = sameDialect
+        ? `<div class="fc-dia-row fc-dia-both"><span class="fc-dia-dot"></span><b>اللهجتان</b><span class="fc-dia-val">${w.fadicca}</span></div>`
+        : `<div class="fc-dia-row"><span class="fc-dia-dot fc-dia-dot--fad"></span><b>الفاديجا</b><span class="fc-dia-val">${w.fadicca}</span></div>
+           <div class="fc-dia-row"><span class="fc-dia-dot fc-dia-dot--ken"></span><b>الكنزية</b><span class="fc-dia-val">${w.kenzi}</span></div>`;
       return `
-      <div class="flashcard" data-fav-key="${favKey}">
+      <div class="flashcard" data-fav-key="${favKey}" data-cat="${w.cat}">
         <div class="flashcard-inner">
           <div class="fc-face front">
-            <span class="fc-cat">${catLabel}</span>
+            <div class="fc-face-top">
+              <span class="fc-cat">${catLabel}</span>
+              <span class="fc-flip-hint" aria-hidden="true" title="انقر لعرض الترجمة">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 2.1l4 4-4 4"/><path d="M3 12.9V12a9 9 0 019-9h9"/><path d="M7 21.9l-4-4 4-4"/><path d="M21 11.1V12a9 9 0 01-9 9H3"/></svg>
+              </span>
+            </div>
             <span class="fc-ar">${w.ar}</span>
             <div class="fc-bottom">
               <button class="fc-fav ${isFav?'active':''}" aria-label="إضافة للمفضلة" data-action="fav">
                 <svg viewBox="0 0 24 24" fill="${isFav?'currentColor':'none'}" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7.5-4.7-10-9.3C.5 8.4 2.3 5 6 5c2.1 0 3.6 1.1 4.5 2.4C11.4 6.1 12.9 5 15 5c3.7 0 5.5 3.4 4 6.7-2.5 4.6-10 9.3-10 9.3z"/></svg>
               </button>
-              <span style="font-size:.72rem;color:var(--text-soft);">اقلب البطاقة</span>
             </div>
           </div>
           <div class="fc-face back">
-            <span class="fc-cat">${catLabel}</span>
-            <div class="fc-dialects">
-              <div><b>الفاديجا:</b> ${w.fadicca}</div>
-              <div style="margin-top:6px;"><b>الكنزية:</b> ${w.kenzi}</div>
+            <div class="fc-face-top">
+              <span class="fc-cat">${catLabel}</span>
             </div>
+            <div class="fc-dialects">${dialectsHtml}</div>
             <div class="fc-bottom">
               <button class="fc-play" data-action="play" aria-label="استماع تقريبي" title="استماع تقريبي (تركيب صوتي آلي وليس نطقًا نوبيًا موثّقًا)">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               </button>
-              <span style="font-size:.7rem;color:var(--text-soft);">نطق تقريبي</span>
+              <span class="fc-approx-label">نطق تقريبي</span>
             </div>
           </div>
         </div>
