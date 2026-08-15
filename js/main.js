@@ -307,7 +307,29 @@ const NUBIAN_VIDEOS = [
     { q:"من هو الملك النوبي الذي وحّد وادي النيل وحكم مصر؟", options:["بعنخي","رمسيس الثاني","إخناتون"], correct:0 },
     { q:"ما الآلة الموسيقية التي تعتبر «روح» الموسيقى النوبية؟", options:["العود","الطنبور (الكيسر)","الناي"], correct:1 },
     { q:"ماذا يرمز «المثلث» في الزخارف النوبية؟", options:["النيل","الأهرامات أو الحماية","النخيل"], correct:1 },
+    // — أُضيفت الأسئلة التالية بالاعتماد على محتوى الموقع نفسه كمرجع أساسي —
+    { q:"ما أول دولة مركزية قامت في أفريقيا جنوب الصحراء؟", options:["مملكة كرمة","مملكة مروي","مملكة نبتة"], correct:0 },
+    { q:"بأي صناعة اشتهرت مملكة مروي، إلى جانب بناء مئات الأهرامات؟", options:["صناعة الحديد","صناعة الزجاج","صناعة الورق"], correct:0 },
+    { q:"بين أي عامين حكم ملوك الأسرة الخامسة والعشرين، الملقّبون بـ«الفراعنة السود»، مصر والنوبة معًا؟", options:["٧٤٤–٦٥٦ ق.م","١٠٧٠–٧٥٠ ق.م","٣٥٠–٥٥٠ م"], correct:0 },
+    { q:"في أي قرن اعتنقت الممالك النوبية الثلاث (نوباتيا، المقرة، علوة) المسيحية؟", options:["القرن السادس الميلادي","القرن الثاني الميلادي","القرن الحادي عشر الميلادي"], correct:0 },
+    { q:"بين أي عامين أدى بناء السد العالي إلى غرق بلاد النوبة القديمة وتهجير أهلها؟", options:["١٩٦٠–١٩٧٠ م","١٩٠٢–١٩١٣ م","١٨٩٩–١٩٠٥ م"], correct:0 },
+    { q:"ما اسم اللهجة النوبية التي يتحدث بها نوبيو الجنوب؟", options:["الفاديجا","الكنزية","النوباتية"], correct:0 },
+    { q:"من الذي اقترح استخدام اللغة النوبية كشفرة عسكرية في حرب أكتوبر ١٩٧٣؟", options:["أحمد إدريس","محمد خليل قاسم","المشير طنطاوي"], correct:0 },
+    { q:"ما اسم أشهر رقصة نوبية جماعية تُؤدى بحركة الأكتاف والتصفيق الإيقاعي المتناغم؟", options:["رقصة الأراجيد","رقصة التنورة","رقصة السمسمية"], correct:0 },
+    { q:"ماذا يرمز رسم «العقرب» على واجهات البيوت النوبية؟", options:["منع الحسد","الحماية من اللصوص","الخصوبة والبركة"], correct:0 },
+    { q:"ما الاستخدام الأساسي لـ«المصطبة» في البيت النوبي؟", options:["الجلوس واستقبال الضيوف","تخزين المياه","حفظ المحاصيل"], correct:0 },
+    { q:"ما اسم موكب الزفاف الراقص الذي يُختتم به الزفاف النوبي؟", options:["الزفّة","السبوع","ليلة الحناء"], correct:0 },
+    { q:"ماذا تُسمّى حقيبة الهدايا الضخمة التي يقدّمها العريس النوبي؟", options:["الشيلة","الجرجار","القايمة"], correct:0 },
+    { q:"أي رقم يُعتبر مقدّسًا في الطقوس النوبية القديمة، ويوافق تاريخ يوم النوبة العالمي؟", options:["٧","٩","١٢"], correct:0 },
+    { q:"ماذا يعني طبق «الملتوت» النوبي؟", options:["العيش الشمسي التقليدي","مرقة اللحم","حلوى بالعسل"], correct:0 },
+    { q:"على أي مكوّن أساسي يعتمد المطبخ النوبي بشكل رئيسي؟", options:["الويكة (البامية المجففة المطحونة)","الأرز الأبيض","السمك المملح"], correct:0 },
+    { q:"ما اسم الأواني الفخارية التقليدية التي تُستخدم لحفظ المياه وتبريدها طبيعيًا؟", options:["الزير والقِلال","الطار والدف","الشيلة والجرجار"], correct:0 },
+    { q:"من مؤلف رواية «الشمندورة» التي تناولت حياة النوبيين وتجربة التهجير؟", options:["محمد خليل قاسم","إدريس علي","حجاج أدول"], correct:0 },
+    { q:"أي فنان نوبي عالمي نقل الموسيقى النوبية إلى المسارح العالمية عبر العزف على العود؟", options:["حمزة علاء الدين","علي كوبان","بحر أبو جريشة"], correct:0 },
+    { q:"لأي إلهة كُرّس معبد فيلة؟", options:["إيزيس","حتحور","نفرتيتي"], correct:0 },
+    { q:"من مؤلف كتاب «اللغة النوبية: كيف نكتبها؟»", options:["د. مختار خليل كبارة","محيي الدين شريف","إبراهيم شعراوي"], correct:0 },
   ];
+  const QUIZ_ROUND_SIZE = 8; // عدد الأسئلة المعروضة في كل محاولة (يُختار عشوائيًا من بنك الأسئلة الكامل)
 
   /* =======================================================================
      Utilities
@@ -965,10 +987,11 @@ const NUBIAN_VIDEOS = [
   const quizPlay = $("#quiz-play");
   const quizFinal = $("#quiz-final");
   let quizIndex = 0, quizScore = 0;
+  let quizRound = QUIZ; // مجموعة الأسئلة الفعلية للمحاولة الحالية (عيّنة عشوائية من بنك الأسئلة)
 
   function renderQuiz() {
-    const q = QUIZ[quizIndex];
-    $("#quiz-progress-label").textContent = `سؤال ${quizIndex + 1} من ${QUIZ.length}`;
+    const q = quizRound[quizIndex];
+    $("#quiz-progress-label").textContent = `سؤال ${quizIndex + 1} من ${quizRound.length}`;
     $("#quiz-question").textContent = q.q;
     $("#quiz-options").innerHTML = q.options.map((opt, i) => `<button data-i="${i}">${opt}</button>`).join("");
     $$("#quiz-options button").forEach(btn => on(btn, "click", () => {
@@ -981,7 +1004,7 @@ const NUBIAN_VIDEOS = [
       if (i === q.correct) quizScore++;
       setTimeout(() => {
         quizIndex++;
-        if (quizIndex < QUIZ.length) renderQuiz();
+        if (quizIndex < quizRound.length) renderQuiz();
         else showQuizFinal();
       }, 1000);
     }));
@@ -989,21 +1012,29 @@ const NUBIAN_VIDEOS = [
   function showQuizFinal() {
     quizPlay.style.display = "none";
     quizFinal.style.display = "block";
-    $("#quiz-score-num").textContent = `${quizScore}/${QUIZ.length}`;
+    $("#quiz-score-num").textContent = `${quizScore}/${quizRound.length}`;
     let msg = "بداية جميلة في رحلة التعرف على النوبة!";
-    if (quizScore === QUIZ.length) msg = "مبهر! أنت خبير في تراث النوبة 🏆";
-    else if (quizScore >= QUIZ.length - 1) msg = "رائع! معرفتك بالنوبة عميقة جدًا.";
+    if (quizScore === quizRound.length) msg = "مبهر! أنت خبير في تراث النوبة 🏆";
+    else if (quizScore >= quizRound.length - 1) msg = "رائع! معرفتك بالنوبة عميقة جدًا.";
     $("#quiz-final-msg").textContent = msg;
   }
-  on($("#quiz-start-btn"), "click", () => {
+  function withShuffledOptions(q) {
+    const order = shuffled(q.options.map((_, i) => i));
+    return { q: q.q, options: order.map(i => q.options[i]), correct: order.indexOf(q.correct) };
+  }
+  function startQuizRound() {
+    quizRound = shuffled(QUIZ).slice(0, Math.min(QUIZ_ROUND_SIZE, QUIZ.length)).map(withShuffledOptions);
     quizIndex = 0; quizScore = 0;
+  }
+  on($("#quiz-start-btn"), "click", () => {
+    startQuizRound();
     quizStart.style.display = "none";
     quizFinal.style.display = "none";
     quizPlay.style.display = "block";
     renderQuiz();
   });
   on($("#quiz-restart-btn"), "click", () => {
-    quizIndex = 0; quizScore = 0;
+    startQuizRound();
     quizFinal.style.display = "none";
     quizPlay.style.display = "block";
     renderQuiz();
