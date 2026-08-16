@@ -329,7 +329,20 @@
           <div class="step-item"><div class="step-num">٣</div><div class="step-text"><h4>ليلة الحناء</h4><p>تبدأ بذبح المواشي وإطعام القرية، وترتدي العروس الساري النوبي الملون بينما تُطبق الحناء وسط الاحتفال.</p></div></div>
           <div class="step-item"><div class="step-num">٤</div><div class="step-text"><h4>الزفّة</h4><p>موكب راقص يرافقه الغناء والتصفيق ورقصات نوبية مميزة، تُؤدى أغانيها باللغتين الفاديجا والكنزية.</p></div></div>
         </div>
-        <div class="story-media" style="aspect-ratio:auto;" data-reveal="scale"><video src="assets/videos/wedding-procession.mp4" poster="assets/videos/wedding-procession-poster.jpg" controls playsinline preload="metadata" style="aspect-ratio:16 / 17;">متصفحك لا يدعم تشغيل الفيديو.</video><span class="media-tag"> العادات والتقاليد الزفاف النوبي</span></div>
+        <div class="story-media" style="aspect-ratio:auto;" data-reveal="scale">
+<video
+    class="auto-pause-video"
+    controls
+    playsinline
+    preload="metadata"
+    src="assets/videos/wedding-procession.mp4"
+    poster="assets/videos/wedding-procession-poster.jpg"
+    style="aspect-ratio: 16 / 17;"
+>
+    متصفحك لا يدعم تشغيل الفيديو.
+</video>
+
+         <span class="media-tag"> العادات والتقاليد الزفاف النوبي</span></div>
       </div>
       <!-- <div class="glass-card stack-lg" style="padding:26px;max-width:800px;" data-reveal>
         <span class="card-eyebrow">الميلاد والسبوع</span>
@@ -481,10 +494,12 @@
           <div class="vgallery-player">
             <div class="vgallery-frame">
               <div class="vgallery-frame-bg" id="vgallery-frame-bg" aria-hidden="true"></div>
-              <video id="vgallery-video" controls playsinline preload="metadata">
-                <source id="vgallery-source" src="" type="video/mp4">
-                متصفحك لا يدعم تشغيل الفيديو.
-              </video>
+             <video id="vgallery-video" controls playsinline preload="metadata">
+    <source id="vgallery-source" src="" type="video/mp4">
+    متصفحك لا يدعم تشغيل الفيديو.
+</video>
+
+
             </div>
             <div class="vgallery-thumbs" id="vgallery-thumbs"></div>
             <div class="vgallery-nav">
@@ -507,8 +522,14 @@
       <div class="village-wedding" data-reveal="fade">
         <div class="vw-media">
           <div class="vw-frame">
-            <iframe src="https://www.youtube.com/embed/iGVILKQiyMo?rel=0" title="فرح نوبي في البلد" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
+<iframe
+    class="auto-pause-youtube"
+    src="https://www.youtube.com/embed/iGVILKQiyMo?enablejsapi=1&rel=0"
+    title="فرح نوبي في البلد"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    loading="lazy">
+</iframe>          </div>
         </div>
         <div class="vw-info">
           <span class="vw-eyebrow">نافذة أرشيفية مستقلة</span>
@@ -1237,5 +1258,76 @@
 </div>
 
 <script src="js/main.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<script>
+let youtubePlayers = [];
+
+// تهيئة YouTube API
+function onYouTubeIframeAPIReady() {
+
+    document.querySelectorAll('.auto-pause-youtube').forEach((iframe) => {
+
+        const player = new YT.Player(iframe, {
+            events: {
+                onReady: function () {
+                    youtubePlayers.push(player);
+                }
+            }
+        });
+
+    });
+}
+
+
+// Observer واحد لجميع الفيديوهات
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (!entry.isIntersecting) {
+
+            const element = entry.target;
+
+            // HTML Video
+            if (element.tagName === 'VIDEO') {
+                element.pause();
+            }
+
+            // YouTube Video
+            else if (element.tagName === 'IFRAME') {
+
+                const player = youtubePlayers.find(
+                    p => p.getIframe() === element
+                );
+
+                if (player) {
+                    player.pauseVideo();
+                }
+            }
+        }
+
+    });
+
+}, {
+    threshold: 0.5
+});
+
+
+// مراقبة فيديوهات HTML
+document.querySelectorAll('.auto-pause-video, #vgallery-video')
+    .forEach(video => {
+        observer.observe(video);
+    });
+
+
+// مراقبة فيديوهات YouTube
+document.querySelectorAll('.auto-pause-youtube')
+    .forEach(iframe => {
+        observer.observe(iframe);
+    });
+</script>
 </body>
 </html>
+
+
