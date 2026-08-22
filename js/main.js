@@ -1,5 +1,5 @@
 /* =========================================================================
-   النوبة · أسوان — data + interactions
+   النوبة · أسوان    data + interactions
    No backend, no localStorage (keeps the page fully portable + artifact-safe).
    All state lives in memory for the duration of the visit.
    ========================================================================= */
@@ -11,7 +11,7 @@
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* =======================================================================
-     DATA — Nubian dictionary (Fadicca / Kenzi), transcribed from the source
+     DATA    Nubian dictionary (Fadicca / Kenzi), transcribed from the source
      content document. Numbers use a single traditional form for both.
      ======================================================================= */
   const DICTIONARY = {
@@ -26,114 +26,209 @@
       { key: "numbers",  label: "الأرقام", en: "Numbers" },
     ],
     words: [
-      // عبارات أساسية
-      { cat:"phrases", ar:"تحية (مرحباً)", en:"Greeting (Hello)", fadicca:"مسكاقنا / سليمو", kenzi:"مسكاقرو / سليمو" },
-      { cat:"phrases", ar:"شكرًا", en:"Thank you", fadicca:"أورا / أورونج", kenzi:"أورا / أورون" },
-      { cat:"phrases", ar:"الحب", en:"Love", fadicca:"دولّي", kenzi:"دولّي" },
-      { cat:"phrases", ar:"البيت", en:"Home", fadicca:"كا", kenzi:"كا" },
-      { cat:"phrases", ar:"الماء", en:"Water", fadicca:"أمان (Aman)", kenzi:"أسي (Essi)" },
-      // أساسيات
-      { cat:"basics", ar:"أنا", en:"I / me", fadicca:"أي (Ay)", kenzi:"أي (Ay)" },
-      { cat:"basics", ar:"أنتَ / أنتِ", en:"You", fadicca:"إير (Ir)", kenzi:"إير (Ir)" },
-      { cat:"basics", ar:"نعم", en:"Yes", fadicca:"أي / أيو", kenzi:"أيو" },
-      { cat:"basics", ar:"لا", en:"No", fadicca:"ملا (Mala) / مالانق", kenzi:"أون (Oun) / مالا" },
-      { cat:"basics", ar:"لا يوجد / بلاش", en:"There isn't / don't", fadicca:"ملا / مانقا", kenzi:"مونا / سيكام" },
-      { cat:"basics", ar:"لسه", en:"Not yet", fadicca:"جيل", kenzi:"جيل" },
-      { cat:"basics", ar:"كفاية", en:"Enough", fadicca:"يكّي / كورك", kenzi:"يكّي" },
-      { cat:"basics", ar:"من؟", en:"Who?", fadicca:"ني (Nee)", kenzi:"ني (Nee)" },
-      { cat:"basics", ar:"ماذا؟", en:"What?", fadicca:"مين (Min)", kenzi:"مين (Min)" },
-      { cat:"basics", ar:"أين؟", en:"Where?", fadicca:"مينتو", kenzi:"مينتو / سيكّي" },
-      { cat:"basics", ar:"متى؟", en:"When?", fadicca:"هومين", kenzi:"شومين" },
-      { cat:"basics", ar:"الآن", en:"Now", fadicca:"إشكولا / آكا", kenzi:"إشكولا" },
-      { cat:"basics", ar:"اليوم", en:"Today", fadicca:"إينال / إيتو", kenzi:"إيتو (Eeto)" },
-      { cat:"basics", ar:"بكرة", en:"Tomorrow", fadicca:"بيا (Beya)", kenzi:"بيا (Beya)" },
-      { cat:"basics", ar:"أمس", en:"Yesterday", fadicca:"صو", kenzi:"صو / سو" },
-      // أفعال
-      { cat:"verbs", ar:"تعال", en:"Come", fadicca:"كير (Kiir)", kenzi:"كير (Kiir)" },
-      { cat:"verbs", ar:"اذهب / امشِ", en:"Go / walk", fadicca:"موق (Mog)", kenzi:"موق (Mog)" },
-      { cat:"verbs", ar:"كُل", en:"Eat", fadicca:"كالي (Kalli)", kenzi:"كالي (Kalli)" },
-      { cat:"verbs", ar:"اشرب", en:"Drink", fadicca:"ني (Ni)", kenzi:"ناي (Nai)" },
-      { cat:"verbs", ar:"نَم", en:"Sleep", fadicca:"جير / نيير", kenzi:"جير / نيير" },
-      { cat:"verbs", ar:"اجلس", en:"Sit", fadicca:"تقو / آك", kenzi:"أوقو" },
-      { cat:"verbs", ar:"اسمع", en:"Listen", fadicca:"مسك / أوكي", kenzi:"أوكي (Ukki)" },
-      { cat:"verbs", ar:"انظر", en:"Look", fadicca:"نال (Nal)", kenzi:"نال (Nal)" },
-      { cat:"verbs", ar:"تكلم", en:"Speak", fadicca:"ويقي", kenzi:"ويقير" },
-      { cat:"verbs", ar:"هات / أعطِ", en:"Give / bring", fadicca:"دين / تِي", kenzi:"تِي / دين" },
-      { cat:"verbs", ar:"خذ", en:"Take", fadicca:"طاو (Taw)", kenzi:"طاو (Taw)" },
-      { cat:"verbs", ar:"ادخل", en:"Enter", fadicca:"جين (Jeen)", kenzi:"جين (Jeen)" },
-      { cat:"verbs", ar:"اخرج", en:"Go out", fadicca:"بال / وسكيل", kenzi:"وسكيل" },
-      { cat:"verbs", ar:"اغسل", en:"Wash", fadicca:"جوك / شوك", kenzi:"شوك" },
-      { cat:"verbs", ar:"العب", en:"Play", fadicca:"أور (Our)", kenzi:"أور (Our)" },
-      { cat:"verbs", ar:"اعمل / اشتغل", en:"Work", fadicca:"صو / أوج", kenzi:"أوج" },
-      { cat:"verbs", ar:"اضحك", en:"Laugh", fadicca:"جيل (Jeel)", kenzi:"جيل (Jeel)" },
-      { cat:"verbs", ar:"اعرف", en:"Know", fadicca:"كيب / ارسك", kenzi:"كيب / ارسك" },
-      // العائلة
-      { cat:"family", ar:"أمي", en:"My mother", fadicca:"إنَّا (Enna)", kenzi:"إنَّا (Enna)" },
-      { cat:"family", ar:"أبي", en:"My father", fadicca:"أپَّا / آبا", kenzi:"أپَّا / آبا" },
-      { cat:"family", ar:"أخي", en:"My brother", fadicca:"فاي (Fayi)", kenzi:"أَمْبا (Amba)" },
-      { cat:"family", ar:"أختي", en:"My sister", fadicca:"داوس", kenzi:"داوس" },
-      { cat:"family", ar:"ولد / ابن", en:"Boy / son", fadicca:"تود (Tod)", kenzi:"تود (Tod)" },
-      { cat:"family", ar:"بنت / ابنة", en:"Girl / daughter", fadicca:"بور (Bour)", kenzi:"بور (Bour)" },
-      { cat:"family", ar:"طفل", en:"Child", fadicca:"كورا / تود", kenzi:"بورو" },
-      { cat:"family", ar:"رجل", en:"Man", fadicca:"أوقج (Ougij)", kenzi:"أوقج (Ougij)" },
-      { cat:"family", ar:"امرأة", en:"Woman", fadicca:"إدين / إدنا", kenzi:"إدين" },
-      { cat:"family", ar:"ضيف", en:"Guest", fadicca:"إشكي", kenzi:"إشكي" },
-      { cat:"family", ar:"صاحب / جار", en:"Friend / neighbor", fadicca:"كورسي / أورسي", kenzi:"أورسي" },
-      { cat:"family", ar:"إنسان", en:"Person", fadicca:"إد (Id)", kenzi:"إد (Id)" },
-      // أجزاء الجسم
-      { cat:"body", ar:"رأس", en:"Head", fadicca:"أور (Ur)", kenzi:"أور (Ur)" },
-      { cat:"body", ar:"عين", en:"Eye", fadicca:"ميس (Miss)", kenzi:"كال (Kal)" },
-      { cat:"body", ar:"أذن", en:"Ear", fadicca:"أوي (Uyi)", kenzi:"أوي (Uyi)" },
-      { cat:"body", ar:"فم", en:"Mouth", fadicca:"أوق (Oug)", kenzi:"أوق (Oug)" },
-      { cat:"body", ar:"يد", en:"Hand", fadicca:"إيد (Eed)", kenzi:"إيد (Eed)" },
-      { cat:"body", ar:"رجل (قدم)", en:"Leg / foot", fadicca:"أوس (Ous)", kenzi:"أوس (Ous)" },
-      { cat:"body", ar:"قلب", en:"Heart", fadicca:"آي (Aay)", kenzi:"آي (Aay)" },
-      { cat:"body", ar:"بطن", en:"Stomach", fadicca:"تو (Too)", kenzi:"تو (Too)" },
-      { cat:"body", ar:"شعر", en:"Hair", fadicca:"ديل / صوم", kenzi:"صوم" },
-      { cat:"body", ar:"لسان", en:"Tongue", fadicca:"نال / نيد", kenzi:"نيد (Need)" },
-      // البيت والطعام
-      { cat:"house", ar:"بيت", en:"House", fadicca:"كا (Ka)", kenzi:"كا (Ka)" },
-      { cat:"house", ar:"باب", en:"Door", fadicca:"كورو (Kourou)", kenzi:"كورو (Kourou)" },
-      { cat:"house", ar:"ماء", en:"Water", fadicca:"أمان (Aman)", kenzi:"أسي (Essi)" },
-      { cat:"house", ar:"لبن", en:"Milk", fadicca:"إرتي (Erti)", kenzi:"إرتي (Erti)" },
-      { cat:"house", ar:"شاي", en:"Tea", fadicca:"شاي", kenzi:"شاي" },
-      { cat:"house", ar:"خبز", en:"Bread", fadicca:"كابِدة / شادي", kenzi:"كابِدة / شادي" },
-      { cat:"house", ar:"تمر", en:"Dates", fadicca:"فينتي (Finti)", kenzi:"فينتي (Finti)" },
-      { cat:"house", ar:"نخلة", en:"Palm tree", fadicca:"فينتي كُو", kenzi:"فينتي كور" },
-      { cat:"house", ar:"نار", en:"Fire", fadicca:"إق (Iq)", kenzi:"إق (Iq)" },
-      { cat:"house", ar:"ملح", en:"Salt", fadicca:"أجر (Ajir)", kenzi:"أجر (Ajir)" },
-      { cat:"house", ar:"لحم", en:"Meat", fadicca:"كوس (Koos)", kenzi:"كوس (Koos)" },
-      { cat:"house", ar:"سمك", en:"Fish", fadicca:"أمان كاري", kenzi:"أسي كاري" },
-      { cat:"house", ar:"فلوس / ذهب", en:"Money / gold", fadicca:"أوري (فلوس) / نوب (ذهب)", kenzi:"أوري (فلوس)" },
-      // صفات
-      { cat:"qualities", ar:"جميل", en:"Beautiful", fadicca:"مسقاني / مشكا", kenzi:"مشكا (Mishka)" },
-      { cat:"qualities", ar:"سيء / وحش", en:"Bad / ugly", fadicca:"ملان (Malan)", kenzi:"ملان (Malan)" },
-      { cat:"qualities", ar:"كبير", en:"Big", fadicca:"دُو (Dou)", kenzi:"أورا / داو" },
-      { cat:"qualities", ar:"صغير", en:"Small", fadicca:"كينو (Keeno) / كورا", kenzi:"كين (Keen)" },
-      { cat:"qualities", ar:"كثير", en:"Much / many", fadicca:"ماني / جيك", kenzi:"كادي" },
-      { cat:"qualities", ar:"طويل", en:"Long / tall", fadicca:"فور (Four)", kenzi:"فور (Four)" },
-      { cat:"qualities", ar:"قصير", en:"Short", fadicca:"كور (Kour)", kenzi:"كور (Kour)" },
-      { cat:"qualities", ar:"أبيض", en:"White", fadicca:"أرو (Aroo)", kenzi:"أرو (Aroo)" },
-      { cat:"qualities", ar:"أسود", en:"Black", fadicca:"أُدّي (Uddi)", kenzi:"أُدّي (Uddi)" },
-      { cat:"qualities", ar:"أحمر", en:"Red", fadicca:"جيل (Jeel)", kenzi:"جيل (Jeel)" },
-      { cat:"qualities", ar:"بارد", en:"Cold", fadicca:"أوقوج (Ougouj)", kenzi:"أوقوج (Ougouj)" },
-      { cat:"qualities", ar:"سريع", en:"Fast", fadicca:"بيرا (Beera)", kenzi:"بيرا (Beera)" },
-      // الأرقام
-      { cat:"numbers", ar:"١ (واحد)", en:"1 (one)", fadicca:"وِير (Weer)", kenzi:"وِير (Weer)" },
-      { cat:"numbers", ar:"٢ (اثنين)", en:"2 (two)", fadicca:"أُوو (Oww)", kenzi:"أُوو (Oww)" },
-      { cat:"numbers", ar:"٣ (ثلاثة)", en:"3 (three)", fadicca:"طوسكو (Tosko)", kenzi:"طوسكو (Tosko)" },
-      { cat:"numbers", ar:"٤ (أربعة)", en:"4 (four)", fadicca:"كِمسو (Kemsou)", kenzi:"كِمسو (Kemsou)" },
-      { cat:"numbers", ar:"٥ (خمسة)", en:"5 (five)", fadicca:"دِجو (Dijjou)", kenzi:"دِجو (Dijjou)" },
-      { cat:"numbers", ar:"٦ (ستة)", en:"6 (six)", fadicca:"قورو (Gorou)", kenzi:"قورو (Gorou)" },
-      { cat:"numbers", ar:"٧ (سبعة)", en:"7 (seven)", fadicca:"كولود (Kolod)", kenzi:"كولود (Kolod)" },
-      { cat:"numbers", ar:"٨ (ثمانية)", en:"8 (eight)", fadicca:"إدِوو (Iddiww)", kenzi:"إدِوو (Iddiww)" },
-      { cat:"numbers", ar:"٩ (تسعة)", en:"9 (nine)", fadicca:"إسكود (Iskod)", kenzi:"إسكود (Iskod)" },
-      { cat:"numbers", ar:"١٠ (عشرة)", en:"10 (ten)", fadicca:"ديمِر (Dimir)", kenzi:"ديمِر (Dimir)" },
-    ],
+  // عبارات أساسية
+  { cat:"phrases", ar:"تحية (مرحباً)", en:"Greeting (Hello)", fadicca:"مسكاقنا / سليمو", kenzi:"مسكاقرو / سليمو" },
+
+  { cat:"phrases", ar:"شكرًا", en:"Thank you", fadicca:"أورا / أورونج", kenzi:"أورا / أورون" },
+
+  { cat:"phrases", ar:"الحب", en:"Love", fadicca:"دولّي", kenzi:"دولّي" },
+
+  { cat:"phrases", ar:"البيت", en:"Home", fadicca:"كا (Ka)", kenzi:"كا (Ka)" },
+
+
+  { cat:"phrases", ar:"الماء", en:"Water", fadicca:"أمان (Aman)", kenzi:"أسي (Essi)" },
+
+  // أساسيات
+  { cat:"basics", ar:"أنا", en:"I / me", fadicca:"أي (Ay)", kenzi:"أي (Ay)" },
+
+  { cat:"basics", ar:"أنتَ / أنتِ", en:"You", fadicca:"إير (Ir)", kenzi:"إير (Ir)" },
+
+  { cat:"basics", ar:"نعم", en:"Yes", fadicca:"أي / أيو (Ay / Ayo)", kenzi:"أيو (Ayo)" },
+
+  { cat:"basics", ar:"لا", en:"No", fadicca:"ملا (Mala) / مالانق (Malanq)", kenzi:"أون (Oun) / مالا (Mala)" },
+
+  { cat:"basics", ar:"لا يوجد / بلاش", en:"There isn't / don't", fadicca:"ملا / مانقا (Mala / Manga)", kenzi:"مونا / سيكام (Mona / Sekam)" },
+
+  { cat:"basics", ar:"لسه", en:"Not yet", fadicca:"جيل (Jil)", kenzi:"جيل (Jil)" },
+
+  { cat:"basics", ar:"كفاية", en:"Enough", fadicca:"يكّي (Yikki) / كورك (Kourk)", kenzi:"يكّي (Yikki)" },
+
+  { cat:"basics", ar:"من؟", en:"Who?", fadicca:"ني (Nee)", kenzi:"ني (Nee)" },
+
+  { cat:"basics", ar:"ماذا؟", en:"What?", fadicca:"مين (Min)", kenzi:"مين (Min)" },
+
+  { cat:"basics", ar:"أين؟", en:"Where?", fadicca:"مينتو (Minto)", kenzi:"مينتو (Minto) / سيكّي (Sikki)" },
+
+  { cat:"basics", ar:"متى؟", en:"When?", fadicca:"هومين (Homin)", kenzi:"شومين (Shomin)" },
+
+  { cat:"basics", ar:"الآن", en:"Now", fadicca:"إشكولا (Ishkola) / آكا (Aka)", kenzi:"إشكولا (Ishkola)" },
+
+  { cat:"basics", ar:"اليوم", en:"Today", fadicca:"إينال (Inal) / إيتو (Eeto)", kenzi:"إيتو (Eeto)" },
+
+  { cat:"basics", ar:"بكرة", en:"Tomorrow", fadicca:"بيا (Beya)", kenzi:"بيا (Beya)" },
+
+  { cat:"basics", ar:"أمس", en:"Yesterday", fadicca:"صو (So)", kenzi:"صو (So) / سو (Su)" },
+
+  // أفعال
+  { cat:"verbs", ar:"تعال", en:"Come", fadicca:"كير (Kiir)", kenzi:"كير (Kiir)" },
+
+  { cat:"verbs", ar:"اذهب / امشِ", en:"Go / walk", fadicca:"موق (Mog)", kenzi:"موق (Mog)" },
+
+  { cat:"verbs", ar:"كُل", en:"Eat", fadicca:"كالي (Kalli)", kenzi:"كالي (Kalli)" },
+
+  { cat:"verbs", ar:"اشرب", en:"Drink", fadicca:"ني (Ni)", kenzi:"ناي (Nai)" },
+
+  { cat:"verbs", ar:"نَم", en:"Sleep", fadicca:"جير (Jeer) / نيير (Nier)", kenzi:"جير (Jeer) / نيير (Nier)" },
+
+  { cat:"verbs", ar:"اجلس", en:"Sit", fadicca:"تقو (Tegu) / آك (Ak)", kenzi:"أوقو (Ougo)" },
+
+  { cat:"verbs", ar:"اسمع", en:"Listen", fadicca:"مسك (Misk) / أوكي (Ukki)", kenzi:"أوكي (Ukki)" },
+
+  { cat:"verbs", ar:"انظر", en:"Look", fadicca:"نال (Nal)", kenzi:"نال (Nal)" },
+
+  { cat:"verbs", ar:"تكلم", en:"Speak", fadicca:"ويقي (Weeqi)", kenzi:"ويقير (Weeqir)" },
+
+  { cat:"verbs", ar:"هات / أعطِ", en:"Give / bring", fadicca:"دين (Deen) / تِي (Tee)", kenzi:"تِي (Tee) / دين (Deen)" },
+
+  { cat:"verbs", ar:"خذ", en:"Take", fadicca:"طاو (Taw)", kenzi:"طاو (Taw)" },
+
+  { cat:"verbs", ar:"ادخل", en:"Enter", fadicca:"جين (Jeen)", kenzi:"جين (Jeen)" },
+
+  { cat:"verbs", ar:"اخرج", en:"Go out", fadicca:"بال (Bal) / وسكيل (Woskiil)", kenzi:"وسكيل (Woskiil)" },
+
+  { cat:"verbs", ar:"اغسل", en:"Wash", fadicca:"جوك (Jook) / شوك (Shook)", kenzi:"شوك (Shook)" },
+
+  { cat:"verbs", ar:"العب", en:"Play", fadicca:"أور (Our)", kenzi:"أور (Our)" },
+
+  { cat:"verbs", ar:"اعمل / اشتغل", en:"Work", fadicca:"صو (So) / أوج (Ouj)", kenzi:"أوج (Ouj)" },
+
+  { cat:"verbs", ar:"اضحك", en:"Laugh", fadicca:"جيل (Jeel)", kenzi:"جيل (Jeel)" },
+
+  { cat:"verbs", ar:"اعرف", en:"Know", fadicca:"كيب (Kib) / ارسك (Arsk)", kenzi:"كيب (Kib) / ارسك (Arsk)" },
+
+  // العائلة
+  { cat:"family", ar:"أمي", en:"My mother", fadicca:"إنَّا (Enna)", kenzi:"إنَّا (Enna)" },
+
+  { cat:"family", ar:"أبي", en:"My father", fadicca:"أپَّا (Appa) / آبا (Aba)", kenzi:"أپَّا (Appa) / آبا (Aba)" },
+
+  { cat:"family", ar:"أخي", en:"My brother", fadicca:"فاي (Fayi)", kenzi:"أَمْبا (Amba)" },
+
+  { cat:"family", ar:"أختي", en:"My sister", fadicca:"داوس (Dawes)", kenzi:"داوس (Dawes)" },
+
+  { cat:"family", ar:"ولد / ابن", en:"Boy / son", fadicca:"تود (Tod)", kenzi:"تود (Tod)" },
+
+  { cat:"family", ar:"بنت / ابنة", en:"Girl / daughter", fadicca:"بور (Bour)", kenzi:"بور (Bour)" },
+
+  { cat:"family", ar:"طفل", en:"Child", fadicca:"كورا (Kora) / تود (Tod)", kenzi:"بورو (Bouro)" },
+
+  { cat:"family", ar:"رجل", en:"Man", fadicca:"أوقج (Ougij)", kenzi:"أوقج (Ougij)" },
+
+  { cat:"family", ar:"امرأة", en:"Woman", fadicca:"إدين (Idin) / إدنا (Idna)", kenzi:"إدين (Idin)" },
+
+  { cat:"family", ar:"ضيف", en:"Guest", fadicca:"إشكي (Ishki)", kenzi:"إشكي (Ishki)" },
+
+  { cat:"family", ar:"صاحب / جار", en:"Friend / neighbor", fadicca:"كورسي (Koursi) / أورسي (Oursi)", kenzi:"أورسي (Oursi)" },
+
+  { cat:"family", ar:"إنسان", en:"Person", fadicca:"إد (Id)", kenzi:"إد (Id)" },
+
+  // أجزاء الجسم
+  { cat:"body", ar:"رأس", en:"Head", fadicca:"أور (Ur)", kenzi:"أور (Ur)" },
+
+  { cat:"body", ar:"عين", en:"Eye", fadicca:"ميس (Miss)", kenzi:"كال (Kal)" },
+
+  { cat:"body", ar:"أذن", en:"Ear", fadicca:"أوي (Uyi)", kenzi:"أوي (Uyi)" },
+
+  { cat:"body", ar:"فم", en:"Mouth", fadicca:"أوق (Oug)", kenzi:"أوق (Oug)" },
+
+  { cat:"body", ar:"يد", en:"Hand", fadicca:"إيد (Eed)", kenzi:"إيد (Eed)" },
+
+  { cat:"body", ar:"رجل (قدم)", en:"Leg / foot", fadicca:"أوس (Ous)", kenzi:"أوس (Ous)" },
+
+  { cat:"body", ar:"قلب", en:"Heart", fadicca:"آي (Aay)", kenzi:"آي (Aay)" },
+
+  { cat:"body", ar:"بطن", en:"Stomach", fadicca:"تو (Too)", kenzi:"تو (Too)" },
+
+  { cat:"body", ar:"شعر", en:"Hair", fadicca:"ديل (Deel) / صوم (Soom)", kenzi:"صوم (Soom)" },
+
+  { cat:"body", ar:"لسان", en:"Tongue", fadicca:"نال (Nal) / نيد (Need)", kenzi:"نيد (Need)" },
+
+  // البيت والطعام
+  { cat:"house", ar:"بيت", en:"House", fadicca:"كا (Ka)", kenzi:"كا (Ka)" },
+
+  { cat:"house", ar:"باب", en:"Door", fadicca:"كورو (Kourou)", kenzi:"كورو (Kourou)" },
+
+  { cat:"house", ar:"ماء", en:"Water", fadicca:"أمان (Aman)", kenzi:"أسي (Essi)" },
+
+  { cat:"house", ar:"لبن", en:"Milk", fadicca:"إرتي (Erti)", kenzi:"إرتي (Erti)" },
+
+  { cat:"house", ar:"شاي", en:"Tea", fadicca:"شاي (Shai)", kenzi:"شاي (Shai)" },
+
+  { cat:"house", ar:"خبز", en:"Bread", fadicca:"كابِدة (Kabida) / شادي (Shadi)", kenzi:"كابِدة (Kabida) / شادي (Shadi)" },
+
+  { cat:"house", ar:"تمر", en:"Dates", fadicca:"فينتي (Finti)", kenzi:"فينتي (Finti)" },
+
+  { cat:"house", ar:"نخلة", en:"Palm tree", fadicca:"فينتي كُو (Finti Koo)", kenzi:"فينتي كور (Finti Kour)" },
+
+  { cat:"house", ar:"نار", en:"Fire", fadicca:"إق (Iq)", kenzi:"إق (Iq)" },
+
+  { cat:"house", ar:"ملح", en:"Salt", fadicca:"أجر (Ajir)", kenzi:"أجر (Ajir)" },
+
+  { cat:"house", ar:"لحم", en:"Meat", fadicca:"كوس (Koos)", kenzi:"كوس (Koos)" },
+
+  { cat:"house", ar:"سمك", en:"Fish", fadicca:"أمان كاري (Aman Kari)", kenzi:"أسي كاري (Essi Kari)" },
+
+  { cat:"house", ar:"فلوس / ذهب", en:"Money / gold", fadicca:"أوري (فلوس) (Oori) / نوب (ذهب) (Noob)", kenzi:"أوري (فلوس) (Oori)" },
+
+  // صفات
+  { cat:"qualities", ar:"جميل", en:"Beautiful", fadicca:"مسقاني (Miskani) / مشكا (Mishka)", kenzi:"مشكا (Mishka)" },
+
+  { cat:"qualities", ar:"سيء / وحش", en:"Bad / ugly", fadicca:"ملان (Malan)", kenzi:"ملان (Malan)" },
+
+  { cat:"qualities", ar:"كبير", en:"Big", fadicca:"دُو (Dou)", kenzi:"أورا (Ora) / داو (Dao)" },
+
+  { cat:"qualities", ar:"صغير", en:"Small", fadicca:"كينو (Keeno) / كورا (Kora)", kenzi:"كين (Keen)" },
+
+  { cat:"qualities", ar:"كثير", en:"Much / many", fadicca:"ماني (Mani) / جيك (Jeek)", kenzi:"كادي (Kadi)" },
+
+  { cat:"qualities", ar:"طويل", en:"Long / tall", fadicca:"فور (Four)", kenzi:"فور (Four)" },
+
+  { cat:"qualities", ar:"قصير", en:"Short", fadicca:"كور (Kour)", kenzi:"كور (Kour)" },
+
+  { cat:"qualities", ar:"أبيض", en:"White", fadicca:"أرو (Aroo)", kenzi:"أرو (Aroo)" },
+
+  { cat:"qualities", ar:"أسود", en:"Black", fadicca:"أُدّي (Uddi)", kenzi:"أُدّي (Uddi)" },
+
+  { cat:"qualities", ar:"أحمر", en:"Red", fadicca:"جيل (Jeel)", kenzi:"جيل (Jeel)" },
+
+  { cat:"qualities", ar:"بارد", en:"Cold", fadicca:"أوقوج (Ougouj)", kenzi:"أوقوج (Ougouj)" },
+
+  { cat:"qualities", ar:"سريع", en:"Fast", fadicca:"بيرا (Beera)", kenzi:"بيرا (Beera)" },
+
+  // الأرقام
+  { cat:"numbers", ar:"١ (واحد)", en:"1 (one)", fadicca:"وِير (Weer)", kenzi:"وِير (Weer)" },
+
+  { cat:"numbers", ar:"٢ (اثنين)", en:"2 (two)", fadicca:"أُوو (Oww)", kenzi:"أُوو (Oww)" },
+
+  { cat:"numbers", ar:"٣ (ثلاثة)", en:"3 (three)", fadicca:"طوسكو (Tosko)", kenzi:"طوسكو (Tosko)" },
+
+  { cat:"numbers", ar:"٤ (أربعة)", en:"4 (four)", fadicca:"كِمسو (Kemsou)", kenzi:"كِمسو (Kemsou)" },
+
+  { cat:"numbers", ar:"٥ (خمسة)", en:"5 (five)", fadicca:"دِجو (Dijjou)", kenzi:"دِجو (Dijjou)" },
+
+  { cat:"numbers", ar:"٦ (ستة)", en:"6 (six)", fadicca:"قورو (Gorou)", kenzi:"قورو (Gorou)" },
+
+  { cat:"numbers", ar:"٧ (سبعة)", en:"7 (seven)", fadicca:"كولود (Kolod)", kenzi:"كولود (Kolod)" },
+
+  { cat:"numbers", ar:"٨ (ثمانية)", en:"8 (eight)", fadicca:"إدِوو (Iddiww)", kenzi:"إدِوو (Iddiww)" },
+
+  { cat:"numbers", ar:"٩ (تسعة)", en:"9 (nine)", fadicca:"إسكود (Iskod)", kenzi:"إسكود (Iskod)" },
+
+  { cat:"numbers", ar:"١٠ (عشرة)", en:"10 (ten)", fadicca:"ديمِر (Dimir)", kenzi:"ديمِر (Dimir)" },
+],
   };
 
   /* =======================================================================
-     DATA — Gallery (every file from /assets, tagged + captioned)
+     DATA    Gallery (every file from /assets, tagged + captioned)
      ======================================================================= */
   const GALLERY = [
     { base:"nile-terrace-building", tag:"architecture", label:"العمارة", label_en:"Architecture", alt:"مبنى نوبي على ضفاف النيل", alt_en:"A Nubian building on the banks of the Nile" },
@@ -151,7 +246,7 @@
     { base:"museum-ramses-statue", tag:"history", label:"آثار وتاريخ", label_en:"History & antiquities", alt:"تمثال حجري لرمسيس الثاني في متحف النوبة", alt_en:"A stone statue of Ramesses II at the Nubian Museum" },
     { base:"music-band-daf", tag:"music", label:"الموسيقى والرقص", label_en:"Music & dance", alt:"فرقة موسيقية نوبية تؤدي بالدفوف", alt_en:"A Nubian musical troupe performing with frame drums" },
     { base:"music-nile-musicians", tag:"music", label:"الموسيقى والرقص", label_en:"Music & dance", alt:"عازفان نوبيان يعزفان بجوار النيل", alt_en:"Two Nubian musicians playing by the Nile" },
-    { base:"music-tanbur-instrument", tag:"music", label:"الموسيقى والرقص", label_en:"Music & dance", alt:"التنبور هو الآلة الوترية المقدسة في الموسيقى النوبية، يصنع منها الفنان أغانيَ للفرح والحب والحنين، وتتوارثه الأجيال كما تتوارث الأرض والاسم.", alt_en:"The tanbur is the sacred stringed instrument of Nubian music — artists shape from it songs of joy, love and longing, and it is handed down through generations like land and name." },
+    { base:"music-tanbur-instrument", tag:"music", label:"الموسيقى والرقص", label_en:"Music & dance", alt:"التنبور هو الآلة الوترية المقدسة في الموسيقى النوبية، يصنع منها الفنان أغانيَ للفرح والحب والحنين، وتتوارثه الأجيال كما تتوارث الأرض والاسم.", alt_en:"The tanbur is the sacred stringed instrument of Nubian music    artists shape from it songs of joy, love and longing, and it is handed down through generations like land and name." },
     { base:"music-tar-players", tag:"music", label:"الموسيقى والرقص", label_en:"Music & dance", alt:"يتوارث النوبيون العزف على الدفوف والطبول جيلًا بعد جيل، في جلسات غير رسمية يعلّم فيها الكبار الصغار", alt_en:"Nubians pass down frame-drum and drum playing generation after generation, in informal sessions where elders teach the young" },
     { base:"music-drum-generations", tag:"music", label:"الموسيقى والرقص", label_en:"Music & dance", alt:"جيلان يعزفان الدفوف معًا في جلسة غير رسمية", alt_en:"Two generations playing frame drums together in an informal session" },
     { base:"handicrafts-market-street", tag:"crafts", label:"الحرف اليدوية", label_en:"Handicrafts", alt:"شارع وسوق نوبي للحرف والهدايا", alt_en:"A Nubian street market for crafts and gifts" },
@@ -181,9 +276,9 @@
   ];
 
   /* =======================================================================
-     DATA — Nubian video archive (6-video interactive gallery, Music section)
+     DATA    Nubian video archive (6-video interactive gallery, Music section)
      Local video files, NOT YouTube. Each video's file lives at assets/videos/
-     — see assets/videos/README.txt for exact filenames expected.
+        see assets/videos/README.txt for exact filenames expected.
      Poster images are auto-extracted from each video file (see build step).
      ======================================================================= */
 const NUBIAN_VIDEOS = [
@@ -199,7 +294,7 @@ const NUBIAN_VIDEOS = [
     description:
       "رحلة إلى عمق الهوية النوبية، نستحضر خلالها ملامح حضارة عريقة امتدت جذورها عبر آلاف السنين، ونكتشف إرثًا ثقافيًا أصيلًا ما زال حاضرًا في تفاصيل الحياة والفن واللغة والعادات. تعكس هذه الرحلة الفخر بتاريخ النوبة وثراء حضارتها، وتبرز جمال الفن النوبي بما يحمله من ألوان ورموز وتفاصيل تعبّر عن روح المكان وذاكرة الأجيال. ومن خلال هذا التراث، تتجلى العلاقة العميقة بين الإنسان النوبي وأرضه وتاريخه، حيث تتكامل الموسيقى واللغة والفنون والعادات والموروث الشعبي لتشكّل هوية متفردة حافظت على حضورها عبر العصور. إنها هوية نابضة بالحياة، تجمع بين أصالة الماضي وإبداع الحاضر، وتحمل قصة شعبٍ ما زال يروي تاريخه ويفتخر بجذوره من جيل إلى جيل.",
     description_en:
-      "A journey into the depths of Nubian identity, evoking the features of an ancient civilization whose roots stretch back thousands of years, and uncovering an authentic cultural legacy still present in the details of daily life, art, language and custom. This journey reflects pride in Nubia's history and the richness of its civilization, and highlights the beauty of Nubian art with its colors, symbols and details that express the spirit of the place and the memory of its generations. Through this heritage, the deep bond between the Nubian people, their land and their history becomes clear, as music, language, the arts, customs and folk tradition come together to form a distinctive identity that has endured across the ages — a living identity that blends the authenticity of the past with the creativity of the present, carrying the story of a people who still tell their history and take pride in their roots from generation to generation.",
+      "A journey into the depths of Nubian identity, evoking the features of an ancient civilization whose roots stretch back thousands of years, and uncovering an authentic cultural legacy still present in the details of daily life, art, language and custom. This journey reflects pride in Nubia's history and the richness of its civilization, and highlights the beauty of Nubian art with its colors, symbols and details that express the spirit of the place and the memory of its generations. Through this heritage, the deep bond between the Nubian people, their land and their history becomes clear, as music, language, the arts, customs and folk tradition come together to form a distinctive identity that has endured across the ages    a living identity that blends the authenticity of the past with the creativity of the present, carrying the story of a people who still tell their history and take pride in their roots from generation to generation.",
     hashtags: [
       "#النوبة",
       "#فخور_أنا",
@@ -326,7 +421,7 @@ const NUBIAN_VIDEOS = [
     description:
       "أجواء حنّة نوبية أصيلة من توشكي غرب، في مشهد يحتفي بواحدة من أبرز المناسبات الاجتماعية في الثقافة النوبية. تمتزج الموسيقى والغناء والرقص مع طقوس الاحتفال، لتصنع أجواءً مليئة بالفرح والبهجة، وتكشف جانبًا من العادات والتقاليد التي حافظ عليها المجتمع النوبي وحرص على تناقلها عبر الأجيال. وتجتمع العائلة والأصدقاء في هذه المناسبة لمشاركة العروس فرحتها، وسط الأغاني النوبية والإيقاعات الشعبية، لتصبح الحنّة أكثر من مجرد احتفال؛ فهي مساحة للتعبير عن الانتماء والهوية واستمرار التراث في الحياة اليومية.",
     description_en:
-      "An authentic Nubian henna night from Toshka West, celebrating one of the most important social occasions in Nubian culture. Music, singing and dance blend with the rituals of celebration to create an atmosphere full of joy, revealing customs and traditions that Nubian society has preserved and made a point of passing down through the generations. Family and friends gather on this occasion to share the bride's happiness amid Nubian songs and folk rhythms, making the henna night more than a celebration — a space for expressing belonging and identity, and for keeping heritage alive in everyday life.",
+      "An authentic Nubian henna night from Toshka West, celebrating one of the most important social occasions in Nubian culture. Music, singing and dance blend with the rituals of celebration to create an atmosphere full of joy, revealing customs and traditions that Nubian society has preserved and made a point of passing down through the generations. Family and friends gather on this occasion to share the bride's happiness amid Nubian songs and folk rhythms, making the henna night more than a celebration    a space for expressing belonging and identity, and for keeping heritage alive in everyday life.",
     hashtags: [
       "#هشام_باطه",
       "#توشكي_غرب",
@@ -379,7 +474,7 @@ const NUBIAN_VIDEOS = [
   },
 ];
   /* =======================================================================
-     DATA — Quiz (from the source document, verbatim questions/answers)
+     DATA    Quiz (from the source document, verbatim questions/answers)
      ======================================================================= */
   const QUIZ = [
     { q:"ماذا تعني كلمة «نوب» في اللغة المصرية القديمة؟", q_en:"What does the word \"Nub\" mean in the ancient Egyptian language?", options:["الماء","الذهب","الشمس"], options_en:["Water","Gold","The sun"], correct:1 },
@@ -387,7 +482,7 @@ const NUBIAN_VIDEOS = [
     { q:"من هو الملك النوبي الذي وحّد وادي النيل وحكم مصر؟", q_en:"Which Nubian king unified the Nile Valley and ruled Egypt?", options:["بعنخي","رمسيس الثاني","إخناتون"], options_en:["Piye","Ramesses II","Akhenaten"], correct:0 },
     { q:"ما الآلة الموسيقية التي تعتبر «روح» الموسيقى النوبية؟", q_en:"Which instrument is considered the \"soul\" of Nubian music?", options:["العود","الطنبور (الكيسر)","الناي"], options_en:["The oud","The tanbur (kissar)","The nay flute"], correct:1 },
     { q:"ماذا يرمز «المثلث» في الزخارف النوبية؟", q_en:"What does the \"triangle\" symbolize in Nubian decoration?", options:["النيل","الأهرامات أو الحماية","النخيل"], options_en:["The Nile","Pyramids or protection","Palm trees"], correct:1 },
-    // — أُضيفت الأسئلة التالية بالاعتماد على محتوى الموقع نفسه كمرجع أساسي —
+    //    أُضيفت الأسئلة التالية بالاعتماد على محتوى الموقع نفسه كمرجع أساسي   
     { q:"ما أول دولة مركزية قامت في أفريقيا جنوب الصحراء؟", q_en:"What was the first centralized state in sub-Saharan Africa?", options:["مملكة كرمة","مملكة مروي","مملكة نبتة"], options_en:["The Kingdom of Kerma","The Kingdom of Meroë","The Kingdom of Napata"], correct:0 },
     { q:"بأي صناعة اشتهرت مملكة مروي، إلى جانب بناء مئات الأهرامات؟", q_en:"For which industry was the Kingdom of Meroë famous, besides building hundreds of pyramids?", options:["صناعة الحديد","صناعة الزجاج","صناعة الورق"], options_en:["Ironworking","Glassmaking","Papermaking"], correct:0 },
     { q:"بين أي عامين حكم ملوك الأسرة الخامسة والعشرين، الملقّبون بـ«الفراعنة السود»، مصر والنوبة معًا؟", q_en:"Between which years did the kings of the 25th Dynasty, known as the \"Black Pharaohs,\" rule Egypt and Nubia together?", options:["٧٤٤–٦٥٦ ق.م","١٠٧٠–٧٥٠ ق.م","٣٥٠–٥٥٠ م"], options_en:["744–656 BCE","1070–750 BCE","350–550 CE"], correct:0 },
@@ -458,7 +553,7 @@ const NUBIAN_VIDEOS = [
   $$(".mobile-drawer a").forEach(a => on(a, "click", () => drawer.classList.remove("open")));
 
   /* =======================================================================
-     Theme toggle (in-memory only — safe for artifact previews & portable use)
+     Theme toggle (in-memory only    safe for artifact previews & portable use)
      ======================================================================= */
   let theme = "light";
   const themeBtn = $("#btn-theme");
@@ -526,8 +621,8 @@ const NUBIAN_VIDEOS = [
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute("content", lang === "en"
-        ? "Discover the ancient civilization of Nubia — history, culture, language, crafts, cuisine and landmarks in Aswan"
-        : "اكتشف حضارة النوبة العريقة — التاريخ، الثقافة، اللغة، الحرف، المطبخ، والمعالم في أسوان");
+        ? "Discover the ancient civilization of Nubia    history, culture, language, crafts, cuisine and landmarks in Aswan"
+        : "اكتشف حضارة النوبة العريقة    التاريخ، الثقافة، اللغة، الحرف، المطبخ، والمعالم في أسوان");
     }
     $$(".counter-num[data-count]").forEach(el => {
       const target = parseInt(el.dataset.count, 10) || 0;
@@ -624,7 +719,7 @@ const NUBIAN_VIDEOS = [
         </button>`).join("");
     }
 
-    // Updates only the text/info panel for video i, in the current language —
+    // Updates only the text/info panel for video i, in the current language   
     // does NOT touch the <video> element, so switching language never
     // interrupts or restarts a video the visitor is currently watching.
     function renderInfo(i) {
@@ -782,7 +877,7 @@ const NUBIAN_VIDEOS = [
   }
 
   /* =======================================================================
-     Hero parallax + crossfade — kept subtle and minimal
+     Hero parallax + crossfade    kept subtle and minimal
      ======================================================================= */
   const heroImgs = $$(".hero-media img");
   if (heroImgs.length && !prefersReducedMotion) {
@@ -874,8 +969,8 @@ const NUBIAN_VIDEOS = [
     }
     if (!list.length) {
       dictGrid.innerHTML = isEn()
-        ? `<div class="dict-empty">No matches for your search — try another word.</div>`
-        : `<div class="dict-empty">لا توجد نتائج مطابقة لبحثك — جرّب كلمة أخرى.</div>`;
+        ? `<div class="dict-empty">No matches for your search    try another word.</div>`
+        : `<div class="dict-empty">لا توجد نتائج مطابقة لبحثك    جرّب كلمة أخرى.</div>`;
       return;
     }
     const bothLabel = isEn() ? "Both dialects" : "اللهجتان";
@@ -959,7 +1054,7 @@ const NUBIAN_VIDEOS = [
   renderDictGrid();
   onLangChange(() => { renderDictCategories(); renderDictGrid(); });
 
-  // Word of the day — deterministic by day-of-year, no server needed
+  // Word of the day    deterministic by day-of-year, no server needed
   const wordOfDayEl = $("#word-of-day-content");
   function renderWordOfDay() {
     if (!wordOfDayEl) return;
@@ -1084,7 +1179,7 @@ const NUBIAN_VIDEOS = [
     const label = isEn() ? g.label_en : g.label;
     lbImg.src = `${IMG}${g.base}-thumb.jpg`;
     lbImg.alt = alt;
-    lbCaption.textContent = `${alt} — ${label}`;
+    lbCaption.textContent = `${alt}    ${label}`;
   }
   function closeLightbox() {
     lightbox.classList.remove("open");
@@ -1132,15 +1227,28 @@ const NUBIAN_VIDEOS = [
     testiDotsWrap.innerHTML = testiSlides.map((_, i) => `<button class="${i===testiIndex?'active':''}" data-i="${i}"></button>`).join("");
     $$("button", testiDotsWrap).forEach(b => on(b, "click", () => { testiIndex = parseInt(b.dataset.i, 10); updateTesti(); }));
   }
-  function updateTesti() {
+function updateTesti() {
     const track = $("#testi-track");
-    const dir = document.documentElement.dir === "rtl" ? "" : "-";
-    if (track) track.style.transform = `translateX(${dir}${testiIndex * 100}%)`;
+
+    if (track) {
+        track.style.transform = `translate3d(-${testiIndex * 100}%, 0, 0)`;
+    }
+
     renderTestiDots();
-  }
-  on($("#testi-prev"), "click", () => { testiIndex = (testiIndex - 1 + testiSlides.length) % testiSlides.length; updateTesti(); });
-  on($("#testi-next"), "click", () => { testiIndex = (testiIndex + 1) % testiSlides.length; updateTesti(); });
-  if (testiSlides.length) {
+}
+ on($("#testi-prev"), "click", () => {
+    testiIndex =
+        (testiIndex - 1 + testiSlides.length) % testiSlides.length;
+
+    updateTesti();
+});
+
+on($("#testi-next"), "click", () => {
+    testiIndex =
+        (testiIndex + 1) % testiSlides.length;
+
+    updateTesti();
+}); if (testiSlides.length) {
     renderTestiDots();
     if (!prefersReducedMotion) {
       let testiTimer = setInterval(() => { testiIndex = (testiIndex + 1) % testiSlides.length; updateTesti(); }, 6500);
@@ -1250,8 +1358,8 @@ const NUBIAN_VIDEOS = [
     const note = $("#newsletter-note");
     if (input && input.value.trim()) {
       note.textContent = isEn()
-        ? "Thanks for joining — we'll send you the latest Nubian stories."
-        : "شكرًا لانضمامك — سنراسلك بجديد حكايات النوبة.";
+        ? "Thanks for joining    we'll send you the latest Nubian stories."
+        : "شكرًا لانضمامك    سنراسلك بجديد حكايات النوبة.";
       input.value = "";
     } else if (note) {
       note.textContent = isEn() ? "Please enter a valid email address." : "من فضلك أدخل بريدًا إلكترونيًا صحيحًا.";

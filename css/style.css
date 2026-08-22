@@ -386,8 +386,8 @@ nav.nav-links a.active{color:var(--accent);}
   font-family:var(--font-ar-display);
   font-weight:700;
   font-size:clamp(2.6rem,7vw,5.6rem);
-  line-height:1.14;
-  max-width:16ch;
+  line-height:.8;
+  max-width:121ch;
   text-shadow:0 6px 30px rgba(0,0,0,.25);
 }
 .hero-title .accent-word{color:var(--gold-soft);font-style:normal;}
@@ -1234,4 +1234,33 @@ footer .footer-top{padding-block:70px 40px;}
 .texture-dots{
   background-image:radial-gradient(var(--border) 1px, transparent 1px);
   background-size:22px 22px;
+}
+
+
+
+/* Testimonials Slider - ثابت في اللغتين */
+#testi-track {
+    display: flex !important;
+    flex-direction: row !important;
+    direction: ltr !important;
+    width: 100%;
+}
+
+#testi-track .testi-slide {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    direction: inherit;
+}
+
+/* الأسهم ثابتة */
+.testi-arrows {
+    direction: ltr !important;
+}
+
+.testi-arrows .icon-btn {
+    direction: ltr !important;
+}
+
+.testi-arrows .icon-btn svg {
+    transform: none !important;
 }
